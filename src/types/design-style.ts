@@ -12,6 +12,10 @@ export type DesignStyleName = 'neobrutalism' | 'art-deco'
 export interface DesignStyle {
   name: DesignStyleName
   displayName: string
+  background: {
+    body: string
+    container: string
+  }
   card: {
     container: string
     title: string
@@ -51,6 +55,7 @@ export interface DesignStyle {
     list: string
     trigger: string
     triggerActive: string
+    triggerInactive: string
     content: string
   }
   accordion: {

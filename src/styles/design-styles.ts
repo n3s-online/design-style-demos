@@ -7,6 +7,10 @@ import type { DesignStyle, DesignStyleName } from '@/types/design-style'
 const neobrutalismStyle: DesignStyle = {
   name: 'neobrutalism',
   displayName: 'Neobrutalism',
+  background: {
+    body: 'bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100',
+    container: 'bg-white border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]',
+  },
   card: {
     container: 'border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-yellow-300 rounded-none',
     title: 'font-black text-3xl uppercase tracking-tight text-black',
@@ -43,9 +47,10 @@ const neobrutalismStyle: DesignStyle = {
     base: 'border-4 border-black rounded-none',
   },
   tabs: {
-    list: 'border-4 border-black bg-pink-300 rounded-none p-1',
-    trigger: 'font-black uppercase tracking-tight text-black border-2 border-transparent data-[state=active]:border-black',
-    triggerActive: 'bg-yellow-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    list: 'border-4 border-black bg-pink-300 rounded-none p-1 gap-1',
+    trigger: 'font-black uppercase tracking-tight text-black border-4 border-black transition-all px-4 py-2',
+    triggerActive: 'bg-yellow-300 translate-y-[2px] shadow-none',
+    triggerInactive: 'bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]',
     content: 'border-4 border-black bg-white p-4 mt-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]',
   },
   accordion: {
@@ -86,6 +91,10 @@ const neobrutalismStyle: DesignStyle = {
 const artDecoStyle: DesignStyle = {
   name: 'art-deco',
   displayName: 'Art Deco',
+  background: {
+    body: 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950',
+    container: 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-2 border-amber-600 shadow-2xl shadow-amber-900/20',
+  },
   card: {
     container: 'border border-amber-600 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-xl rounded-sm relative before:absolute before:inset-0 before:border-2 before:border-amber-500/20 before:rounded-sm',
     title: 'font-serif text-3xl tracking-widest text-amber-400 uppercase border-b-2 border-amber-600/50 pb-2',
@@ -122,9 +131,10 @@ const artDecoStyle: DesignStyle = {
     base: 'border border-amber-600',
   },
   tabs: {
-    list: 'border border-amber-600 bg-slate-900 rounded-sm p-1 shadow-inner',
-    trigger: 'font-serif tracking-wider text-amber-400 uppercase text-sm border border-transparent data-[state=active]:border-amber-600',
-    triggerActive: 'bg-gradient-to-r from-amber-600/20 to-amber-700/20 shadow-md',
+    list: 'border border-amber-600 bg-slate-900 rounded-sm p-1 shadow-inner gap-1',
+    trigger: 'font-serif tracking-wider text-amber-400 uppercase text-sm border border-amber-600/50 px-4 py-2 transition-all',
+    triggerActive: 'bg-gradient-to-r from-amber-600/30 to-amber-700/30 border-amber-600 shadow-md shadow-amber-500/20',
+    triggerInactive: 'bg-slate-800/50 hover:bg-slate-800 hover:border-amber-600/70',
     content: 'border border-amber-600 bg-gradient-to-br from-slate-900 to-slate-800 p-6 mt-2 shadow-lg rounded-sm',
   },
   accordion: {
