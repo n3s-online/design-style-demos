@@ -23,4 +23,59 @@ export interface DesignStyle {
     text: string
     label: string
   }
+  button: {
+    base: string
+    primary: string
+    secondary: string
+    outline: string
+  }
+  input: {
+    base: string
+    label: string
+  }
+  textarea: {
+    base: string
+  }
+  checkbox: {
+    base: string
+    label: string
+  }
+  switch: {
+    base: string
+  }
+  tabs: {
+    list: string
+    trigger: string
+    triggerActive: string
+    content: string
+  }
+  accordion: {
+    item: string
+    trigger: string
+    content: string
+  }
+  alert: {
+    base: string
+    title: string
+    description: string
+  }
+  badge: {
+    base: string
+    success: string
+    warning: string
+    error: string
+  }
+  progress: {
+    container: string
+    bar: string
+  }
+  slider: {
+    base: string
+  }
+  dialog: {
+    overlay: string
+    content: string
+    title: string
+    description: string
+  }
 }
