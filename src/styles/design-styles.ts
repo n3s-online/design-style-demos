@@ -215,6 +215,113 @@ const artDecoStyle: DesignStyle = {
 }
 
 /**
+ * Pure Minimalism Design Style
+ * Characterized by extreme simplicity, ample whitespace, and subtle design
+ */
+const pureMinimalismStyle: DesignStyle = {
+  name: 'pure-minimalism',
+  displayName: 'Pure Minimalism',
+  metadata: {
+    description: 'An ultra-clean design style emphasizing whitespace, simplicity, and the bare essentials',
+    characteristics: [
+      'Abundant whitespace',
+      'Minimal color palette',
+      'Ultra-thin borders (1px)',
+      'Light shadows',
+      'Sans-serif typography',
+      'Focus on content over decoration'
+    ],
+    colorPalette: [
+      'Pure white backgrounds (#ffffff)',
+      'Light gray accents (#f9fafb)',
+      'Dark gray text (#111827)',
+      'Subtle blue accents (#3b82f6)'
+    ],
+    typography: [
+      'Light font weights (300-400)',
+      'Generous line spacing',
+      'Sans-serif fonts',
+      'Normal case text'
+    ]
+  },
+  background: {
+    body: 'bg-white',
+    container: 'bg-white border border-gray-100',
+  },
+  card: {
+    container: 'border border-gray-100 bg-white rounded-sm',
+    title: 'font-light text-2xl text-gray-900',
+    content: 'font-light text-base text-gray-600 leading-relaxed',
+  },
+  navbar: {
+    container: 'border-b border-gray-100 bg-white',
+    select: 'border border-gray-200 bg-white text-gray-900 rounded-sm font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
+    text: 'text-gray-900',
+    label: 'text-gray-600 font-light',
+  },
+  button: {
+    base: 'border border-gray-200 rounded-sm font-light transition-all hover:border-gray-300',
+    // For style selector dialog
+    selected: 'bg-gray-900 text-white border-gray-900',
+    unselected: 'bg-white text-gray-900 hover:bg-gray-50',
+    // For general button usage
+    primary: 'bg-gray-900 text-white border-gray-900 hover:bg-gray-800',
+    secondary: 'bg-gray-100 text-gray-900 border-gray-200 hover:bg-gray-200',
+    outline: 'bg-white text-gray-900 border-gray-300 hover:bg-gray-50',
+  },
+  input: {
+    base: 'border border-gray-200 rounded-sm bg-white text-gray-900 font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
+    label: 'font-light text-gray-600',
+  },
+  textarea: {
+    base: 'border border-gray-200 rounded-sm bg-white text-gray-900 font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
+  },
+  checkbox: {
+    base: 'border border-gray-300 rounded-sm w-4 h-4 accent-gray-900 focus:ring-1 focus:ring-blue-500',
+    label: 'font-light text-gray-600',
+  },
+  switch: {
+    base: 'border border-gray-300 rounded-full',
+  },
+  tabs: {
+    list: 'border-b border-gray-100 bg-white p-0 gap-0',
+    trigger: 'font-light text-gray-600 px-4 py-2 transition-all border-b-2',
+    triggerActive: 'text-gray-900 border-gray-900',
+    triggerInactive: 'border-transparent hover:text-gray-900 hover:border-gray-200',
+    content: 'bg-white p-4 mt-2',
+  },
+  accordion: {
+    item: 'border-b border-gray-100 bg-white',
+    trigger: 'font-light text-gray-900 hover:text-gray-600 p-4',
+    content: 'font-light text-gray-600 p-4 pt-0',
+  },
+  alert: {
+    base: 'border border-gray-200 rounded-sm bg-white p-4',
+    title: 'font-normal text-gray-900',
+    description: 'font-light text-gray-600',
+  },
+  badge: {
+    base: 'border border-gray-200 rounded-full font-light text-xs px-2 py-0.5',
+    success: 'bg-green-50 text-green-700 border-green-200',
+    warning: 'bg-yellow-50 text-yellow-700 border-yellow-200',
+    error: 'bg-red-50 text-red-700 border-red-200',
+  },
+  progress: {
+    container: 'border border-gray-200 rounded-full bg-gray-50 h-2 overflow-hidden',
+    bar: 'bg-gray-900 h-full',
+  },
+  slider: {
+    base: 'accent-gray-900 h-1',
+  },
+  dialog: {
+    overlay: 'bg-black/20',
+    content: 'border border-gray-100 bg-white shadow-xl rounded-sm',
+    title: 'font-light text-xl text-gray-900',
+    description: 'font-light text-gray-600',
+  },
+}
+
+/**
  * Design Style Registry
  * To add a new style: simply add it to this object
  * This follows the Open-Closed Principle
@@ -222,6 +329,7 @@ const artDecoStyle: DesignStyle = {
 export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   neobrutalism: neobrutalismStyle,
   'art-deco': artDecoStyle,
+  'pure-minimalism': pureMinimalismStyle,
 }
 
 /**
