@@ -1,0 +1,26 @@
+import * as React from "react"
+import { cn } from "@/lib/utils"
+
+export interface SliderProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
+  onValueChange?: (value: number) => void
+}
+
+const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
+  ({ className, onValueChange, ...props }, ref) => {
+    return (
+      <input
+        type="range"
+        ref={ref}
+        className={cn(
+          "w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary",
+          className
+        )}
+        onChange={(e) => onValueChange?.(Number(e.target.value))}
+        {...props}
+      />
+    )
+  }
+)
+Slider.displayName = "Slider"
+
+export { Slider }
