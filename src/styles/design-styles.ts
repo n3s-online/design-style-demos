@@ -680,23 +680,23 @@ const y2kStyle: DesignStyle = {
   },
   card: {
     container: 'bg-gradient-to-br from-pink-400 to-pink-300 border-2 border-white shadow-[inset_0_2px_0_rgba(255,255,255,0.6),4px_4px_0_rgba(0,0,0,0.15)] rounded-2xl',
-    title: 'font-black text-2xl bg-gradient-to-r from-white via-sky-100 to-white bg-clip-text text-transparent [text-shadow:0_2px_8px_rgba(0,0,0,0.2)]',
-    content: 'font-bold text-base text-white leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.3)]',
+    title: 'font-black text-2xl text-white',
+    content: 'font-bold text-base text-white leading-relaxed',
   },
   navbar: {
     container: 'bg-gradient-to-r from-lime-400 via-sky-300 to-pink-400 border-b-2 border-white shadow-[0_4px_0_rgba(255,255,255,0.4)]',
     select: 'bg-white border-2 border-sky-400 text-sky-600 font-black rounded-xl shadow-[inset_0_2px_0_rgba(255,255,255,1),0_4px_0_rgba(0,0,0,0.1)] focus:ring-2 focus:ring-pink-400 focus:outline-none',
-    text: 'text-white font-black [text-shadow:0_2px_4px_rgba(0,0,0,0.3)]',
-    label: 'text-white font-black [text-shadow:0_2px_4px_rgba(0,0,0,0.3)]',
+    text: 'text-white font-black',
+    label: 'text-white font-black',
   },
   button: {
     base: 'border-2 rounded-2xl font-black transition-all shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_4px_0_rgba(0,0,0,0.2)] hover:shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_6px_0_rgba(0,0,0,0.25)] hover:translate-y-[-2px] active:translate-y-0 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_2px_0_rgba(0,0,0,0.2)]',
     // For style selector dialog
-    selected: 'bg-gradient-to-br from-lime-400 to-lime-500 text-white border-lime-300 [text-shadow:0_2px_4px_rgba(0,0,0,0.2)]',
+    selected: 'bg-gradient-to-br from-lime-400 to-lime-500 text-white border-lime-300',
     unselected: 'bg-gradient-to-br from-sky-300 to-sky-400 text-white border-sky-200 hover:from-sky-400 hover:to-sky-500',
     // For general button usage
-    primary: 'bg-gradient-to-br from-pink-400 to-pink-500 text-white border-pink-300 [text-shadow:0_2px_4px_rgba(0,0,0,0.2)]',
-    secondary: 'bg-gradient-to-br from-lime-400 to-lime-500 text-white border-lime-300 [text-shadow:0_2px_4px_rgba(0,0,0,0.2)]',
+    primary: 'bg-gradient-to-br from-pink-400 to-pink-500 text-white border-pink-300',
+    secondary: 'bg-gradient-to-br from-lime-400 to-lime-500 text-white border-lime-300',
     outline: 'bg-white text-sky-600 border-sky-400',
   },
   input: {
@@ -715,20 +715,20 @@ const y2kStyle: DesignStyle = {
   },
   tabs: {
     list: 'bg-gradient-to-r from-lime-300 to-sky-300 border-2 border-white rounded-2xl p-2 gap-2 shadow-[inset_0_2px_0_rgba(255,255,255,0.4)]',
-    trigger: 'font-black text-white px-4 py-2 rounded-xl transition-all border-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.2)]',
+    trigger: 'font-black text-white px-4 py-2 rounded-xl transition-all border-2',
     triggerActive: 'bg-white text-pink-500 border-pink-300 shadow-[inset_0_2px_0_rgba(255,255,255,1),0_2px_4px_rgba(0,0,0,0.1)]',
     triggerInactive: 'border-transparent hover:bg-white/20',
     content: 'bg-white border-2 border-sky-300 rounded-2xl p-6 mt-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]',
   },
   accordion: {
     item: 'bg-gradient-to-br from-sky-300 to-sky-400 border-2 border-white rounded-2xl mb-2 overflow-hidden shadow-[0_4px_0_rgba(0,0,0,0.1)]',
-    trigger: 'font-black text-white hover:bg-sky-500/50 p-4 [text-shadow:0_2px_4px_rgba(0,0,0,0.2)]',
+    trigger: 'font-black text-white hover:bg-sky-500/50 p-4',
     content: 'font-bold text-sky-900 p-4 bg-white border-t-2 border-sky-200',
   },
   alert: {
     base: 'bg-gradient-to-br from-pink-300 to-pink-400 border-2 border-white rounded-2xl shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_4px_12px_rgba(0,0,0,0.1)] p-4',
-    title: 'font-black text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.2)]',
-    description: 'font-bold text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.2)]',
+    title: 'font-black text-white',
+    description: 'font-bold text-white',
   },
   badge: {
     base: 'border-2 rounded-full font-black text-xs px-3 py-1 shadow-[0_2px_0_rgba(0,0,0,0.1)]',
@@ -746,7 +746,7 @@ const y2kStyle: DesignStyle = {
   dialog: {
     overlay: 'bg-sky-400/40 backdrop-blur-sm',
     content: 'bg-gradient-to-br from-white via-sky-50 to-pink-50 border-2 border-sky-400 rounded-2xl shadow-[inset_0_2px_0_rgba(255,255,255,0.8),0_8px_24px_rgba(0,0,0,0.15)]',
-    title: 'font-black text-xl bg-gradient-to-r from-pink-500 via-sky-500 to-lime-500 bg-clip-text text-transparent',
+    title: 'font-black text-xl text-pink-500',
     description: 'font-bold text-sky-700',
   },
 }
