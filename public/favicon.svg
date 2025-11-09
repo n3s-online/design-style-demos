@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" fill="white"/>
+
+  <!-- Back card (Art Deco style) - elegant, gold -->
+  <rect x="17" y="13" width="12" height="16" fill="#D97706" stroke="#78350F" stroke-width="1"/>
+  <rect x="18" y="15" width="10" height="1" fill="#FCD34D" opacity="0.5"/>
+
+  <!-- Middle card (Transition) - purple/pink -->
+  <rect x="10" y="8" width="12" height="16" fill="#EC4899" stroke="#000000" stroke-width="1.5"/>
+
+  <!-- Front card (Neobrutalism style) - bold, yellow with black border and shadow -->
+  <rect x="3" y="3" width="12" height="16" fill="#FDE047" stroke="#000000" stroke-width="2"/>
+  <rect x="5" y="5" width="8" height="2" fill="#000000"/>
+  <rect x="5" y="9" width="6" height="1" fill="#000000"/>
+  <rect x="5" y="11" width="6" height="1" fill="#000000"/>
+</svg>

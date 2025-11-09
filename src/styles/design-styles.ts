@@ -20,6 +20,10 @@ const neobrutalismStyle: DesignStyle = {
   },
   button: {
     base: 'border-4 border-black rounded-none font-black uppercase tracking-tight transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-0 active:translate-y-0 active:shadow-none',
+    // For style selector dialog
+    selected: 'bg-yellow-300 text-black',
+    unselected: 'bg-white text-black hover:bg-gray-100',
+    // For general button usage
     primary: 'bg-cyan-400 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
     secondary: 'bg-pink-300 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
     outline: 'bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
@@ -95,6 +99,10 @@ const artDecoStyle: DesignStyle = {
   },
   button: {
     base: 'border border-amber-600 rounded-sm font-serif tracking-widest uppercase transition-all hover:shadow-lg hover:shadow-amber-500/20',
+    // For style selector dialog
+    selected: 'bg-gradient-to-br from-amber-600 via-amber-500 to-amber-600 text-slate-900 font-bold',
+    unselected: 'bg-slate-900 text-amber-400 hover:bg-slate-800',
+    // For general button usage
     primary: 'bg-gradient-to-r from-amber-600 to-amber-700 text-slate-900 shadow-md hover:from-amber-500 hover:to-amber-600',
     secondary: 'bg-gradient-to-r from-slate-800 to-slate-900 text-amber-400 shadow-md hover:from-slate-700 hover:to-slate-800',
     outline: 'bg-transparent text-amber-400 border-2 border-amber-600 hover:bg-amber-600/10',

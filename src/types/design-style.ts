@@ -25,6 +25,10 @@ export interface DesignStyle {
   }
   button: {
     base: string
+    // For style selector dialog
+    selected: string
+    unselected: string
+    // For general button usage
     primary: string
     secondary: string
     outline: string
