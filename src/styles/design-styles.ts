@@ -429,6 +429,113 @@ const glassmorphismStyle: DesignStyle = {
 }
 
 /**
+ * Claymorphism Design Style
+ * Characterized by soft, clay-like 3D elements with inflated appearance
+ */
+const claymorphismStyle: DesignStyle = {
+  name: 'claymorphism',
+  displayName: 'Claymorphism',
+  metadata: {
+    description: 'A playful design style featuring soft, clay-like 3D elements with a puffy, inflated appearance',
+    characteristics: [
+      'Soft, puffy 3D elements',
+      'Double shadows (inner and outer)',
+      'Rounded, smooth corners',
+      'Clay-like texture',
+      'Pastel color palette',
+      'Inflated, tactile appearance'
+    ],
+    colorPalette: [
+      'Soft pastels (peach, mint, lavender)',
+      'Light backgrounds',
+      'Muted, warm tones',
+      'Subtle color variations'
+    ],
+    typography: [
+      'Rounded, soft fonts',
+      'Medium font weights',
+      'Sans-serif typefaces',
+      'Friendly, approachable styling'
+    ]
+  },
+  background: {
+    body: 'bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50',
+    container: 'bg-gradient-to-br from-orange-100 to-pink-100 rounded-3xl shadow-[inset_-8px_-8px_16px_rgba(255,255,255,0.8),inset_8px_8px_16px_rgba(0,0,0,0.1),8px_8px_16px_rgba(0,0,0,0.1)]',
+  },
+  card: {
+    container: 'bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl shadow-[inset_-5px_-5px_10px_rgba(255,255,255,0.7),inset_5px_5px_10px_rgba(0,0,0,0.1),8px_8px_20px_rgba(0,0,0,0.15)]',
+    title: 'font-bold text-2xl text-purple-900',
+    content: 'font-normal text-base text-purple-800 leading-relaxed',
+  },
+  navbar: {
+    container: 'bg-gradient-to-r from-pink-100 to-purple-100 border-b-0 shadow-[0_4px_12px_rgba(0,0,0,0.08)]',
+    select: 'bg-gradient-to-br from-white to-pink-50 text-purple-900 rounded-2xl font-medium shadow-[inset_-3px_-3px_6px_rgba(255,255,255,0.8),inset_3px_3px_6px_rgba(0,0,0,0.1)] focus:ring-0 focus:outline-none',
+    text: 'text-purple-900',
+    label: 'text-purple-800 font-medium',
+  },
+  button: {
+    base: 'rounded-2xl font-semibold transition-all shadow-[inset_-3px_-3px_6px_rgba(255,255,255,0.8),inset_3px_3px_6px_rgba(0,0,0,0.1),4px_4px_8px_rgba(0,0,0,0.1)] hover:shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.8),inset_2px_2px_4px_rgba(0,0,0,0.1),6px_6px_12px_rgba(0,0,0,0.12)] active:shadow-[inset_3px_3px_6px_rgba(0,0,0,0.15),inset_-3px_-3px_6px_rgba(255,255,255,0.7)]',
+    // For style selector dialog
+    selected: 'bg-gradient-to-br from-purple-300 to-pink-300 text-purple-900',
+    unselected: 'bg-gradient-to-br from-purple-100 to-pink-100 text-purple-800 hover:from-purple-200 hover:to-pink-200',
+    // For general button usage
+    primary: 'bg-gradient-to-br from-purple-300 to-pink-300 text-purple-900',
+    secondary: 'bg-gradient-to-br from-orange-200 to-yellow-200 text-orange-900',
+    outline: 'bg-gradient-to-br from-white to-purple-50 text-purple-800',
+  },
+  input: {
+    base: 'bg-gradient-to-br from-white to-purple-50 rounded-2xl text-purple-900 placeholder:text-purple-400 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.1),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] focus:outline-none focus:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.12),inset_-4px_-4px_8px_rgba(255,255,255,0.9)]',
+    label: 'font-semibold text-purple-800',
+  },
+  textarea: {
+    base: 'bg-gradient-to-br from-white to-purple-50 rounded-2xl text-purple-900 placeholder:text-purple-400 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.1),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] focus:outline-none focus:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.12),inset_-4px_-4px_8px_rgba(255,255,255,0.9)]',
+  },
+  checkbox: {
+    base: 'rounded-md w-5 h-5 accent-purple-400 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] focus:ring-0',
+    label: 'font-medium text-purple-800',
+  },
+  switch: {
+    base: 'rounded-full shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)]',
+  },
+  tabs: {
+    list: 'bg-gradient-to-r from-purple-100 to-pink-100 rounded-3xl p-2 gap-2 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08)]',
+    trigger: 'font-semibold text-purple-700 px-4 py-2 rounded-2xl transition-all',
+    triggerActive: 'bg-gradient-to-br from-purple-300 to-pink-300 text-purple-900 shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.7),4px_4px_8px_rgba(0,0,0,0.1)]',
+    triggerInactive: 'hover:bg-gradient-to-br hover:from-purple-200 hover:to-pink-200',
+    content: 'bg-gradient-to-br from-white to-purple-50 rounded-3xl p-6 mt-2 shadow-[inset_-4px_-4px_8px_rgba(255,255,255,0.8),inset_4px_4px_8px_rgba(0,0,0,0.08),8px_8px_16px_rgba(0,0,0,0.08)]',
+  },
+  accordion: {
+    item: 'bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl mb-3 overflow-hidden shadow-[4px_4px_12px_rgba(0,0,0,0.1)]',
+    trigger: 'font-semibold text-purple-900 hover:bg-purple-200/50 p-4 transition-colors',
+    content: 'font-normal text-purple-800 p-4 bg-gradient-to-br from-white to-purple-50',
+  },
+  alert: {
+    base: 'bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl shadow-[inset_-4px_-4px_8px_rgba(255,255,255,0.8),inset_4px_4px_8px_rgba(0,0,0,0.08),8px_8px_16px_rgba(0,0,0,0.1)] p-4',
+    title: 'font-bold text-purple-900',
+    description: 'font-normal text-purple-800',
+  },
+  badge: {
+    base: 'rounded-full font-semibold text-xs px-3 py-1 shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.8),inset_2px_2px_4px_rgba(0,0,0,0.1)]',
+    success: 'bg-gradient-to-br from-green-200 to-emerald-200 text-green-900',
+    warning: 'bg-gradient-to-br from-yellow-200 to-orange-200 text-orange-900',
+    error: 'bg-gradient-to-br from-red-200 to-pink-200 text-red-900',
+  },
+  progress: {
+    container: 'bg-gradient-to-r from-purple-100 to-pink-100 rounded-full h-4 overflow-hidden shadow-[inset_3px_3px_6px_rgba(0,0,0,0.1)]',
+    bar: 'bg-gradient-to-r from-purple-400 to-pink-400 h-full shadow-[2px_0_4px_rgba(0,0,0,0.1)]',
+  },
+  slider: {
+    base: 'accent-purple-400 h-2 rounded-full',
+  },
+  dialog: {
+    overlay: 'bg-purple-900/30 backdrop-blur-sm',
+    content: 'bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl shadow-[inset_-8px_-8px_16px_rgba(255,255,255,0.8),inset_8px_8px_16px_rgba(0,0,0,0.1),12px_12px_24px_rgba(0,0,0,0.15)]',
+    title: 'font-bold text-xl text-purple-900',
+    description: 'font-normal text-purple-800',
+  },
+}
+
+/**
  * Design Style Registry
  * To add a new style: simply add it to this object
  * This follows the Open-Closed Principle
@@ -438,6 +545,7 @@ export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   'art-deco': artDecoStyle,
   'pure-minimalism': pureMinimalismStyle,
   glassmorphism: glassmorphismStyle,
+  claymorphism: claymorphismStyle,
 }
 
 /**

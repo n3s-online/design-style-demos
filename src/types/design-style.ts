@@ -3,7 +3,7 @@
  * Following Open-Closed Principle: open for extension, closed for modification
  */
 
-export type DesignStyleName = 'neobrutalism' | 'art-deco' | 'pure-minimalism' | 'glassmorphism'
+export type DesignStyleName = 'neobrutalism' | 'art-deco' | 'pure-minimalism' | 'glassmorphism' | 'claymorphism'
 
 /**
  * Interface defining the structure of a design style
