@@ -20,5 +20,7 @@ export interface DesignStyle {
   navbar: {
     container: string
     select: string
+    text: string
+    label: string
   }
 }

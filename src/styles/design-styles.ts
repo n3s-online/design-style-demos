@@ -15,6 +15,8 @@ const neobrutalismStyle: DesignStyle = {
   navbar: {
     container: 'border-b-4 border-black bg-pink-400 shadow-[0_4px_0px_0px_rgba(0,0,0,1)]',
     select: 'border-4 border-black bg-white font-bold text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:ring-4 focus:ring-black',
+    text: 'text-black',
+    label: 'text-black',
   },
 }
 
@@ -33,6 +35,8 @@ const artDecoStyle: DesignStyle = {
   navbar: {
     container: 'border-b border-amber-600 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 shadow-lg',
     select: 'border border-amber-600 bg-slate-900 text-amber-400 font-serif shadow-md focus:ring-2 focus:ring-amber-500',
+    text: 'text-amber-400 font-serif',
+    label: 'text-amber-300 font-serif',
   },
 }
 
