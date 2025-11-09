@@ -1,6 +1,7 @@
 import { useDesignStyle } from '@/contexts/DesignStyleContext'
 import { BaseLayout } from './layouts/BaseLayout'
 import { NeobrutalismLayout } from './layouts/NeobrutalismLayout'
+import { ArtDecoLayout } from './layouts/ArtDecoLayout'
 
 /**
  * LayoutSelector Component
@@ -19,6 +20,8 @@ export function LayoutSelector() {
   switch (currentStyle.name) {
     case 'neobrutalism':
       return <NeobrutalismLayout />
+    case 'art-deco':
+      return <ArtDecoLayout />
 
     // Default fallback layout
     default:
