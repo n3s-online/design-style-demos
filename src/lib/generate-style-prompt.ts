@@ -25,7 +25,7 @@ ${metadata.typography.map((typo) => `- ${typo}`).join('\n')}
 - Update all UI components to match the ${displayName} aesthetic
 - Apply consistent styling across navigation, buttons, cards, and form elements
 - Maintain accessibility standards while implementing the visual style
-- Use Tailwind CSS classes where possible for consistency
+- Implement using best practices for the project's tech stack to ensure consistent styling
 - Ensure responsive design principles are maintained
 
 Please review my existing code and apply this design style comprehensively throughout the application.`
