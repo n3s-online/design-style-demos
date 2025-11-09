@@ -644,6 +644,114 @@ const popArtStyle: DesignStyle = {
 }
 
 /**
+ * Y2K Aesthetic Design Style
+ * Characterized by chrome effects, cyber aesthetics, and early 2000s internet culture
+ */
+const y2kStyle: DesignStyle = {
+  name: 'y2k',
+  displayName: 'Y2K Aesthetic',
+  metadata: {
+    description: 'A nostalgic design style inspired by early 2000s internet culture, featuring chrome effects, neon colors, and futuristic vibes',
+    characteristics: [
+      'Metallic chrome effects',
+      'Cyber/digital aesthetic',
+      'Glossy, reflective surfaces',
+      'Futuristic gradients',
+      'Neon accent colors',
+      'Early 2000s nostalgia'
+    ],
+    colorPalette: [
+      'Silver/chrome (#e5e7eb)',
+      'Electric blue (#60a5fa)',
+      'Hot pink/magenta (#ec4899)',
+      'Cyber purple (#a855f7)',
+      'Black backgrounds'
+    ],
+    typography: [
+      'Futuristic fonts',
+      'Bold, tech-inspired styling',
+      'Mixed case with digital flair',
+      'Glowing text effects'
+    ]
+  },
+  background: {
+    body: 'bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950',
+    container: 'bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-blue-400 shadow-[0_0_20px_rgba(96,165,250,0.3)]',
+  },
+  card: {
+    container: 'bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-pink-500 shadow-[0_0_20px_rgba(236,72,153,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] rounded-lg',
+    title: 'font-bold text-2xl bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent',
+    content: 'font-normal text-base text-slate-300 leading-relaxed',
+  },
+  navbar: {
+    container: 'bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b-2 border-blue-500 shadow-[0_4px_20px_rgba(96,165,250,0.2)]',
+    select: 'bg-slate-800 border-2 border-blue-500 text-blue-300 font-bold rounded shadow-[0_0_10px_rgba(96,165,250,0.3)] focus:ring-2 focus:ring-pink-500 focus:outline-none',
+    text: 'text-transparent bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text font-bold',
+    label: 'text-blue-300 font-bold',
+  },
+  button: {
+    base: 'border-2 rounded font-bold transition-all shadow-[0_0_10px_rgba(96,165,250,0.3)] hover:shadow-[0_0_20px_rgba(96,165,250,0.5)] active:scale-95',
+    // For style selector dialog
+    selected: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white border-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.5)]',
+    unselected: 'bg-slate-800 text-blue-300 border-blue-500 hover:bg-slate-700',
+    // For general button usage
+    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white border-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.4)]',
+    secondary: 'bg-gradient-to-r from-pink-600 to-purple-600 text-white border-pink-400 shadow-[0_0_15px_rgba(236,72,153,0.4)]',
+    outline: 'bg-transparent text-blue-300 border-blue-500 hover:bg-blue-500/10',
+  },
+  input: {
+    base: 'bg-slate-900 border-2 border-blue-500 rounded text-blue-100 font-medium placeholder:text-slate-500 focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]',
+    label: 'font-bold text-blue-300',
+  },
+  textarea: {
+    base: 'bg-slate-900 border-2 border-blue-500 rounded text-blue-100 font-medium placeholder:text-slate-500 focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]',
+  },
+  checkbox: {
+    base: 'border-2 border-blue-500 rounded w-5 h-5 accent-blue-500 focus:ring-2 focus:ring-pink-500 bg-slate-900',
+    label: 'font-medium text-slate-300',
+  },
+  switch: {
+    base: 'border-2 border-blue-500 shadow-[0_0_8px_rgba(96,165,250,0.3)]',
+  },
+  tabs: {
+    list: 'bg-slate-900 border-2 border-blue-500/50 rounded-lg p-1 gap-1 shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]',
+    trigger: 'font-bold text-blue-300 px-4 py-2 rounded transition-all',
+    triggerActive: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-[0_0_10px_rgba(96,165,250,0.4)]',
+    triggerInactive: 'hover:bg-slate-800 hover:text-blue-200',
+    content: 'bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-pink-500/50 rounded-lg p-6 mt-2 shadow-[0_0_15px_rgba(236,72,153,0.2)]',
+  },
+  accordion: {
+    item: 'bg-slate-900 border-2 border-blue-500/50 rounded-lg mb-2 overflow-hidden shadow-[0_0_10px_rgba(96,165,250,0.2)]',
+    trigger: 'font-bold text-blue-300 hover:bg-slate-800 p-4 transition-colors',
+    content: 'font-normal text-slate-300 p-4 bg-slate-950 border-t-2 border-blue-500/30',
+  },
+  alert: {
+    base: 'bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-pink-500 rounded-lg shadow-[0_0_20px_rgba(236,72,153,0.3)] p-4',
+    title: 'font-bold text-transparent bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text',
+    description: 'font-normal text-slate-300',
+  },
+  badge: {
+    base: 'border-2 rounded-full font-bold text-xs px-3 py-1 shadow-[0_0_8px_rgba(96,165,250,0.3)]',
+    success: 'bg-gradient-to-r from-green-600 to-emerald-600 text-white border-green-400',
+    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600 text-white border-yellow-400',
+    error: 'bg-gradient-to-r from-red-600 to-pink-600 text-white border-red-400',
+  },
+  progress: {
+    container: 'bg-slate-900 border-2 border-blue-500 rounded-full h-4 overflow-hidden shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]',
+    bar: 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-full shadow-[0_0_10px_rgba(96,165,250,0.5)]',
+  },
+  slider: {
+    base: 'accent-blue-500 h-2',
+  },
+  dialog: {
+    overlay: 'bg-black/80 backdrop-blur-sm',
+    content: 'bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-blue-500 rounded-lg shadow-[0_0_30px_rgba(96,165,250,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]',
+    title: 'font-bold text-xl text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text',
+    description: 'font-normal text-slate-300',
+  },
+}
+
+/**
  * Design Style Registry
  * To add a new style: simply add it to this object
  * This follows the Open-Closed Principle
@@ -655,6 +763,7 @@ export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   glassmorphism: glassmorphismStyle,
   claymorphism: claymorphismStyle,
   'pop-art': popArtStyle,
+  y2k: y2kStyle,
 }
 
 /**
