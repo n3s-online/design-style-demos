@@ -536,6 +536,114 @@ const claymorphismStyle: DesignStyle = {
 }
 
 /**
+ * Pop Art Design Style
+ * Characterized by bold colors, comic book aesthetics, and 1960s retro style
+ */
+const popArtStyle: DesignStyle = {
+  name: 'pop-art',
+  displayName: 'Pop Art',
+  metadata: {
+    description: 'A vibrant design style inspired by 1960s pop art, featuring bold colors, comic aesthetics, and high contrast',
+    characteristics: [
+      'Bold, vibrant primary colors',
+      'High contrast combinations',
+      'Thick black outlines',
+      'Comic book aesthetics',
+      'Retro 1960s style',
+      'Playful, energetic vibe'
+    ],
+    colorPalette: [
+      'Bright red (#ef4444)',
+      'Electric blue (#3b82f6)',
+      'Vivid yellow (#facc15)',
+      'Hot pink (#ec4899)',
+      'Black outlines'
+    ],
+    typography: [
+      'Bold, heavy fonts',
+      'Uppercase for emphasis',
+      'Comic-style lettering',
+      'Black font weights'
+    ]
+  },
+  background: {
+    body: 'bg-gradient-to-br from-yellow-300 via-pink-400 to-blue-400',
+    container: 'bg-yellow-300 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]',
+  },
+  card: {
+    container: 'bg-red-500 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rounded-none',
+    title: 'font-black text-2xl uppercase text-white [text-shadow:3px_3px_0px_rgba(0,0,0,1)]',
+    content: 'font-bold text-base text-white leading-relaxed',
+  },
+  navbar: {
+    container: 'bg-gradient-to-r from-red-500 via-yellow-400 to-blue-500 border-b-4 border-black',
+    select: 'bg-white border-4 border-black text-black font-black rounded-none shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] focus:ring-0 focus:outline-none',
+    text: 'text-white font-black [text-shadow:2px_2px_0px_rgba(0,0,0,1)]',
+    label: 'text-white font-black [text-shadow:2px_2px_0px_rgba(0,0,0,1)]',
+  },
+  button: {
+    base: 'border-4 border-black rounded-none font-black uppercase transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0 active:translate-y-0 active:shadow-none',
+    // For style selector dialog
+    selected: 'bg-yellow-400 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    unselected: 'bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-yellow-100',
+    // For general button usage
+    primary: 'bg-red-500 text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]',
+    secondary: 'bg-blue-500 text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]',
+    outline: 'bg-yellow-300 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+  },
+  input: {
+    base: 'bg-white border-4 border-black rounded-none text-black font-bold placeholder:text-gray-600 focus:ring-0 focus:outline-none focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    label: 'font-black uppercase text-black',
+  },
+  textarea: {
+    base: 'bg-white border-4 border-black rounded-none text-black font-bold placeholder:text-gray-600 focus:ring-0 focus:outline-none focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+  },
+  checkbox: {
+    base: 'border-4 border-black rounded-none w-6 h-6 accent-red-500 focus:ring-0',
+    label: 'font-bold text-black',
+  },
+  switch: {
+    base: 'border-4 border-black rounded-none',
+  },
+  tabs: {
+    list: 'bg-pink-400 border-4 border-black p-1 gap-1 rounded-none',
+    trigger: 'font-black uppercase text-black px-4 py-2 border-4 border-black transition-all',
+    triggerActive: 'bg-yellow-400 shadow-[inset_2px_2px_0px_0px_rgba(0,0,0,0.3)]',
+    triggerInactive: 'bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]',
+    content: 'bg-white border-4 border-black p-6 mt-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rounded-none',
+  },
+  accordion: {
+    item: 'bg-blue-500 border-4 border-black mb-2 rounded-none',
+    trigger: 'font-black uppercase text-white hover:bg-blue-600 p-4 [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]',
+    content: 'font-bold text-black p-4 bg-yellow-300 border-t-4 border-black',
+  },
+  alert: {
+    base: 'border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-4 rounded-none',
+    title: 'font-black uppercase text-black',
+    description: 'font-bold text-black',
+  },
+  badge: {
+    base: 'border-3 border-black rounded-none font-black uppercase text-xs px-2 py-1',
+    success: 'bg-green-400 text-black',
+    warning: 'bg-yellow-400 text-black',
+    error: 'bg-red-500 text-white',
+  },
+  progress: {
+    container: 'bg-white border-4 border-black h-8 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    bar: 'bg-gradient-to-r from-red-500 via-yellow-400 to-blue-500 h-full border-r-4 border-black',
+  },
+  slider: {
+    base: 'accent-red-500 h-4 border-2 border-black',
+  },
+  dialog: {
+    overlay: 'bg-black/60',
+    content: 'bg-yellow-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rounded-none',
+    title: 'font-black text-2xl uppercase text-black',
+    description: 'font-bold text-black',
+  },
+}
+
+/**
  * Design Style Registry
  * To add a new style: simply add it to this object
  * This follows the Open-Closed Principle
@@ -546,6 +654,7 @@ export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   'pure-minimalism': pureMinimalismStyle,
   glassmorphism: glassmorphismStyle,
   claymorphism: claymorphismStyle,
+  'pop-art': popArtStyle,
 }
 
 /**
