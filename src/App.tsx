@@ -1,16 +1,18 @@
 import { Navbar } from '@/components/Navbar'
-import { StyledCard } from '@/components/StyledCard'
+import { ComponentShowcase } from '@/components/ComponentShowcase'
+import { useDesignStyle } from '@/contexts/DesignStyleContext'
+import { cn } from '@/lib/utils'
 
 function App() {
+  const { currentStyle } = useDesignStyle()
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={cn("min-h-screen", currentStyle.background.body)}>
       <Navbar />
-      <main className="flex items-center justify-center p-8">
-        <StyledCard
-          title="Hello World"
-          content="This card adapts to the selected design style. Try switching between Neobrutalism and Art Deco in the navbar above!"
-          className="w-full max-w-md"
-        />
+      <main className="p-8">
+        <div className={cn("max-w-7xl mx-auto p-8 rounded-lg", currentStyle.background.container)}>
+          <ComponentShowcase />
+        </div>
       </main>
     </div>
   )
