@@ -36,22 +36,20 @@ export function PromptDialog({ triggerClassName }: PromptDialogProps) {
       <DialogTrigger className={triggerClassName}>
         Get Prompt
       </DialogTrigger>
-      <DialogContent className="sm:max-w-2xl max-h-[80vh] flex flex-col">
+      <DialogContent className="sm:max-w-2xl">
         <DialogHeader>
           <DialogTitle>Transform Your Website</DialogTitle>
         </DialogHeader>
-        <div className="flex flex-col gap-4 py-4 flex-1 overflow-hidden">
+        <div className="flex flex-col gap-4 py-4">
           <p className="text-sm text-gray-600">
             Copy this prompt and paste it into your coding agent to transform your website
             into the <span className="font-semibold">{currentStyle.displayName}</span> style.
           </p>
 
-          <div className="relative flex-1 overflow-hidden flex flex-col">
-            <div className="absolute inset-0 overflow-auto">
-              <pre className="text-sm bg-gray-50 p-4 rounded-md border border-gray-200 whitespace-pre-wrap break-words">
-                {prompt}
-              </pre>
-            </div>
+          <div className="max-h-[400px] overflow-y-auto overflow-x-hidden border border-gray-200 rounded-md bg-gray-50">
+            <pre className="text-sm p-4 whitespace-pre-wrap break-words">
+              {prompt}
+            </pre>
           </div>
 
           <button
