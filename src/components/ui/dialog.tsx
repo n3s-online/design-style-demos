@@ -1,4 +1,5 @@
 import * as React from "react"
+import * as ReactDOM from "react-dom"
 import { cn } from "@/lib/utils"
 
 interface DialogProps {
@@ -7,9 +8,16 @@ interface DialogProps {
   children: React.ReactNode
 }
 
-const Dialog: React.FC<DialogProps> = ({ open, onOpenChange, children }) => {
+const Dialog: React.FC<DialogProps> = ({ open: controlledOpen, onOpenChange, children }) => {
+  // Support uncontrolled mode with internal state
+  const [uncontrolledOpen, setUncontrolledOpen] = React.useState(false)
+
+  // Use controlled state if provided, otherwise use internal state
+  const open = controlledOpen !== undefined ? controlledOpen : uncontrolledOpen
+  const handleOpenChange = onOpenChange || setUncontrolledOpen
+
   return (
-    <DialogContext.Provider value={{ open: open || false, onOpenChange }}>
+    <DialogContext.Provider value={{ open, onOpenChange: handleOpenChange }}>
       {children}
     </DialogContext.Provider>
   )
@@ -44,7 +52,16 @@ const DialogTrigger = React.forwardRef<
 DialogTrigger.displayName = "DialogTrigger"
 
 const DialogPortal: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <>{children}</>
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+    return () => setMounted(false)
+  }, [])
+
+  if (!mounted) return null
+
+  return ReactDOM.createPortal(children, document.body)
 }
 
 const DialogOverlay = React.forwardRef<
