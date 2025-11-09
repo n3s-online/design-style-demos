@@ -12,6 +12,12 @@ export type DesignStyleName = 'neobrutalism' | 'art-deco'
 export interface DesignStyle {
   name: DesignStyleName
   displayName: string
+  metadata: {
+    description: string
+    characteristics: string[]
+    colorPalette: string[]
+    typography: string[]
+  }
   background: {
     body: string
     container: string

@@ -7,6 +7,29 @@ import type { DesignStyle, DesignStyleName } from '@/types/design-style'
 const neobrutalismStyle: DesignStyle = {
   name: 'neobrutalism',
   displayName: 'Neobrutalism',
+  metadata: {
+    description: 'A bold, unapologetic design style featuring thick borders, hard shadows, and high-contrast colors',
+    characteristics: [
+      'Thick black borders (4px)',
+      'Hard drop shadows with no blur',
+      'No rounded corners',
+      'Bold, uppercase typography',
+      'High contrast color combinations',
+      'Playful, energetic aesthetic'
+    ],
+    colorPalette: [
+      'Bright yellows (#fde047)',
+      'Pink accents (#f472b6)',
+      'Pure black borders',
+      'White backgrounds'
+    ],
+    typography: [
+      'Black font weights (900)',
+      'Uppercase text for emphasis',
+      'Tight letter spacing',
+      'Sans-serif fonts'
+    ]
+  },
   background: {
     body: 'bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100',
     container: 'bg-white border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]',
@@ -91,6 +114,29 @@ const neobrutalismStyle: DesignStyle = {
 const artDecoStyle: DesignStyle = {
   name: 'art-deco',
   displayName: 'Art Deco',
+  metadata: {
+    description: 'An elegant design style inspired by 1920s luxury, featuring geometric patterns, gold accents, and sophisticated typography',
+    characteristics: [
+      'Geometric patterns and layered borders',
+      'Luxurious gradient backgrounds',
+      'Gold/amber accent colors',
+      'Wide letter spacing',
+      'Elegant serif typography',
+      'Sophisticated, timeless aesthetic'
+    ],
+    colorPalette: [
+      'Dark slate backgrounds (#0f172a, #1e293b)',
+      'Gold/amber accents (#fbbf24, #d97706)',
+      'Amber borders and highlights',
+      'Subtle gradient overlays'
+    ],
+    typography: [
+      'Serif fonts for elegance',
+      'Wide letter spacing (tracking-widest)',
+      'Uppercase for dramatic effect',
+      'Regular to bold weights'
+    ]
+  },
   background: {
     body: 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950',
     container: 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-2 border-amber-600 shadow-2xl shadow-amber-900/20',
