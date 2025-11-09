@@ -422,7 +422,7 @@ const glassmorphismStyle: DesignStyle = {
   },
   dialog: {
     overlay: 'bg-black/60 backdrop-blur-md',
-    content: 'bg-white/90 backdrop-blur-xl border border-purple-300 shadow-2xl rounded-2xl',
+    content: 'bg-white border border-purple-400/60 shadow-2xl rounded-2xl',
     title: 'font-semibold text-xl text-purple-900',
     description: 'font-normal text-purple-700',
   },

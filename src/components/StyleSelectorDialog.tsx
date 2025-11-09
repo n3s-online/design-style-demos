@@ -17,7 +17,7 @@ interface StyleSelectorDialogProps {
 
 export function StyleSelectorDialog({ triggerClassName }: StyleSelectorDialogProps) {
   const [open, setOpen] = useState(false)
-  const { styleName, setStyleName } = useDesignStyle()
+  const { styleName, setStyleName, currentStyle } = useDesignStyle()
   const availableStyles = getAvailableStyles()
 
   const handleStyleSelect = (name: DesignStyleName) => {
@@ -30,9 +30,12 @@ export function StyleSelectorDialog({ triggerClassName }: StyleSelectorDialogPro
       <DialogTrigger className={triggerClassName}>
         Change Style
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent
+        className={cn("sm:max-w-md", currentStyle.dialog.content)}
+        overlayClassName={currentStyle.dialog.overlay}
+      >
         <DialogHeader>
-          <DialogTitle>Select a Design Style</DialogTitle>
+          <DialogTitle className={currentStyle.dialog.title}>Select a Design Style</DialogTitle>
         </DialogHeader>
         <div className="flex flex-col gap-4 py-4">
           {availableStyles.map((style) => {
