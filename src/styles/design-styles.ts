@@ -322,6 +322,113 @@ const pureMinimalismStyle: DesignStyle = {
 }
 
 /**
+ * Glassmorphism Design Style
+ * Characterized by frosted glass effects, transparency, and blur
+ */
+const glassmorphismStyle: DesignStyle = {
+  name: 'glassmorphism',
+  displayName: 'Glassmorphism',
+  metadata: {
+    description: 'A modern design style featuring frosted glass effects, transparency, and beautiful blur',
+    characteristics: [
+      'Frosted glass effect (backdrop-blur)',
+      'Semi-transparent backgrounds',
+      'Light, subtle borders',
+      'Colorful gradient backgrounds',
+      'Soft shadows',
+      'Floating, layered elements'
+    ],
+    colorPalette: [
+      'Vibrant gradients (pink, purple, blue)',
+      'Semi-transparent whites (rgba)',
+      'Colorful accents',
+      'Light borders with transparency'
+    ],
+    typography: [
+      'Medium font weights (400-500)',
+      'Sans-serif fonts',
+      'White or dark text for contrast',
+      'Clean, modern styling'
+    ]
+  },
+  background: {
+    body: 'bg-gradient-to-br from-pink-300 via-purple-300 to-blue-400',
+    container: 'bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl',
+  },
+  card: {
+    container: 'bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl rounded-2xl',
+    title: 'font-semibold text-2xl text-white',
+    content: 'font-normal text-base text-white/90 leading-relaxed',
+  },
+  navbar: {
+    container: 'bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg',
+    select: 'bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-lg font-medium focus:ring-2 focus:ring-white/50 focus:outline-none',
+    text: 'text-white',
+    label: 'text-white/90 font-medium',
+  },
+  button: {
+    base: 'backdrop-blur-md border border-white/30 rounded-xl font-medium transition-all hover:bg-white/20 hover:shadow-lg',
+    // For style selector dialog
+    selected: 'bg-white/30 text-white border-white/50 shadow-lg',
+    unselected: 'bg-white/10 text-white hover:bg-white/20',
+    // For general button usage
+    primary: 'bg-white/20 text-white border-white/40 hover:bg-white/30 shadow-md',
+    secondary: 'bg-purple-500/30 text-white border-purple-300/50 hover:bg-purple-500/40 shadow-md',
+    outline: 'bg-transparent text-white border-white/50 hover:bg-white/10',
+  },
+  input: {
+    base: 'bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
+    label: 'font-medium text-white/90',
+  },
+  textarea: {
+    base: 'bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
+  },
+  checkbox: {
+    base: 'border-2 border-white/50 rounded w-4 h-4 accent-white focus:ring-2 focus:ring-white/50 bg-white/10',
+    label: 'font-medium text-white/90',
+  },
+  switch: {
+    base: 'border border-white/30 bg-white/10',
+  },
+  tabs: {
+    list: 'bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-1 gap-1',
+    trigger: 'font-medium text-white/70 px-4 py-2 rounded-lg transition-all',
+    triggerActive: 'bg-white/30 text-white shadow-md',
+    triggerInactive: 'hover:bg-white/10 hover:text-white',
+    content: 'bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 mt-2 shadow-lg',
+  },
+  accordion: {
+    item: 'bg-white/10 backdrop-blur-md border border-white/20 rounded-xl mb-2 overflow-hidden',
+    trigger: 'font-medium text-white hover:bg-white/10 p-4 transition-colors',
+    content: 'font-normal text-white/90 p-4 bg-white/5 border-t border-white/20',
+  },
+  alert: {
+    base: 'bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg p-4',
+    title: 'font-semibold text-white',
+    description: 'font-normal text-white/90',
+  },
+  badge: {
+    base: 'bg-white/20 backdrop-blur-sm border border-white/30 rounded-full font-medium text-xs px-3 py-1',
+    success: 'bg-green-500/30 text-white border-green-300/50',
+    warning: 'bg-yellow-500/30 text-white border-yellow-300/50',
+    error: 'bg-red-500/30 text-white border-red-300/50',
+  },
+  progress: {
+    container: 'bg-white/10 backdrop-blur-sm border border-white/20 rounded-full h-3 overflow-hidden',
+    bar: 'bg-gradient-to-r from-pink-400 to-purple-500 h-full shadow-md',
+  },
+  slider: {
+    base: 'accent-white h-2',
+  },
+  dialog: {
+    overlay: 'bg-black/40 backdrop-blur-sm',
+    content: 'bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl rounded-2xl',
+    title: 'font-semibold text-xl text-white',
+    description: 'font-normal text-white/90',
+  },
+}
+
+/**
  * Design Style Registry
  * To add a new style: simply add it to this object
  * This follows the Open-Closed Principle
@@ -330,6 +437,7 @@ export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   neobrutalism: neobrutalismStyle,
   'art-deco': artDecoStyle,
   'pure-minimalism': pureMinimalismStyle,
+  glassmorphism: glassmorphismStyle,
 }
 
 /**
