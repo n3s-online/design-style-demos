@@ -7,9 +7,16 @@ interface DialogProps {
   children: React.ReactNode
 }
 
-const Dialog: React.FC<DialogProps> = ({ open, onOpenChange, children }) => {
+const Dialog: React.FC<DialogProps> = ({ open: controlledOpen, onOpenChange, children }) => {
+  // Support uncontrolled mode with internal state
+  const [uncontrolledOpen, setUncontrolledOpen] = React.useState(false)
+
+  // Use controlled state if provided, otherwise use internal state
+  const open = controlledOpen !== undefined ? controlledOpen : uncontrolledOpen
+  const handleOpenChange = onOpenChange || setUncontrolledOpen
+
   return (
-    <DialogContext.Provider value={{ open: open || false, onOpenChange }}>
+    <DialogContext.Provider value={{ open, onOpenChange: handleOpenChange }}>
       {children}
     </DialogContext.Provider>
   )
