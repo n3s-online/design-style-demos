@@ -752,6 +752,114 @@ const y2kStyle: DesignStyle = {
 }
 
 /**
+ * Vaporwave Design Style
+ * Characterized by retro 80s/90s aesthetics, neon colors, and synthwave vibes
+ */
+const vaporwaveStyle: DesignStyle = {
+  name: 'vaporwave',
+  displayName: 'Vaporwave',
+  metadata: {
+    description: 'A nostalgic design style inspired by 80s/90s aesthetics, featuring neon colors, retro futurism, and synthwave vibes',
+    characteristics: [
+      'Retro 80s/90s aesthetic',
+      'Neon pink, purple, and cyan',
+      'Grid patterns and gradients',
+      'Retro futurism',
+      'Glitch effects',
+      'Dreamy, nostalgic atmosphere'
+    ],
+    colorPalette: [
+      'Hot pink (#ff00ff)',
+      'Cyan/teal (#00ffff)',
+      'Purple (#9333ea)',
+      'Deep navy backgrounds',
+      'Sunset gradients'
+    ],
+    typography: [
+      'Retro fonts',
+      'Italic styling',
+      'Futuristic lettering',
+      'Gradient text effects'
+    ]
+  },
+  background: {
+    body: 'bg-gradient-to-b from-purple-900 via-pink-800 to-cyan-900',
+    container: 'bg-gradient-to-br from-purple-900/80 to-pink-900/80 border-2 border-cyan-400 shadow-[0_0_30px_rgba(0,255,255,0.3),inset_0_0_20px_rgba(255,0,255,0.1)]',
+  },
+  card: {
+    container: 'bg-gradient-to-br from-purple-900 to-pink-900 border-2 border-pink-400 shadow-[0_0_25px_rgba(255,0,255,0.4),0_8px_32px_rgba(0,0,0,0.3)] rounded-none',
+    title: 'font-bold text-2xl italic bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(255,0,255,0.5)]',
+    content: 'font-normal text-base text-cyan-100 leading-relaxed',
+  },
+  navbar: {
+    container: 'bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 border-b-2 border-cyan-400 shadow-[0_4px_20px_rgba(0,255,255,0.3)]',
+    select: 'bg-purple-900 border-2 border-cyan-400 text-cyan-300 font-bold italic rounded-none shadow-[0_0_15px_rgba(0,255,255,0.3)] focus:ring-2 focus:ring-pink-500 focus:outline-none',
+    text: 'text-transparent bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text font-bold italic',
+    label: 'text-cyan-300 font-bold italic',
+  },
+  button: {
+    base: 'border-2 rounded-none font-bold italic transition-all shadow-[0_0_15px_rgba(255,0,255,0.4)] hover:shadow-[0_0_25px_rgba(255,0,255,0.6)] hover:translate-y-[-2px] active:translate-y-0',
+    // For style selector dialog
+    selected: 'bg-gradient-to-r from-pink-600 to-purple-600 text-white border-cyan-400 shadow-[0_0_20px_rgba(255,0,255,0.5)]',
+    unselected: 'bg-purple-900 text-pink-300 border-pink-400 hover:bg-purple-800',
+    // For general button usage
+    primary: 'bg-gradient-to-r from-pink-600 to-purple-600 text-white border-cyan-400 shadow-[0_0_20px_rgba(255,0,255,0.5)]',
+    secondary: 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white border-pink-400 shadow-[0_0_20px_rgba(0,255,255,0.5)]',
+    outline: 'bg-transparent text-cyan-300 border-cyan-400 hover:bg-cyan-400/10',
+  },
+  input: {
+    base: 'bg-purple-950 border-2 border-cyan-400 rounded-none text-cyan-100 font-medium italic placeholder:text-purple-400 focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-[inset_0_0_10px_rgba(0,0,0,0.5),0_0_10px_rgba(0,255,255,0.2)]',
+    label: 'font-bold italic text-pink-300',
+  },
+  textarea: {
+    base: 'bg-purple-950 border-2 border-cyan-400 rounded-none text-cyan-100 font-medium italic placeholder:text-purple-400 focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-[inset_0_0_10px_rgba(0,0,0,0.5),0_0_10px_rgba(0,255,255,0.2)]',
+  },
+  checkbox: {
+    base: 'border-2 border-cyan-400 rounded-none w-5 h-5 accent-pink-500 focus:ring-2 focus:ring-pink-500 bg-purple-950',
+    label: 'font-medium italic text-cyan-200',
+  },
+  switch: {
+    base: 'border-2 border-cyan-400 shadow-[0_0_10px_rgba(0,255,255,0.3)]',
+  },
+  tabs: {
+    list: 'bg-purple-950 border-2 border-pink-400 rounded-none p-1 gap-1 shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]',
+    trigger: 'font-bold italic text-pink-300 px-4 py-2 rounded-none transition-all border-2 border-transparent',
+    triggerActive: 'bg-gradient-to-r from-pink-600 to-purple-600 text-white border-cyan-400 shadow-[0_0_15px_rgba(255,0,255,0.5)]',
+    triggerInactive: 'hover:bg-purple-900 hover:text-cyan-300 hover:border-cyan-400/50',
+    content: 'bg-gradient-to-br from-purple-950 to-pink-950 border-2 border-cyan-400/50 rounded-none p-6 mt-2 shadow-[0_0_20px_rgba(0,255,255,0.2),inset_0_0_15px_rgba(0,0,0,0.3)]',
+  },
+  accordion: {
+    item: 'bg-purple-950 border-2 border-pink-400 rounded-none mb-2 overflow-hidden shadow-[0_0_15px_rgba(255,0,255,0.2)]',
+    trigger: 'font-bold italic text-pink-300 hover:bg-purple-900 hover:text-cyan-300 p-4 transition-colors',
+    content: 'font-normal italic text-cyan-200 p-4 bg-gradient-to-r from-purple-950 to-pink-950 border-t-2 border-cyan-400/30',
+  },
+  alert: {
+    base: 'bg-gradient-to-br from-purple-950 to-pink-950 border-2 border-cyan-400 rounded-none shadow-[0_0_25px_rgba(0,255,255,0.4),inset_0_0_15px_rgba(0,0,0,0.3)] p-4',
+    title: 'font-bold italic text-transparent bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text',
+    description: 'font-normal italic text-cyan-200',
+  },
+  badge: {
+    base: 'border-2 rounded-none font-bold italic text-xs px-3 py-1 shadow-[0_0_10px_rgba(255,0,255,0.3)]',
+    success: 'bg-gradient-to-r from-green-600 to-cyan-600 text-white border-cyan-400',
+    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600 text-white border-pink-400',
+    error: 'bg-gradient-to-r from-red-600 to-pink-600 text-white border-pink-400',
+  },
+  progress: {
+    container: 'bg-purple-950 border-2 border-cyan-400 rounded-none h-4 overflow-hidden shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]',
+    bar: 'bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 h-full shadow-[0_0_15px_rgba(255,0,255,0.5)]',
+  },
+  slider: {
+    base: 'accent-pink-500 h-2',
+  },
+  dialog: {
+    overlay: 'bg-black/70 backdrop-blur-sm',
+    content: 'bg-gradient-to-br from-purple-900 to-pink-900 border-2 border-cyan-400 rounded-none shadow-[0_0_40px_rgba(0,255,255,0.5),inset_0_0_30px_rgba(255,0,255,0.1)]',
+    title: 'font-bold text-xl italic text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text',
+    description: 'font-normal italic text-cyan-100',
+  },
+}
+
+/**
  * Design Style Registry
  * To add a new style: simply add it to this object
  * This follows the Open-Closed Principle
@@ -764,6 +872,7 @@ export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   claymorphism: claymorphismStyle,
   'pop-art': popArtStyle,
   y2k: y2kStyle,
+  vaporwave: vaporwaveStyle,
 }
 
 /**
