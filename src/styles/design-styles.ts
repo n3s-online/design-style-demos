@@ -421,10 +421,10 @@ const glassmorphismStyle: DesignStyle = {
     base: 'accent-white h-2',
   },
   dialog: {
-    overlay: 'bg-black/40 backdrop-blur-sm',
-    content: 'bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl rounded-2xl',
-    title: 'font-semibold text-xl text-white',
-    description: 'font-normal text-white/90',
+    overlay: 'bg-black/60 backdrop-blur-md',
+    content: 'bg-white/90 backdrop-blur-xl border border-purple-300 shadow-2xl rounded-2xl',
+    title: 'font-semibold text-xl text-purple-900',
+    description: 'font-normal text-purple-700',
   },
 }
 
