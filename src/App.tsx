@@ -1,17 +1,17 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Navbar } from '@/components/Navbar'
+import { StyledCard } from '@/components/StyledCard'
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle>Hello World</CardTitle>
-          <CardDescription>Welcome to your new Vite + React + TypeScript app with ShadCN!</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>This is a simple card component from ShadCN UI.</p>
-        </CardContent>
-      </Card>
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <main className="flex items-center justify-center p-8">
+        <StyledCard
+          title="Hello World"
+          content="This card adapts to the selected design style. Try switching between Neobrutalism and Art Deco in the navbar above!"
+          className="w-full max-w-md"
+        />
+      </main>
     </div>
   )
 }
