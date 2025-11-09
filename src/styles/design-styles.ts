@@ -7,6 +7,29 @@ import type { DesignStyle, DesignStyleName } from '@/types/design-style'
 const neobrutalismStyle: DesignStyle = {
   name: 'neobrutalism',
   displayName: 'Neobrutalism',
+  metadata: {
+    description: 'A bold, unapologetic design style featuring thick borders, hard shadows, and high-contrast colors',
+    characteristics: [
+      'Thick black borders (4px)',
+      'Hard drop shadows with no blur',
+      'No rounded corners',
+      'Bold, uppercase typography',
+      'High contrast color combinations',
+      'Playful, energetic aesthetic'
+    ],
+    colorPalette: [
+      'Bright yellows (#fde047)',
+      'Pink accents (#f472b6)',
+      'Pure black borders',
+      'White backgrounds'
+    ],
+    typography: [
+      'Black font weights (900)',
+      'Uppercase text for emphasis',
+      'Tight letter spacing',
+      'Sans-serif fonts'
+    ]
+  },
   card: {
     container: 'border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-yellow-300 rounded-none',
     title: 'font-black text-3xl uppercase tracking-tight text-black',
@@ -32,6 +55,29 @@ const neobrutalismStyle: DesignStyle = {
 const artDecoStyle: DesignStyle = {
   name: 'art-deco',
   displayName: 'Art Deco',
+  metadata: {
+    description: 'An elegant design style inspired by 1920s luxury, featuring geometric patterns, gold accents, and sophisticated typography',
+    characteristics: [
+      'Geometric patterns and layered borders',
+      'Luxurious gradient backgrounds',
+      'Gold/amber accent colors',
+      'Wide letter spacing',
+      'Elegant serif typography',
+      'Sophisticated, timeless aesthetic'
+    ],
+    colorPalette: [
+      'Dark slate backgrounds (#0f172a, #1e293b)',
+      'Gold/amber accents (#fbbf24, #d97706)',
+      'Amber borders and highlights',
+      'Subtle gradient overlays'
+    ],
+    typography: [
+      'Serif fonts for elegance',
+      'Wide letter spacing (tracking-widest)',
+      'Uppercase for dramatic effect',
+      'Regular to bold weights'
+    ]
+  },
   card: {
     container: 'border border-amber-600 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-xl rounded-sm relative before:absolute before:inset-0 before:border-2 before:border-amber-500/20 before:rounded-sm',
     title: 'font-serif text-3xl tracking-widest text-amber-400 uppercase border-b-2 border-amber-600/50 pb-2',
