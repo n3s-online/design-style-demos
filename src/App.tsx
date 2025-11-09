@@ -1,6 +1,6 @@
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
-import { ComponentShowcase } from '@/components/ComponentShowcase'
+import { LayoutSelector } from '@/components/LayoutSelector'
 import { useDesignStyle } from '@/contexts/DesignStyleContext'
 import { cn } from '@/lib/utils'
 
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <main className="flex-1 p-8">
         <div className={cn("max-w-7xl mx-auto p-8 rounded-lg", currentStyle.background.container)}>
-          <ComponentShowcase />
+          <LayoutSelector />
         </div>
       </main>
       <Footer />
