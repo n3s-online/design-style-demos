@@ -1,4 +1,5 @@
 import * as React from "react"
+import * as ReactDOM from "react-dom"
 import { cn } from "@/lib/utils"
 
 interface DialogProps {
@@ -51,7 +52,16 @@ const DialogTrigger = React.forwardRef<
 DialogTrigger.displayName = "DialogTrigger"
 
 const DialogPortal: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <>{children}</>
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+    return () => setMounted(false)
+  }, [])
+
+  if (!mounted) return null
+
+  return ReactDOM.createPortal(children, document.body)
 }
 
 const DialogOverlay = React.forwardRef<
