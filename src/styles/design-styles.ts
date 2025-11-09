@@ -18,6 +18,11 @@ const neobrutalismStyle: DesignStyle = {
     text: 'text-black',
     label: 'text-black',
   },
+  button: {
+    base: 'border-4 border-black font-black uppercase tracking-tight rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all',
+    selected: 'bg-yellow-300 text-black',
+    unselected: 'bg-white text-black hover:bg-gray-100',
+  },
 }
 
 /**
@@ -37,6 +42,11 @@ const artDecoStyle: DesignStyle = {
     select: 'border border-amber-600 bg-slate-900 text-amber-400 font-serif shadow-md focus:ring-2 focus:ring-amber-500',
     text: 'text-amber-400 font-serif',
     label: 'text-amber-300 font-serif',
+  },
+  button: {
+    base: 'border border-amber-600 font-serif tracking-widest uppercase shadow-lg hover:shadow-xl transition-all rounded-sm',
+    selected: 'bg-gradient-to-br from-amber-600 via-amber-500 to-amber-600 text-slate-900 font-bold',
+    unselected: 'bg-slate-900 text-amber-400 hover:bg-slate-800',
   },
 }
 

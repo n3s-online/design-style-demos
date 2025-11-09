@@ -23,4 +23,9 @@ export interface DesignStyle {
     text: string
     label: string
   }
+  button: {
+    base: string
+    selected: string
+    unselected: string
+  }
 }
