@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useDesignStyle } from '@/contexts/DesignStyleContext'
 import { cn } from '@/lib/utils'
-import { DemoSection } from '../DemoSection'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
