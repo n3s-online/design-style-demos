@@ -1,0 +1,40 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#F9FAFB"/>
+
+  <!-- Shadow for depth -->
+  <rect x="90" y="90" width="192" height="256" fill="#00000020"/>
+
+  <!-- Back card (Art Deco style) - elegant, gold accent -->
+  <rect x="230" y="166" width="192" height="256" fill="url(#artDecoGradient)" stroke="#78350F" stroke-width="3"/>
+  <rect x="246" y="190" width="160" height="4" fill="#FCD34D" opacity="0.6"/>
+  <rect x="246" y="202" width="120" height="2" fill="#FCD34D" opacity="0.4"/>
+  <rect x="246" y="210" width="120" height="2" fill="#FCD34D" opacity="0.4"/>
+  <line x1="246" y1="235" x2="406" y2="235" stroke="#D97706" stroke-width="2" opacity="0.5"/>
+
+  <!-- Middle card (Transition) - pink/purple bold -->
+  <rect x="160" y="128" width="192" height="256" fill="#EC4899" stroke="#000000" stroke-width="6"/>
+  <rect x="176" y="152" width="160" height="8" fill="#000000"/>
+  <rect x="176" y="172" width="120" height="4" fill="#000000" opacity="0.7"/>
+  <rect x="176" y="184" width="120" height="4" fill="#000000" opacity="0.7"/>
+
+  <!-- Front card (Neobrutalism style) - bold yellow with thick black border -->
+  <rect x="86" y="86" width="192" height="256" fill="#FDE047" stroke="#000000" stroke-width="8"/>
+  <!-- Neobrutalism shadow offset -->
+  <rect x="94" y="94" width="192" height="256" fill="none" stroke="#000000" stroke-width="2" opacity="0.3"/>
+  <!-- Title bar -->
+  <rect x="102" y="106" width="160" height="16" fill="#000000"/>
+  <!-- Content lines -->
+  <rect x="102" y="142" width="120" height="6" fill="#000000"/>
+  <rect x="102" y="158" width="140" height="6" fill="#000000"/>
+  <rect x="102" y="174" width="100" height="6" fill="#000000"/>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="artDecoGradient" x1="230" y1="166" x2="422" y2="422">
+      <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E293B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
