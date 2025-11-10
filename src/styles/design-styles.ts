@@ -680,8 +680,8 @@ const y2kStyle: DesignStyle = {
   },
   card: {
     container: 'bg-gradient-to-br from-pink-400 to-pink-300 border-2 border-white shadow-[inset_0_2px_0_rgba(255,255,255,0.6),4px_4px_0_rgba(0,0,0,0.15)] rounded-2xl',
-    title: 'font-black text-2xl text-white',
-    content: 'font-bold text-base text-white leading-relaxed',
+    title: 'font-black text-2xl text-sky-700',
+    content: 'font-bold text-base text-sky-900 leading-relaxed',
   },
   navbar: {
     container: 'bg-gradient-to-r from-lime-400 via-sky-300 to-pink-400 border-b-2 border-white shadow-[0_4px_0_rgba(255,255,255,0.4)]',
@@ -727,8 +727,8 @@ const y2kStyle: DesignStyle = {
   },
   alert: {
     base: 'bg-gradient-to-br from-pink-300 to-pink-400 border-2 border-white rounded-2xl shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_4px_12px_rgba(0,0,0,0.1)] p-4',
-    title: 'font-black text-white',
-    description: 'font-bold text-white',
+    title: 'font-black text-sky-700',
+    description: 'font-bold text-sky-800',
   },
   badge: {
     base: 'border-2 rounded-full font-black text-xs px-3 py-1 shadow-[0_2px_0_rgba(0,0,0,0.1)]',
