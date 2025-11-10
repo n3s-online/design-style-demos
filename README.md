@@ -1,73 +1,110 @@
-# React + TypeScript + Vite
+# Design Style Demos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React showcase demonstrating multiple distinct design styles through an interactive business dashboard. Each theme provides a complete visual experience with custom layouts, components, and imagery.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first styling
+- **shadcn/ui** - Component library
+- **Lucide React** - Icon library
 
-## React Compiler
+## 📦 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 16+ and npm/yarn/pnpm
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Clone the repository
+git clone https://github.com/n3s-online/design-style-demos.git
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Navigate to project directory
+cd design-style-demos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Visit `http://localhost:5173` to see the app in action.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏗️ Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── ui/              # shadcn/ui base components
+│   ├── layouts/         # Theme-specific layout components
+│   ├── Navbar.tsx       # Navigation bar
+│   └── Footer.tsx       # Footer component
+├── contexts/
+│   └── DesignStyleContext.tsx  # Theme management
+├── styles/
+│   └── design-styles.ts        # Theme definitions
+├── types/
+│   └── design-style.ts         # TypeScript types
+└── App.tsx              # Main application
+```
+
+## 🎯 Core Features
+
+Each design theme includes a complete business dashboard with:
+
+- Welcome cards and hero sections
+- Interactive forms with validation
+- Action buttons and navigation
+- Project status indicators with badges
+- Tabbed content interfaces
+- FAQ accordions
+- System notifications and alerts
+- Modal dialogs
+- Responsive service grids
+- Theme-specific imagery and iconography
+
+## 🛠️ Adding a New Theme
+
+This project follows the **Open-Closed Principle** - easily extensible without modifying existing code.
+
+1. **Define the style** in `src/styles/design-styles.ts`
+2. **Update types** in `src/types/design-style.ts`
+3. **Create layout component** in `src/components/layouts/`
+4. **Add theme imagery** to `public/[theme-name]/`
+5. **Register in selector** at `src/components/LayoutSelector.tsx`
+
+See `CLAUDE.md` for detailed instructions and best practices.
+
+## 📱 Responsive Design
+
+All themes are fully responsive and tested across:
+- Mobile (320px+)
+- Tablet (768px+)
+- Desktop (1024px+)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-theme`)
+3. Follow the theme creation guidelines in `CLAUDE.md`
+4. Commit your changes (`git commit -m 'Add new theme'`)
+5. Push to the branch (`git push origin feature/new-theme`)
+6. Open a Pull Request
+
+## 📄 License
+
+MIT License - feel free to use this project for learning and inspiration.
+
+## 🙏 Acknowledgments
+
+- Built with [Vite](https://vitejs.dev/)
+- UI components from [shadcn/ui](https://ui.shadcn.com/)
+- Icons from [Lucide](https://lucide.dev/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
