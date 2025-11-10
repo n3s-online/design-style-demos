@@ -1,17 +1,6 @@
 # Design Style Demos
 
-A React showcase demonstrating 8 distinct design styles through an interactive business dashboard. Each theme provides a complete visual experience with custom layouts, components, and imagery.
-
-## 🎨 Available Design Styles
-
-- **Neobrutalism** - Bold geometric shapes, thick borders, high contrast
-- **Art Deco** - 1920s luxury, gold accents, geometric elegance
-- **Pure Minimalism** - Clean white space, essential elements only
-- **Glassmorphism** - Frosted glass effects, translucent surfaces
-- **Claymorphism** - Soft 3D clay textures, tactile feel
-- **Pop Art** - 1960s comic book style, bold primary colors
-- **Y2K** - Early 2000s aesthetic, chrome effects, glossy surfaces
-- **Vaporwave** - 80s/90s nostalgia, pastel gradients, dreamy vibes
+A React showcase demonstrating multiple distinct design styles through an interactive business dashboard. Each theme provides a complete visual experience with custom layouts, components, and imagery.
 
 ## 🚀 Tech Stack
 
