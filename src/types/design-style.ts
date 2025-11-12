@@ -3,7 +3,7 @@
  * Following Open-Closed Principle: open for extension, closed for modification
  */
 
-export type DesignStyleName = 'neobrutalism' | 'art-deco' | 'pure-minimalism' | 'glassmorphism' | 'claymorphism' | 'pop-art' | 'y2k' | 'vaporwave' | 'bold-minimalism' | 'modern-flat' | 'bento-grid'
+export type DesignStyleName = 'neobrutalism' | 'bold-minimalism' | 'modern-flat' | 'bento-grid' | 'art-deco' | 'pure-minimalism' | 'glassmorphism' | 'claymorphism' | 'pop-art' | 'y2k' | 'vaporwave'
 
 /**
  * Interface defining the structure of a design style

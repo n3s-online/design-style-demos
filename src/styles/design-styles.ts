@@ -1184,6 +1184,9 @@ const bentoGridStyle: DesignStyle = {
  */
 export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   neobrutalism: neobrutalismStyle,
+  'bold-minimalism': boldMinimalismStyle,
+  'modern-flat': modernFlatStyle,
+  'bento-grid': bentoGridStyle,
   'art-deco': artDecoStyle,
   'pure-minimalism': pureMinimalismStyle,
   glassmorphism: glassmorphismStyle,
@@ -1191,9 +1194,6 @@ export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   'pop-art': popArtStyle,
   y2k: y2kStyle,
   vaporwave: vaporwaveStyle,
-  'bold-minimalism': boldMinimalismStyle,
-  'modern-flat': modernFlatStyle,
-  'bento-grid': bentoGridStyle,
 }
 
 /**
