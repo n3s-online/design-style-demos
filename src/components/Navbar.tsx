@@ -1,6 +1,7 @@
 import { useDesignStyle } from '@/contexts/DesignStyleContext'
 import { StyleSelectorDialog } from '@/components/StyleSelectorDialog'
 import { PromptDialog } from '@/components/PromptDialog'
+import { HowThisWorksDialog } from '@/components/HowThisWorksDialog'
 
 export function Navbar() {
   const { currentStyle } = useDesignStyle()
@@ -11,6 +12,9 @@ export function Navbar() {
         <h1 className={`text-xl font-bold ${currentStyle.navbar.text}`}>{currentStyle.displayName}</h1>
 
         <div className="flex items-center gap-3">
+          <HowThisWorksDialog
+            triggerClassName={`px-4 py-2 font-semibold ${currentStyle.navbar.select}`}
+          />
           <PromptDialog
             triggerClassName={`px-4 py-2 font-semibold ${currentStyle.navbar.select}`}
           />
