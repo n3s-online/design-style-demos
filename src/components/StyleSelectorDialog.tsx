@@ -31,13 +31,13 @@ export function StyleSelectorDialog({ triggerClassName }: StyleSelectorDialogPro
         Change Style
       </DialogTrigger>
       <DialogContent
-        className={cn("sm:max-w-md", currentStyle.dialog.content)}
+        className={cn("sm:max-w-3xl", currentStyle.dialog.content)}
         overlayClassName={currentStyle.dialog.overlay}
       >
         <DialogHeader>
           <DialogTitle className={currentStyle.dialog.title}>Select a Design Style</DialogTitle>
         </DialogHeader>
-        <div className="flex flex-col gap-4 py-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-4">
           {availableStyles.map((style) => {
             const isSelected = styleName === style.name
             const styleConfig = getDesignStyle(style.name)
