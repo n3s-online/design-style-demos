@@ -860,6 +860,324 @@ const vaporwaveStyle: DesignStyle = {
 }
 
 /**
+ * Bold Minimalism Design Style
+ * Characterized by clean layouts with bold typography and ample white space
+ */
+const boldMinimalismStyle: DesignStyle = {
+  name: 'bold-minimalism',
+  displayName: 'Bold Minimalism',
+  metadata: {
+    description: 'A clean, minimal design style with bold typography as the focal point, using ample white space for a modern, professional look',
+    characteristics: [
+      'Bold, oversized typography',
+      'Abundant white space',
+      'Clean, simple layouts',
+      'Minimal elements',
+      'High contrast between text and background',
+      'Professional, modern aesthetic'
+    ],
+    colorPalette: [
+      'Pure white backgrounds (#ffffff)',
+      'Deep black text (#000000)',
+      'Light gray accents (#f5f5f5)',
+      'Subtle shadows for depth'
+    ],
+    typography: [
+      'Extra bold headings (800-900)',
+      'Large font sizes for emphasis',
+      'Light body text (300-400)',
+      'Sans-serif fonts',
+      'Generous line height'
+    ]
+  },
+  background: {
+    body: 'bg-white',
+    container: 'bg-white',
+  },
+  card: {
+    container: 'bg-white rounded-none',
+    title: 'font-black text-4xl text-black tracking-tight',
+    content: 'font-light text-lg text-gray-700 leading-relaxed',
+  },
+  navbar: {
+    container: 'bg-white border-b border-gray-200',
+    select: 'border-none bg-gray-50 text-black rounded-none font-bold focus:ring-0 focus:outline-none',
+    text: 'text-black font-black text-xl',
+    label: 'text-gray-600 font-light text-sm',
+  },
+  button: {
+    base: 'rounded-none font-black text-sm uppercase tracking-widest transition-all px-8 py-4',
+    selected: 'bg-black text-white',
+    unselected: 'bg-white text-black border border-gray-200 hover:bg-gray-50',
+    primary: 'bg-black text-white hover:bg-gray-900',
+    secondary: 'bg-gray-200 text-black hover:bg-gray-300',
+    outline: 'bg-white text-black border-2 border-black hover:bg-black hover:text-white',
+  },
+  input: {
+    base: 'border-b-2 border-gray-300 rounded-none bg-white text-black font-light text-lg placeholder:text-gray-400 focus:border-black focus:ring-0 focus:outline-none px-0 py-3',
+    label: 'font-black text-xs uppercase tracking-widest text-black mb-4',
+  },
+  textarea: {
+    base: 'border-b-2 border-gray-300 rounded-none bg-white text-black font-light text-lg placeholder:text-gray-400 focus:border-black focus:ring-0 focus:outline-none px-0 py-3',
+  },
+  checkbox: {
+    base: 'border-2 border-black rounded-none w-6 h-6 accent-black focus:ring-0',
+    label: 'font-light text-base text-gray-700',
+  },
+  switch: {
+    base: 'border-2 border-black rounded-full',
+  },
+  tabs: {
+    list: 'border-b-2 border-gray-200 bg-white p-0 gap-8',
+    trigger: 'font-black text-lg uppercase tracking-wider px-0 py-4 transition-all border-b-4',
+    triggerActive: 'text-black border-black',
+    triggerInactive: 'text-gray-400 border-transparent hover:text-gray-600',
+    content: 'bg-white p-8 mt-8',
+  },
+  accordion: {
+    item: 'border-b border-gray-200 bg-white py-4',
+    trigger: 'font-black text-xl text-black hover:text-gray-600 transition-colors',
+    content: 'font-light text-base text-gray-700 pt-4 leading-relaxed',
+  },
+  alert: {
+    base: 'border-l-4 bg-white p-6 rounded-none',
+    title: 'font-black text-lg uppercase tracking-wider',
+    description: 'font-light text-base mt-2',
+  },
+  badge: {
+    base: 'rounded-none font-black uppercase text-xs px-3 py-1 tracking-wider',
+    success: 'bg-black text-white',
+    warning: 'bg-gray-900 text-white',
+    error: 'bg-gray-800 text-white',
+  },
+  progress: {
+    container: 'border border-gray-300 rounded-none bg-gray-100 h-2 overflow-hidden',
+    bar: 'bg-black h-full',
+  },
+  slider: {
+    base: 'accent-black h-1',
+  },
+  dialog: {
+    overlay: 'bg-black/50',
+    content: 'border-none bg-white shadow-2xl rounded-none p-12',
+    title: 'font-black text-3xl text-black uppercase tracking-wide',
+    description: 'font-light text-lg text-gray-700 mt-4',
+  },
+}
+
+/**
+ * Modern Flat Design Style
+ * Characterized by flat colors, darker backgrounds, and vibrant accent colors
+ */
+const modernFlatStyle: DesignStyle = {
+  name: 'modern-flat',
+  displayName: 'Modern Flat',
+  metadata: {
+    description: 'A modern flat design with darker backgrounds and strategic use of vibrant accent colors to focus attention on key elements',
+    characteristics: [
+      'Flat, non-gradient colors',
+      'Dark backgrounds (#1a1a1a, #2d2d2d)',
+      'Vibrant accent colors (green, red, blue)',
+      'Clean, sharp edges',
+      'Minimal shadows',
+      'Strategic color use for CTAs'
+    ],
+    colorPalette: [
+      'Dark charcoal (#1a1a1a)',
+      'Vibrant green (#10b981)',
+      'Electric blue (#3b82f6)',
+      'Bright red (#ef4444)',
+      'Pure white text (#ffffff)'
+    ],
+    typography: [
+      'Medium to bold fonts (500-700)',
+      'Sans-serif typefaces',
+      'Clear hierarchy',
+      'High contrast for readability'
+    ]
+  },
+  background: {
+    body: 'bg-zinc-900',
+    container: 'bg-zinc-800 border border-zinc-700',
+  },
+  card: {
+    container: 'bg-zinc-800 border border-zinc-700 rounded-lg',
+    title: 'font-bold text-2xl text-white',
+    content: 'font-normal text-base text-zinc-300 leading-relaxed',
+  },
+  navbar: {
+    container: 'bg-zinc-900 border-b border-zinc-800',
+    select: 'bg-zinc-800 border border-zinc-700 text-white rounded-md font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none',
+    text: 'text-white font-semibold',
+    label: 'text-zinc-400 font-medium',
+  },
+  button: {
+    base: 'rounded-md font-semibold transition-all',
+    selected: 'bg-emerald-500 text-white',
+    unselected: 'bg-zinc-800 text-white border border-zinc-700 hover:bg-zinc-700',
+    primary: 'bg-emerald-500 text-white hover:bg-emerald-600',
+    secondary: 'bg-blue-500 text-white hover:bg-blue-600',
+    outline: 'bg-transparent text-white border-2 border-zinc-600 hover:bg-zinc-800',
+  },
+  input: {
+    base: 'bg-zinc-800 border border-zinc-700 rounded-md text-white placeholder:text-zinc-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:outline-none',
+    label: 'font-semibold text-zinc-200',
+  },
+  textarea: {
+    base: 'bg-zinc-800 border border-zinc-700 rounded-md text-white placeholder:text-zinc-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:outline-none',
+  },
+  checkbox: {
+    base: 'border-2 border-zinc-600 rounded w-5 h-5 accent-emerald-500 focus:ring-2 focus:ring-emerald-500 bg-zinc-800',
+    label: 'font-medium text-zinc-300',
+  },
+  switch: {
+    base: 'border border-zinc-600 bg-zinc-800',
+  },
+  tabs: {
+    list: 'bg-zinc-800 border border-zinc-700 rounded-lg p-1 gap-1',
+    trigger: 'font-semibold text-zinc-400 px-4 py-2 rounded-md transition-all',
+    triggerActive: 'bg-emerald-500 text-white',
+    triggerInactive: 'hover:bg-zinc-700 hover:text-zinc-200',
+    content: 'bg-zinc-800 border border-zinc-700 rounded-lg p-6 mt-2',
+  },
+  accordion: {
+    item: 'bg-zinc-800 border border-zinc-700 rounded-lg mb-2 overflow-hidden',
+    trigger: 'font-semibold text-white hover:bg-zinc-700 p-4 transition-colors',
+    content: 'font-normal text-zinc-300 p-4 bg-zinc-900/50',
+  },
+  alert: {
+    base: 'bg-zinc-800 border-l-4 rounded-md p-4',
+    title: 'font-bold text-white',
+    description: 'font-normal text-zinc-300',
+  },
+  badge: {
+    base: 'rounded-md font-semibold text-xs px-3 py-1',
+    success: 'bg-emerald-500 text-white',
+    warning: 'bg-amber-500 text-white',
+    error: 'bg-red-500 text-white',
+  },
+  progress: {
+    container: 'bg-zinc-800 border border-zinc-700 rounded-full h-3 overflow-hidden',
+    bar: 'bg-emerald-500 h-full',
+  },
+  slider: {
+    base: 'accent-emerald-500 h-2',
+  },
+  dialog: {
+    overlay: 'bg-black/80',
+    content: 'bg-zinc-800 border border-zinc-700 shadow-2xl rounded-lg',
+    title: 'font-bold text-xl text-white',
+    description: 'font-normal text-zinc-300',
+  },
+}
+
+/**
+ * Bento Grid Design Style
+ * Characterized by tile-based grid layouts with varying box sizes
+ */
+const bentoGridStyle: DesignStyle = {
+  name: 'bento-grid',
+  displayName: 'Bento Grid',
+  metadata: {
+    description: 'A tile-based grid layout inspired by bento boxes, organizing content in customizable boxes with different sizes for emphasis',
+    characteristics: [
+      'Grid-based tile layouts',
+      'Varying box sizes for emphasis',
+      'Clean organization',
+      'Rounded corners on tiles',
+      'Subtle shadows and borders',
+      'Modern, organized presentation'
+    ],
+    colorPalette: [
+      'Light backgrounds (#f8f9fa)',
+      'White tiles (#ffffff)',
+      'Soft borders (#e5e7eb)',
+      'Subtle shadows',
+      'Accent colors for highlights'
+    ],
+    typography: [
+      'Medium font weights (500-600)',
+      'Clear hierarchy',
+      'Sans-serif fonts',
+      'Balanced spacing'
+    ]
+  },
+  background: {
+    body: 'bg-gray-50',
+    container: 'bg-gray-50',
+  },
+  card: {
+    container: 'bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow',
+    title: 'font-semibold text-xl text-gray-900',
+    content: 'font-normal text-sm text-gray-600 leading-relaxed',
+  },
+  navbar: {
+    container: 'bg-white border-b border-gray-200',
+    select: 'bg-white border border-gray-300 text-gray-900 rounded-xl font-medium shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none',
+    text: 'text-gray-900 font-semibold',
+    label: 'text-gray-600 font-medium',
+  },
+  button: {
+    base: 'rounded-xl font-medium transition-all shadow-sm hover:shadow-md',
+    selected: 'bg-blue-500 text-white',
+    unselected: 'bg-white text-gray-900 border border-gray-300 hover:bg-gray-50',
+    primary: 'bg-blue-500 text-white hover:bg-blue-600',
+    secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
+    outline: 'bg-white text-gray-900 border-2 border-gray-300 hover:border-gray-400',
+  },
+  input: {
+    base: 'bg-white border border-gray-300 rounded-xl text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none shadow-sm',
+    label: 'font-medium text-gray-700',
+  },
+  textarea: {
+    base: 'bg-white border border-gray-300 rounded-xl text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none shadow-sm',
+  },
+  checkbox: {
+    base: 'border-2 border-gray-300 rounded-md w-5 h-5 accent-blue-500 focus:ring-2 focus:ring-blue-500 bg-white',
+    label: 'font-normal text-gray-700',
+  },
+  switch: {
+    base: 'border border-gray-300 bg-gray-200',
+  },
+  tabs: {
+    list: 'bg-gray-100 rounded-xl p-1 gap-1',
+    trigger: 'font-medium text-gray-600 px-4 py-2 rounded-lg transition-all',
+    triggerActive: 'bg-white text-gray-900 shadow-sm',
+    triggerInactive: 'hover:text-gray-900',
+    content: 'bg-white border border-gray-200 rounded-xl p-6 mt-2 shadow-sm',
+  },
+  accordion: {
+    item: 'bg-white border border-gray-200 rounded-xl mb-2 overflow-hidden shadow-sm',
+    trigger: 'font-medium text-gray-900 hover:bg-gray-50 p-4 transition-colors',
+    content: 'font-normal text-gray-600 p-4 bg-gray-50/50',
+  },
+  alert: {
+    base: 'bg-white border border-gray-200 rounded-xl shadow-sm p-4',
+    title: 'font-semibold text-gray-900',
+    description: 'font-normal text-gray-600',
+  },
+  badge: {
+    base: 'rounded-lg font-medium text-xs px-3 py-1 shadow-sm',
+    success: 'bg-green-100 text-green-700 border border-green-200',
+    warning: 'bg-amber-100 text-amber-700 border border-amber-200',
+    error: 'bg-red-100 text-red-700 border border-red-200',
+  },
+  progress: {
+    container: 'bg-gray-200 rounded-full h-3 overflow-hidden',
+    bar: 'bg-blue-500 h-full rounded-full',
+  },
+  slider: {
+    base: 'accent-blue-500 h-2',
+  },
+  dialog: {
+    overlay: 'bg-gray-900/40 backdrop-blur-sm',
+    content: 'bg-white border border-gray-200 shadow-2xl rounded-2xl',
+    title: 'font-semibold text-xl text-gray-900',
+    description: 'font-normal text-gray-600',
+  },
+}
+
+/**
  * Design Style Registry
  * To add a new style: simply add it to this object
  * This follows the Open-Closed Principle
@@ -873,6 +1191,9 @@ export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   'pop-art': popArtStyle,
   y2k: y2kStyle,
   vaporwave: vaporwaveStyle,
+  'bold-minimalism': boldMinimalismStyle,
+  'modern-flat': modernFlatStyle,
+  'bento-grid': bentoGridStyle,
 }
 
 /**

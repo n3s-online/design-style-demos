@@ -8,6 +8,9 @@ import { ClaymorphismLayout } from './layouts/ClaymorphismLayout'
 import { PopArtLayout } from './layouts/PopArtLayout'
 import { Y2KLayout } from './layouts/Y2KLayout'
 import { VaporwaveLayout } from './layouts/VaporwaveLayout'
+import { BoldMinimalismLayout } from './layouts/BoldMinimalismLayout'
+import { ModernFlatLayout } from './layouts/ModernFlatLayout'
+import { BentoGridLayout } from './layouts/BentoGridLayout'
 
 /**
  * LayoutSelector Component
@@ -40,6 +43,12 @@ export function LayoutSelector() {
       return <Y2KLayout />
     case 'vaporwave':
       return <VaporwaveLayout />
+    case 'bold-minimalism':
+      return <BoldMinimalismLayout />
+    case 'modern-flat':
+      return <ModernFlatLayout />
+    case 'bento-grid':
+      return <BentoGridLayout />
 
     // Default fallback layout
     default:
