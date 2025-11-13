@@ -24,21 +24,21 @@ export function BoldMinimalismLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-24 py-12">
+    <div className="w-full space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24 py-6 sm:py-8 md:py-12">
       {/* Welcome Section - Emphasize bold typography */}
       <div className="space-y-8">
-        <h1 className={cn(currentStyle.card.title, 'text-6xl md:text-7xl mb-4')}>
+        <h1 className={cn(currentStyle.card.title, 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-3 sm:mb-4')}>
           Welcome to Acme Corp
         </h1>
-        <p className={cn(currentStyle.card.content, 'max-w-3xl text-xl')}>
+        <p className={cn(currentStyle.card.content, 'max-w-3xl text-base sm:text-lg md:text-xl')}>
           Your trusted partner in innovative business solutions. Explore our comprehensive dashboard to manage your projects, team, and resources all in one place.
         </p>
       </div>
 
       {/* Action Buttons */}
       <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, 'text-5xl')}>Quick Actions</h2>
-        <div className="flex flex-wrap gap-6">
+        <h2 className={cn(currentStyle.card.title, 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl')}>Quick Actions</h2>
+        <div className="flex flex-wrap gap-4 sm:gap-6">
           <Button className={cn(currentStyle.button.base, currentStyle.button.primary)}>
             Create New Project
           </Button>
@@ -59,8 +59,8 @@ export function BoldMinimalismLayout() {
 
       {/* Contact Form */}
       <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, 'text-5xl')}>Contact Us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl">
+        <h2 className={cn(currentStyle.card.title, 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl')}>Contact Us</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 sm:gap-x-8 sm:gap-y-8 md:gap-x-12 max-w-4xl">
           <div className="space-y-3">
             <Label className={currentStyle.input.label}>Full Name</Label>
             <Input
@@ -106,8 +106,8 @@ export function BoldMinimalismLayout() {
 
       {/* Preferences */}
       <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, 'text-5xl')}>Account Preferences</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl">
+        <h2 className={cn(currentStyle.card.title, 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl')}>Account Preferences</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 max-w-4xl">
           <div className="space-y-6">
             <h3 className={cn('text-2xl font-bold', currentStyle.input.label)}>Email Preferences</h3>
             <div className="space-y-5">
@@ -160,8 +160,8 @@ export function BoldMinimalismLayout() {
 
       {/* Project Status */}
       <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, 'text-5xl')}>Project Status</h2>
-        <div className="flex flex-wrap gap-4 mb-8">
+        <h2 className={cn(currentStyle.card.title, 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl')}>Project Status</h2>
+        <div className="flex flex-wrap gap-4 mb-6 sm:mb-8">
           <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success)}>
             Active
           </Badge>
@@ -207,7 +207,7 @@ export function BoldMinimalismLayout() {
 
       {/* Dashboard Tabs */}
       <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, 'text-5xl')}>Dashboard</h2>
+        <h2 className={cn(currentStyle.card.title, 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl')}>Dashboard</h2>
         <Tabs defaultValue="overview">
           <TabsList className={currentStyle.tabs.list}>
             <StyledTabTrigger value="overview">Overview</StyledTabTrigger>
@@ -252,7 +252,7 @@ export function BoldMinimalismLayout() {
 
       {/* FAQ */}
       <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, 'text-5xl')}>FAQ</h2>
+        <h2 className={cn(currentStyle.card.title, 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl')}>FAQ</h2>
         <Accordion>
           <AccordionItem value="item-1" className={currentStyle.accordion.item}>
             <AccordionTrigger className={currentStyle.accordion.trigger}>
@@ -291,7 +291,7 @@ export function BoldMinimalismLayout() {
 
       {/* System Notifications */}
       <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, 'text-5xl')}>System Notifications</h2>
+        <h2 className={cn(currentStyle.card.title, 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl')}>System Notifications</h2>
         <div className="space-y-6">
           <Alert className={cn(currentStyle.alert.base, 'border-blue-500')}>
             <AlertTitle className={currentStyle.alert.title}>New Feature Available</AlertTitle>
@@ -322,7 +322,7 @@ export function BoldMinimalismLayout() {
 
       {/* Important Actions Dialog */}
       <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, 'text-5xl')}>Important Actions</h2>
+        <h2 className={cn(currentStyle.card.title, 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl')}>Important Actions</h2>
         <Dialog>
           <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary)}>
             Delete Project
@@ -350,40 +350,40 @@ export function BoldMinimalismLayout() {
 
       {/* Services Grid */}
       <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, 'text-5xl')}>Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <h2 className={cn(currentStyle.card.title, 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl')}>Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           <div className="space-y-4">
-            <h3 className={cn(currentStyle.card.title, 'text-3xl')}>Cloud Solutions</h3>
+            <h3 className={cn(currentStyle.card.title, 'text-xl sm:text-2xl md:text-3xl')}>Cloud Solutions</h3>
             <p className={currentStyle.card.content}>
               Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly.
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className={cn(currentStyle.card.title, 'text-3xl')}>Data Analytics</h3>
+            <h3 className={cn(currentStyle.card.title, 'text-xl sm:text-2xl md:text-3xl')}>Data Analytics</h3>
             <p className={currentStyle.card.content}>
               Transform your data into actionable insights with our powerful analytics platform and visualization tools.
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className={cn(currentStyle.card.title, 'text-3xl')}>Security Services</h3>
+            <h3 className={cn(currentStyle.card.title, 'text-xl sm:text-2xl md:text-3xl')}>Security Services</h3>
             <p className={currentStyle.card.content}>
               Enterprise-grade security solutions to protect your business from modern cyber threats and vulnerabilities.
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className={cn(currentStyle.card.title, 'text-3xl')}>Team Collaboration</h3>
+            <h3 className={cn(currentStyle.card.title, 'text-xl sm:text-2xl md:text-3xl')}>Team Collaboration</h3>
             <p className={currentStyle.card.content}>
               Streamline communication and boost productivity with integrated collaboration tools for distributed teams.
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className={cn(currentStyle.card.title, 'text-3xl')}>API Integration</h3>
+            <h3 className={cn(currentStyle.card.title, 'text-xl sm:text-2xl md:text-3xl')}>API Integration</h3>
             <p className={currentStyle.card.content}>
               Seamlessly connect with third-party services and build custom integrations with our robust API platform.
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className={cn(currentStyle.card.title, 'text-3xl')}>24/7 Support</h3>
+            <h3 className={cn(currentStyle.card.title, 'text-xl sm:text-2xl md:text-3xl')}>24/7 Support</h3>
             <p className={currentStyle.card.content}>
               Round-the-clock technical support from our expert team to keep your operations running smoothly.
             </p>

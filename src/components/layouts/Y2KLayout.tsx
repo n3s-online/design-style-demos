@@ -31,7 +31,7 @@ export function Y2KLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-10">
+    <div className="w-full space-y-6 sm:space-y-8 md:space-y-10">
       {/* Glossy Hero Welcome */}
       <div className="relative">
         <StyledCard
@@ -42,20 +42,20 @@ export function Y2KLayout() {
       </div>
 
       {/* Quick Actions - Glossy Buttons */}
-      <div className="space-y-6">
-        <h2 className={cn(currentStyle.card.title, "text-center text-2xl")}>Quick Actions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-6 text-lg")}>
+      <div className="space-y-4 sm:space-y-6">
+        <h2 className={cn(currentStyle.card.title, "text-center text-lg sm:text-xl md:text-2xl")}>Quick Actions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-6 text-base sm:text-lg")}>
             ⭐ Create New Project
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-6 text-lg")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-4 sm:py-5 md:py-6 text-base sm:text-lg")}>
             📊 View Analytics
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-6 text-lg")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-4 sm:py-5 md:py-6 text-base sm:text-lg")}>
             👥 Team Settings
           </Button>
           <Button
-            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-6 text-lg")}
+            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-6 text-base sm:text-lg")}
             disabled
           >
             📥 Export Report
@@ -64,10 +64,10 @@ export function Y2KLayout() {
       </div>
 
       {/* Two Column: Contact & Status */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {/* Contact Form - Glossy Card */}
-        <div className={cn(currentStyle.card.container, "p-7")}>
-          <h2 className={cn(currentStyle.card.title, "mb-6 text-xl")}>💌 Contact Us</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-7")}>
+          <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6 text-lg sm:text-xl")}>💌 Contact Us</h2>
           <div className="space-y-4">
             <div className="space-y-2">
               <Label className={currentStyle.input.label}>Full Name</Label>
@@ -113,8 +113,8 @@ export function Y2KLayout() {
         </div>
 
         {/* Project Status - Chrome Effects */}
-        <div className={cn(currentStyle.card.container, "p-7")}>
-          <h2 className={cn(currentStyle.card.title, "mb-6 text-xl")}>🚀 Project Status</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-7")}>
+          <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6 text-lg sm:text-xl")}>🚀 Project Status</h2>
           <div className="flex flex-wrap gap-3 mb-6">
             <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success)}>
               ✅ Active
@@ -161,11 +161,11 @@ export function Y2KLayout() {
       </div>
 
       {/* Account Preferences - Fun Grid */}
-      <div className="space-y-6">
-        <h2 className={cn(currentStyle.card.title, "text-center text-2xl")}>⚙️ Account Preferences</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className={cn(currentStyle.card.container, "p-7")}>
-            <h3 className={cn('text-lg mb-5', currentStyle.input.label)}>📧 Email Preferences</h3>
+      <div className="space-y-4 sm:space-y-6">
+        <h2 className={cn(currentStyle.card.title, "text-center text-lg sm:text-xl md:text-2xl")}>⚙️ Account Preferences</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-7")}>
+            <h3 className={cn('text-base sm:text-lg mb-4 sm:mb-5', currentStyle.input.label)}>📧 Email Preferences</h3>
             <div className="space-y-4">
               <label className="flex items-center gap-3 cursor-pointer">
                 <Checkbox
@@ -191,8 +191,8 @@ export function Y2KLayout() {
               </label>
             </div>
           </div>
-          <div className={cn(currentStyle.card.container, "p-7")}>
-            <h3 className={cn('text-lg mb-5', currentStyle.input.label)}>🔔 Notifications</h3>
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-7")}>
+            <h3 className={cn('text-base sm:text-lg mb-4 sm:mb-5', currentStyle.input.label)}>🔔 Notifications</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className={currentStyle.checkbox.label}>Email Notifications</span>
@@ -215,8 +215,8 @@ export function Y2KLayout() {
       </div>
 
       {/* Dashboard Tabs - Futuristic */}
-      <div className="space-y-6">
-        <h2 className={cn(currentStyle.card.title, "text-center text-2xl")}>📱 Dashboard</h2>
+      <div className="space-y-4 sm:space-y-6">
+        <h2 className={cn(currentStyle.card.title, "text-center text-lg sm:text-xl md:text-2xl")}>📱 Dashboard</h2>
         <Tabs defaultValue="overview">
           <TabsList className={currentStyle.tabs.list}>
             <StyledTabTrigger value="overview">Overview</StyledTabTrigger>
@@ -225,7 +225,7 @@ export function Y2KLayout() {
             <StyledTabTrigger value="settings">Settings</StyledTabTrigger>
           </TabsList>
           <TabsContent value="overview" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               Overview
             </h3>
             <p className={currentStyle.card.content}>
@@ -233,7 +233,7 @@ export function Y2KLayout() {
             </p>
           </TabsContent>
           <TabsContent value="analytics" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               Analytics
             </h3>
             <p className={currentStyle.card.content}>
@@ -241,7 +241,7 @@ export function Y2KLayout() {
             </p>
           </TabsContent>
           <TabsContent value="team" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               Team
             </h3>
             <p className={currentStyle.card.content}>
@@ -249,7 +249,7 @@ export function Y2KLayout() {
             </p>
           </TabsContent>
           <TabsContent value="settings" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               Settings
             </h3>
             <p className={currentStyle.card.content}>
@@ -260,8 +260,8 @@ export function Y2KLayout() {
       </div>
 
       {/* FAQ - Glossy Accordion */}
-      <div className="space-y-6">
-        <h2 className={cn(currentStyle.card.title, "text-center text-2xl")}>❓ FAQ</h2>
+      <div className="space-y-4 sm:space-y-6">
+        <h2 className={cn(currentStyle.card.title, "text-center text-lg sm:text-xl md:text-2xl")}>❓ FAQ</h2>
         <Accordion>
           <AccordionItem value="item-1" className={currentStyle.accordion.item}>
             <AccordionTrigger className={currentStyle.accordion.trigger}>
@@ -299,8 +299,8 @@ export function Y2KLayout() {
       </div>
 
       {/* System Notifications - Bubbly Alerts */}
-      <div className="space-y-6">
-        <h2 className={cn(currentStyle.card.title, "text-center text-2xl")}>🔊 System Notifications</h2>
+      <div className="space-y-4 sm:space-y-6">
+        <h2 className={cn(currentStyle.card.title, "text-center text-lg sm:text-xl md:text-2xl")}>🔊 System Notifications</h2>
         <div className="space-y-4">
           <Alert className={cn(currentStyle.alert.base, 'bg-gradient-to-r from-blue-300 to-cyan-300 border-2 border-blue-400 text-blue-900')}>
             <AlertTitle className={currentStyle.alert.title}>✨ New Feature Available</AlertTitle>
@@ -330,9 +330,9 @@ export function Y2KLayout() {
       </div>
 
       {/* Services Grid - Glossy Cards */}
-      <div className="space-y-6">
-        <h2 className={cn(currentStyle.card.title, "text-center text-2xl")}>💎 Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="space-y-4 sm:space-y-6">
+        <h2 className={cn(currentStyle.card.title, "text-center text-lg sm:text-xl md:text-2xl")}>💎 Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <StyledCard
             title="☁️ Cloud Solutions"
             content="Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly."
@@ -361,10 +361,10 @@ export function Y2KLayout() {
       </div>
 
       {/* Important Actions Dialog */}
-      <div className="text-center space-y-6">
-        <h2 className={cn(currentStyle.card.title, "text-2xl")}>⚡ Important Actions</h2>
+      <div className="text-center space-y-4 sm:space-y-6">
+        <h2 className={cn(currentStyle.card.title, "text-lg sm:text-xl md:text-2xl")}>⚡ Important Actions</h2>
         <Dialog>
-          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-8 py-4 text-lg")}>
+          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-4 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4 text-base sm:text-lg")}>
             🗑️ Delete Project
           </DialogTrigger>
           <DialogContent className={currentStyle.dialog.content}>

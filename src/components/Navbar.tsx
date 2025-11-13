@@ -23,30 +23,30 @@ export function Navbar() {
   }
 
   return (
-    <nav className={`px-6 py-4 ${currentStyle.navbar.container}`}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <h1 className={`text-xl font-bold ${currentStyle.navbar.text}`}>{currentStyle.displayName}</h1>
+    <nav className={`px-3 sm:px-6 py-3 sm:py-4 ${currentStyle.navbar.container}`}>
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center gap-3 sm:gap-0 sm:justify-between">
+        <h1 className={`text-lg sm:text-xl font-bold ${currentStyle.navbar.text}`}>{currentStyle.displayName}</h1>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           <HowThisWorksDialog
-            triggerClassName={`px-4 py-2 font-semibold ${currentStyle.navbar.select}`}
+            triggerClassName={`px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
           />
           <PromptDialog
-            triggerClassName={`px-4 py-2 font-semibold ${currentStyle.navbar.select}`}
+            triggerClassName={`px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
           />
           <StyleSelectorDialog
-            triggerClassName={`px-4 py-2 font-semibold ${currentStyle.navbar.select}`}
+            triggerClassName={`px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
           />
           <button
             onClick={goToPrevious}
-            className={`px-3 py-2 font-semibold ${currentStyle.navbar.select}`}
+            className={`px-2 py-1 sm:px-3 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
             aria-label="Previous design style"
           >
             ←
           </button>
           <button
             onClick={goToNext}
-            className={`px-3 py-2 font-semibold ${currentStyle.navbar.select}`}
+            className={`px-2 py-1 sm:px-3 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
             aria-label="Next design style"
           >
             →

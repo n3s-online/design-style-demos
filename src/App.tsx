@@ -10,8 +10,8 @@ function App() {
   return (
     <div className={cn("min-h-screen flex flex-col", currentStyle.background.body)}>
       <Navbar />
-      <main className="flex-1 p-8">
-        <div className={cn("max-w-7xl mx-auto p-8 rounded-lg", currentStyle.background.container)}>
+      <main className="flex-1 p-4 sm:p-6 md:p-8">
+        <div className={cn("max-w-7xl mx-auto p-4 sm:p-6 md:p-8 rounded-lg", currentStyle.background.container)}>
           <LayoutSelector />
         </div>
       </main>
