@@ -528,29 +528,29 @@ const glassmorphismStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-gradient-to-br from-pink-300 via-purple-300 to-blue-400',
-    container: 'bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl',
+    body: 'bg-palette-background',
+    container: 'bg-palette-surface backdrop-blur-xl border border-palette-border shadow-xl',
   },
   card: {
-    container: 'bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl rounded-2xl',
+    container: 'bg-palette-surface backdrop-blur-lg border border-palette-border shadow-2xl rounded-2xl',
     title: 'font-semibold text-2xl text-palette-text',
-    content: 'font-normal text-base text-palette-text/90 leading-relaxed',
+    content: 'font-normal text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg',
-    select: 'bg-white/20 backdrop-blur-md border border-white/30 text-palette-text rounded-lg font-medium focus:ring-2 focus:ring-white/50 focus:outline-none',
+    container: 'bg-palette-surface backdrop-blur-lg border-b border-palette-border shadow-lg',
+    select: 'bg-palette-surface backdrop-blur-md border border-palette-border text-palette-text rounded-lg font-medium focus:ring-2 focus:ring-palette-primary focus:outline-none',
     text: 'text-palette-text',
-    label: 'text-palette-text/90 font-medium',
+    label: 'text-palette-text-secondary font-medium',
   },
   button: {
-    base: 'backdrop-blur-md border border-white/30 rounded-xl font-medium transition-all hover:bg-white/20 hover:shadow-lg',
+    base: 'backdrop-blur-md border border-palette-border rounded-xl font-medium transition-all hover:bg-palette-surface hover:shadow-lg',
     // For style selector dialog
-    selected: 'bg-purple-500/40 text-palette-text border-purple-400/60 shadow-lg backdrop-blur-md',
-    unselected: 'bg-purple-900/30 text-purple-100 border-purple-400/40 hover:bg-purple-800/40 backdrop-blur-md',
+    selected: 'bg-palette-primary text-palette-text border-palette-border shadow-lg backdrop-blur-md',
+    unselected: 'bg-palette-surface text-palette-text border-palette-border hover:bg-palette-background backdrop-blur-md',
     // For general button usage
-    primary: 'bg-white/20 text-palette-text border-white/40 hover:bg-white/30 shadow-md',
-    secondary: 'bg-purple-500/30 text-palette-text border-palette-border/50 hover:bg-purple-500/40 shadow-md',
-    outline: 'bg-transparent text-palette-text border-white/50 hover:bg-white/10',
+    primary: 'bg-palette-primary text-palette-text border-palette-border hover:bg-palette-secondary shadow-md',
+    secondary: 'bg-palette-secondary text-palette-text border-palette-border hover:bg-palette-accent shadow-md',
+    outline: 'bg-transparent text-palette-text border-palette-border hover:bg-palette-surface',
   },
   input: {
     base: 'bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-palette-text placeholder:text-palette-text/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
