@@ -1139,7 +1139,7 @@ const vaporwaveStyle: DesignStyle = {
     container: 'bg-palette-surface border-2 border-palette-border shadow-[0_8px_32px_rgba(255,192,203,0.3)]',
   },
   card: {
-    container: 'bg-palette-primary border-2 border-palette-border shadow-[0_8px_24px_rgba(125,211,192,0.3)] rounded-lg backdrop-blur-sm',
+    container: 'bg-palette-surface/80 backdrop-blur-md border-2 border-palette-border shadow-[0_8px_24px_rgba(125,211,192,0.3)] rounded-lg',
     title: 'font-bold text-2xl italic text-palette-text',
     content: 'font-normal text-base text-palette-text-secondary leading-relaxed',
   },
