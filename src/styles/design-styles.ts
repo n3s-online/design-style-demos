@@ -1220,45 +1220,45 @@ const boldMinimalismStyle: DesignStyle = {
   displayName: 'Bold Minimalism',
   colorPalettes: [
     {
-      id: 'monochrome',
-      name: 'Monochrome',
+      id: 'crimson',
+      name: 'Crimson',
       colors: {
-        primary: '#000000',
-        secondary: '#1f2937',
-        accent: '#4b5563',
-        background: '#ffffff',
-        surface: '#f9fafb',
-        text: '#000000',
-        textSecondary: '#6b7280',
-        border: '#e5e7eb'
+        primary: '#dc2626',      // Crimson red
+        secondary: '#991b1b',    // Dark red
+        accent: '#ef4444',       // Bright red
+        background: '#ffffff',   // Pure white
+        surface: '#fef2f2',      // Light red tint
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#525252', // Dark gray
+        border: '#fee2e2'        // Light red border
       }
     },
     {
-      id: 'blue',
-      name: 'Blue',
+      id: 'indigo',
+      name: 'Indigo',
       colors: {
-        primary: '#1e3a8a',
-        secondary: '#1e40af',
-        accent: '#3b82f6',
-        background: '#ffffff',
-        surface: '#eff6ff',
-        text: '#1e3a8a',
-        textSecondary: '#3b82f6',
-        border: '#dbeafe'
+        primary: '#4f46e5',      // Indigo
+        secondary: '#3730a3',    // Dark indigo
+        accent: '#6366f1',       // Bright indigo
+        background: '#ffffff',   // Pure white
+        surface: '#eef2ff',      // Light indigo tint
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#525252', // Dark gray
+        border: '#e0e7ff'        // Light indigo border
       }
     },
     {
       id: 'emerald',
       name: 'Emerald',
       colors: {
-        primary: '#064e3b',
-        secondary: '#065f46',
-        accent: '#10b981',
-        background: '#ffffff',
-        surface: '#ecfdf5',
-        text: '#064e3b',
-        textSecondary: '#059669',
-        border: '#d1fae5'
+        primary: '#10b981',      // Emerald green
+        secondary: '#047857',    // Dark emerald
+        accent: '#34d399',       // Bright emerald
+        background: '#ffffff',   // Pure white
+        surface: '#ecfdf5',      // Light green tint
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#525252', // Dark gray
+        border: '#d1fae5'        // Light green border
       }
     }
   ],
