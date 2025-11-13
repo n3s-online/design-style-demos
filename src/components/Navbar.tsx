@@ -37,20 +37,22 @@ export function Navbar() {
           <StyleSelectorDialog
             triggerClassName={`px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
           />
-          <button
-            onClick={goToPrevious}
-            className={`px-2 py-1 sm:px-3 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
-            aria-label="Previous design style"
-          >
-            ←
-          </button>
-          <button
-            onClick={goToNext}
-            className={`px-2 py-1 sm:px-3 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
-            aria-label="Next design style"
-          >
-            →
-          </button>
+          <div className="flex gap-2 sm:gap-3">
+            <button
+              onClick={goToPrevious}
+              className={`px-2 py-1 sm:px-3 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
+              aria-label="Previous design style"
+            >
+              ←
+            </button>
+            <button
+              onClick={goToNext}
+              className={`px-2 py-1 sm:px-3 sm:py-2 text-sm sm:text-base font-semibold ${currentStyle.navbar.select}`}
+              aria-label="Next design style"
+            >
+              →
+            </button>
+          </div>
         </div>
       </div>
     </nav>
