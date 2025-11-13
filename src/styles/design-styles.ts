@@ -1520,45 +1520,45 @@ const bentoGridStyle: DesignStyle = {
   displayName: 'Bento Grid',
   colorPalettes: [
     {
-      id: 'neutral',
-      name: 'Neutral',
+      id: 'slate',
+      name: 'Slate',
       colors: {
-        primary: '#3b82f6',
-        secondary: '#6366f1',
-        accent: '#8b5cf6',
-        background: '#f9fafb',
-        surface: '#ffffff',
-        text: '#111827',
-        textSecondary: '#6b7280',
-        border: '#e5e7eb'
+        primary: '#475569',      // Slate
+        secondary: '#64748b',    // Light slate
+        accent: '#3b82f6',       // Blue accent
+        background: '#f8fafc',   // Light slate bg
+        surface: '#ffffff',      // White tiles
+        text: '#1e293b',         // Dark slate text
+        textSecondary: '#64748b', // Medium slate
+        border: '#e2e8f0'        // Light slate border
       }
     },
     {
-      id: 'warm',
-      name: 'Warm',
+      id: 'moss',
+      name: 'Moss',
       colors: {
-        primary: '#f59e0b',
-        secondary: '#f97316',
-        accent: '#ef4444',
-        background: '#fef3c7',
-        surface: '#fffbeb',
-        text: '#78350f',
-        textSecondary: '#92400e',
-        border: '#fde68a'
+        primary: '#65a30d',      // Moss green
+        secondary: '#84cc16',    // Lime
+        accent: '#facc15',       // Yellow accent
+        background: '#f7fee7',   // Light lime bg
+        surface: '#fefce8',      // Light yellow tile
+        text: '#365314',         // Dark green text
+        textSecondary: '#4d7c0f', // Medium green
+        border: '#d9f99d'        // Light green border
       }
     },
     {
-      id: 'cool',
-      name: 'Cool',
+      id: 'plum',
+      name: 'Plum',
       colors: {
-        primary: '#06b6d4',
-        secondary: '#0ea5e9',
-        accent: '#3b82f6',
-        background: '#ecfeff',
-        surface: '#f0f9ff',
-        text: '#164e63',
-        textSecondary: '#0c4a6e',
-        border: '#cffafe'
+        primary: '#9333ea',      // Purple
+        secondary: '#c084fc',    // Light purple
+        accent: '#ec4899',       // Pink accent
+        background: '#faf5ff',   // Light purple bg
+        surface: '#fdf4ff',      // Light pink tile
+        text: '#581c87',         // Dark purple text
+        textSecondary: '#7e22ce', // Medium purple
+        border: '#f3e8ff'        // Light purple border
       }
     }
   ],
