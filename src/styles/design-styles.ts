@@ -462,45 +462,45 @@ const glassmorphismStyle: DesignStyle = {
   displayName: 'Glassmorphism',
   colorPalettes: [
     {
-      id: 'sunset',
-      name: 'Sunset',
-      colors: {
-        primary: '#f472b6',
-        secondary: '#a855f7',
-        accent: '#ec4899',
-        background: '#fdf2f8',
-        surface: 'rgba(255, 255, 255, 0.2)',
-        text: '#ffffff',
-        textSecondary: 'rgba(255, 255, 255, 0.9)',
-        border: 'rgba(255, 255, 255, 0.3)'
-      }
-    },
-    {
       id: 'aurora',
       name: 'Aurora',
       colors: {
-        primary: '#06b6d4',
-        secondary: '#3b82f6',
-        accent: '#8b5cf6',
-        background: '#eff6ff',
-        surface: 'rgba(255, 255, 255, 0.2)',
-        text: '#ffffff',
-        textSecondary: 'rgba(255, 255, 255, 0.9)',
-        border: 'rgba(255, 255, 255, 0.3)'
+        primary: '#8b5cf6',      // Purple
+        secondary: '#3b82f6',    // Blue
+        accent: '#06b6d4',       // Cyan
+        background: '#1e1b4b',   // Deep purple background
+        surface: 'rgba(139, 92, 246, 0.15)', // Purple glass tint
+        text: '#ffffff',         // White text on dark bg
+        textSecondary: 'rgba(255, 255, 255, 0.85)', // Slightly transparent white
+        border: 'rgba(139, 92, 246, 0.3)' // Purple border
       }
     },
     {
-      id: 'mint',
-      name: 'Mint',
+      id: 'sunset',
+      name: 'Sunset',
       colors: {
-        primary: '#10b981',
-        secondary: '#14b8a6',
-        accent: '#06b6d4',
-        background: '#f0fdfa',
-        surface: 'rgba(255, 255, 255, 0.2)',
-        text: '#ffffff',
-        textSecondary: 'rgba(255, 255, 255, 0.9)',
-        border: 'rgba(255, 255, 255, 0.3)'
+        primary: '#f97316',      // Orange
+        secondary: '#ec4899',    // Pink
+        accent: '#f59e0b',       // Amber
+        background: '#7c2d12',   // Deep orange-brown background
+        surface: 'rgba(249, 115, 22, 0.15)', // Orange glass tint
+        text: '#ffffff',         // White text on dark bg
+        textSecondary: 'rgba(255, 255, 255, 0.85)', // Slightly transparent white
+        border: 'rgba(249, 115, 22, 0.3)' // Orange border
+      }
+    },
+    {
+      id: 'ocean',
+      name: 'Ocean',
+      colors: {
+        primary: '#06b6d4',      // Cyan
+        secondary: '#0ea5e9',    // Sky blue
+        accent: '#14b8a6',       // Teal
+        background: '#082f49',   // Deep ocean blue background
+        surface: 'rgba(6, 182, 212, 0.15)', // Cyan glass tint
+        text: '#ffffff',         // White text on dark bg
+        textSecondary: 'rgba(255, 255, 255, 0.85)', // Slightly transparent white
+        border: 'rgba(6, 182, 212, 0.3)' // Cyan border
       }
     }
   ],
