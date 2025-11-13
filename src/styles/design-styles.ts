@@ -919,42 +919,42 @@ const y2kStyle: DesignStyle = {
       id: 'cyber',
       name: 'Cyber',
       colors: {
-        primary: '#84cc16',
-        secondary: '#ec4899',
-        accent: '#38bdf8',
-        background: '#f0f9ff',
-        surface: '#e0f2fe',
-        text: '#0369a1',
-        textSecondary: '#ffffff',
-        border: '#38bdf8'
+        primary: '#06b6d4',      // Cyan chrome
+        secondary: '#3b82f6',    // Blue
+        accent: '#8b5cf6',       // Purple
+        background: '#0c1222',   // Deep cyber black
+        surface: '#1e293b',      // Dark slate
+        text: '#e0f2fe',         // Light cyan
+        textSecondary: '#cbd5e1', // Silver
+        border: '#06b6d4'        // Cyan border
       }
     },
     {
-      id: 'candy',
-      name: 'Candy',
+      id: 'bubblegum',
+      name: 'Bubblegum',
       colors: {
-        primary: '#f0abfc',
-        secondary: '#fbbf24',
-        accent: '#fb923c',
-        background: '#fef3c7',
-        surface: '#fde68a',
-        text: '#92400e',
-        textSecondary: '#ffffff',
-        border: '#f0abfc'
+        primary: '#ec4899',      // Hot pink
+        secondary: '#f0abfc',    // Light pink
+        accent: '#fbbf24',       // Yellow
+        background: '#1a0e1a',   // Deep pink-black
+        surface: '#3b1e3b',      // Dark pink
+        text: '#fce7f3',         // Light pink
+        textSecondary: '#e9d5ff', // Light lavender
+        border: '#ec4899'        // Pink border
       }
     },
     {
-      id: 'chrome',
-      name: 'Chrome',
+      id: 'matrix',
+      name: 'Matrix',
       colors: {
-        primary: '#cbd5e1',
-        secondary: '#94a3b8',
-        accent: '#06b6d4',
-        background: '#f8fafc',
-        surface: '#e2e8f0',
-        text: '#0f172a',
-        textSecondary: '#ffffff',
-        border: '#cbd5e1'
+        primary: '#84cc16',      // Lime green
+        secondary: '#22c55e',    // Green
+        accent: '#10b981',       // Emerald
+        background: '#0a1f0a',   // Deep matrix black
+        surface: '#1e3a1e',      // Dark green
+        text: '#d9f99d',         // Light lime
+        textSecondary: '#bbf7d0', // Light green
+        border: '#84cc16'        // Lime border
       }
     }
   ],
