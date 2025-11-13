@@ -465,13 +465,13 @@ const glassmorphismStyle: DesignStyle = {
       id: 'aurora',
       name: 'Aurora',
       colors: {
-        primary: '#8b5cf6',      // Purple (for text/accents only)
-        secondary: '#3b82f6',    // Blue (for text/accents only)
-        accent: '#06b6d4',       // Cyan (for text/accents only)
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', // Bright purple gradient
-        surface: 'rgba(255, 255, 255, 0.15)', // Translucent white glass
+        primary: '#667eea',      // Purple gradient start
+        secondary: '#764ba2',    // Purple gradient end
+        accent: '#8b5cf6',       // Vibrant purple accent
+        background: '#667eea',   // Gradient background
+        surface: 'rgba(255, 255, 255, 0.4)', // Translucent white glass
         text: '#1a1a1a',         // Dark text for contrast on bright bg
-        textSecondary: 'rgba(26, 26, 26, 0.75)', // Slightly transparent dark
+        textSecondary: '#4a4a4a', // Medium gray text
         border: 'rgba(255, 255, 255, 0.2)' // Subtle white border
       }
     },
@@ -479,13 +479,13 @@ const glassmorphismStyle: DesignStyle = {
       id: 'sunset',
       name: 'Sunset',
       colors: {
-        primary: '#f97316',      // Orange (for text/accents only)
-        secondary: '#ec4899',    // Pink (for text/accents only)
-        accent: '#f59e0b',       // Amber (for text/accents only)
-        background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', // Bright pink-orange gradient
-        surface: 'rgba(255, 255, 255, 0.15)', // Translucent white glass
+        primary: '#f093fb',      // Pink gradient start
+        secondary: '#f5576c',    // Red-pink gradient end
+        accent: '#ec4899',       // Vibrant pink accent
+        background: '#f093fb',   // Gradient background
+        surface: 'rgba(255, 255, 255, 0.4)', // Translucent white glass
         text: '#1a1a1a',         // Dark text for contrast on bright bg
-        textSecondary: 'rgba(26, 26, 26, 0.75)', // Slightly transparent dark
+        textSecondary: '#4a4a4a', // Medium gray text
         border: 'rgba(255, 255, 255, 0.2)' // Subtle white border
       }
     },
@@ -493,13 +493,13 @@ const glassmorphismStyle: DesignStyle = {
       id: 'ocean',
       name: 'Ocean',
       colors: {
-        primary: '#06b6d4',      // Cyan (for text/accents only)
-        secondary: '#0ea5e9',    // Sky blue (for text/accents only)
-        accent: '#14b8a6',       // Teal (for text/accents only)
-        background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', // Bright cyan gradient
-        surface: 'rgba(255, 255, 255, 0.15)', // Translucent white glass
+        primary: '#4facfe',      // Cyan gradient start
+        secondary: '#00f2fe',    // Bright cyan gradient end
+        accent: '#06b6d4',       // Vibrant cyan accent
+        background: '#4facfe',   // Gradient background
+        surface: 'rgba(255, 255, 255, 0.4)', // Translucent white glass
         text: '#1a1a1a',         // Dark text for contrast on bright bg
-        textSecondary: 'rgba(26, 26, 26, 0.75)', // Slightly transparent dark
+        textSecondary: '#4a4a4a', // Medium gray text
         border: 'rgba(255, 255, 255, 0.2)' // Subtle white border
       }
     }
@@ -528,79 +528,79 @@ const glassmorphismStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500',
-    container: 'bg-white/30 backdrop-blur-xl border border-white/20 shadow-xl rounded-2xl',
+    body: 'bg-gradient-to-br from-palette-primary via-palette-accent to-palette-secondary',
+    container: 'bg-palette-surface backdrop-blur-xl border border-palette-border shadow-xl rounded-2xl',
   },
   card: {
-    container: 'bg-white/40 backdrop-blur-lg border border-white/20 shadow-lg rounded-xl',
-    title: 'font-semibold text-2xl text-gray-900',
-    content: 'font-normal text-base text-gray-800 leading-relaxed',
+    container: 'bg-palette-surface backdrop-blur-lg border border-palette-border shadow-lg rounded-xl',
+    title: 'font-semibold text-2xl text-palette-text',
+    content: 'font-normal text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'bg-white/40 backdrop-blur-lg border-b border-white/20 shadow-lg',
-    select: 'bg-white/30 backdrop-blur-md border border-white/20 text-gray-900 rounded-lg font-medium focus:ring-2 focus:ring-white/50 focus:outline-none',
-    text: 'text-gray-900',
-    label: 'text-gray-800 font-medium',
+    container: 'bg-palette-surface backdrop-blur-lg border-b border-palette-border shadow-lg',
+    select: 'bg-palette-surface backdrop-blur-md border border-palette-border text-palette-text rounded-lg font-medium focus:ring-2 focus:ring-white/50 focus:outline-none',
+    text: 'text-palette-text',
+    label: 'text-palette-text-secondary font-medium',
   },
   button: {
-    base: 'backdrop-blur-md border border-white/20 rounded-xl font-medium transition-all hover:shadow-lg',
+    base: 'backdrop-blur-md border border-palette-border rounded-xl font-medium transition-all hover:shadow-lg',
     // For style selector dialog
-    selected: 'bg-white/50 text-gray-900 border-white/30 shadow-lg backdrop-blur-md',
-    unselected: 'bg-white/20 text-gray-900 border-white/20 hover:bg-white/30 backdrop-blur-md',
+    selected: 'bg-white/50 text-palette-text border-white/30 shadow-lg backdrop-blur-md',
+    unselected: 'bg-white/20 text-palette-text border-palette-border hover:bg-white/30 backdrop-blur-md',
     // For general button usage
-    primary: 'bg-white/30 text-gray-900 border-white/20 hover:bg-white/40 shadow-md',
-    secondary: 'bg-white/25 text-gray-900 border-white/20 hover:bg-white/35 shadow-md',
-    outline: 'bg-transparent text-gray-900 border-white/30 hover:bg-white/20',
+    primary: 'bg-white/30 text-palette-text border-palette-border hover:bg-white/40 shadow-md',
+    secondary: 'bg-white/25 text-palette-text border-palette-border hover:bg-white/35 shadow-md',
+    outline: 'bg-transparent text-palette-text border-white/30 hover:bg-white/20',
   },
   input: {
-    base: 'bg-white/30 backdrop-blur-md border border-white/30 rounded-lg text-gray-900 placeholder:text-gray-700/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
-    label: 'font-medium text-gray-900',
+    base: 'bg-white/30 backdrop-blur-md border border-white/30 rounded-lg text-palette-text placeholder:text-palette-text-secondary/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
+    label: 'font-medium text-palette-text',
   },
   textarea: {
-    base: 'bg-white/30 backdrop-blur-md border border-white/30 rounded-lg text-gray-900 placeholder:text-gray-700/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
+    base: 'bg-white/30 backdrop-blur-md border border-white/30 rounded-lg text-palette-text placeholder:text-palette-text-secondary/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
   },
   checkbox: {
-    base: 'border-2 border-white/50 rounded w-4 h-4 accent-purple-600 focus:ring-2 focus:ring-white/50 bg-white/30',
-    label: 'font-medium text-gray-900',
+    base: 'border-2 border-white/50 rounded w-4 h-4 accent-palette-accent focus:ring-2 focus:ring-white/50 bg-white/30',
+    label: 'font-medium text-palette-text',
   },
   switch: {
     base: 'border border-white/30 bg-white/20',
   },
   tabs: {
     list: 'bg-white/30 backdrop-blur-md border border-white/20 rounded-xl p-1 gap-1',
-    trigger: 'font-medium text-gray-800 px-4 py-2 rounded-lg transition-all',
-    triggerActive: 'bg-white/50 text-gray-900 shadow-md backdrop-blur-sm',
-    triggerInactive: 'hover:bg-white/20 hover:text-gray-900',
+    trigger: 'font-medium text-palette-text-secondary px-4 py-2 rounded-lg transition-all',
+    triggerActive: 'bg-white/50 text-palette-text shadow-md backdrop-blur-sm',
+    triggerInactive: 'hover:bg-white/20 hover:text-palette-text',
     content: 'bg-white/30 backdrop-blur-md border border-white/20 rounded-xl p-6 mt-2 shadow-lg',
   },
   accordion: {
     item: 'bg-white/30 backdrop-blur-md border border-white/20 rounded-xl mb-2 overflow-hidden',
-    trigger: 'font-medium text-gray-900 hover:bg-white/20 p-4 transition-colors',
-    content: 'font-normal text-gray-800 p-4 bg-white/10 border-t border-white/20',
+    trigger: 'font-medium text-palette-text hover:bg-white/20 p-4 transition-colors',
+    content: 'font-normal text-palette-text-secondary p-4 bg-white/10 border-t border-white/20',
   },
   alert: {
     base: 'bg-white/40 backdrop-blur-md border border-white/30 rounded-xl shadow-lg p-4',
-    title: 'font-semibold text-gray-900',
-    description: 'font-normal text-gray-800',
+    title: 'font-semibold text-palette-text',
+    description: 'font-normal text-palette-text-secondary',
   },
   badge: {
-    base: 'bg-white/40 backdrop-blur-sm border border-white/30 rounded-full font-medium text-xs px-3 py-1',
-    success: 'bg-green-500/40 text-gray-900 border-white/30 backdrop-blur-sm',
-    warning: 'bg-yellow-500/40 text-gray-900 border-white/30 backdrop-blur-sm',
-    error: 'bg-red-500/40 text-gray-900 border-white/30 backdrop-blur-sm',
+    base: 'bg-white/40 backdrop-blur-sm border border-white/30 rounded-full font-medium text-xs px-3 py-1 text-palette-text',
+    success: 'bg-green-500/40 text-palette-text border-white/30 backdrop-blur-sm',
+    warning: 'bg-yellow-500/40 text-palette-text border-white/30 backdrop-blur-sm',
+    error: 'bg-red-500/40 text-palette-text border-white/30 backdrop-blur-sm',
   },
   progress: {
     container: 'bg-white/30 backdrop-blur-sm border border-white/20 rounded-full h-3 overflow-hidden',
-    bar: 'bg-gradient-to-r from-pink-500 to-purple-600 h-full shadow-md',
+    bar: 'bg-gradient-to-r from-palette-primary to-palette-accent h-full shadow-md',
   },
   slider: {
-    base: 'accent-purple-600 h-2',
+    base: 'accent-palette-accent h-2',
   },
   dialog: {
     overlay: 'bg-black/40 backdrop-blur-sm',
     content: 'bg-white/40 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl',
-    title: 'font-semibold text-xl text-gray-900',
-    description: 'font-normal text-gray-800',
+    title: 'font-semibold text-xl text-palette-text',
+    description: 'font-normal text-palette-text-secondary',
   },
 }
 
