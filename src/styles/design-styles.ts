@@ -1071,42 +1071,42 @@ const vaporwaveStyle: DesignStyle = {
       id: 'sunset',
       name: 'Sunset',
       colors: {
-        primary: '#f472b6',
-        secondary: '#a855f7',
-        accent: '#06b6d4',
-        background: '#fdf2f8',
-        surface: '#fae8ff',
-        text: '#a21caf',
-        textSecondary: '#9333ea',
-        border: '#f0abfc'
+        primary: '#ff6ec7',      // Hot pink
+        secondary: '#a855f7',    // Purple
+        accent: '#fbbf24',       // Golden yellow
+        background: '#1a0520',   // Deep purple-black
+        surface: '#2d1838',      // Dark purple
+        text: '#ffc0e5',         // Light pink
+        textSecondary: '#dda8f5', // Light purple
+        border: '#ff6ec7'        // Pink border
       }
     },
     {
-      id: 'oceanic',
-      name: 'Oceanic',
+      id: 'neon',
+      name: 'Neon',
       colors: {
-        primary: '#06b6d4',
-        secondary: '#8b5cf6',
-        accent: '#ec4899',
-        background: '#ecfeff',
-        surface: '#cffafe',
-        text: '#0e7490',
-        textSecondary: '#7c3aed',
-        border: '#67e8f9'
+        primary: '#06b6d4',      // Cyan
+        secondary: '#ec4899',    // Magenta
+        accent: '#8b5cf6',       // Purple
+        background: '#0a1628',   // Deep blue-black
+        surface: '#1e2a42',      // Dark navy
+        text: '#7dd3fc',         // Light cyan
+        textSecondary: '#f9a8d4', // Light pink
+        border: '#06b6d4'        // Cyan border
       }
     },
     {
-      id: 'peachy',
-      name: 'Peachy',
+      id: 'retro',
+      name: 'Retro',
       colors: {
-        primary: '#fb923c',
-        secondary: '#fbbf24',
-        accent: '#f472b6',
-        background: '#fff7ed',
-        surface: '#fed7aa',
-        text: '#c2410c',
-        textSecondary: '#92400e',
-        border: '#fdba74'
+        primary: '#14b8a6',      // Teal
+        secondary: '#fb7185',    // Rose
+        accent: '#a78bfa',       // Lavender
+        background: '#0f1419',   // Deep teal-black
+        surface: '#1e2d2a',      // Dark teal
+        text: '#5eead4',         // Light teal
+        textSecondary: '#fda4af', // Light rose
+        border: '#14b8a6'        // Teal border
       }
     }
   ],
