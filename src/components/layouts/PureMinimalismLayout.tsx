@@ -31,31 +31,31 @@ export function PureMinimalismLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-24 py-8">
+    <div className="w-full space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24 py-4 sm:py-6 md:py-8">
       {/* Minimal Hero - Maximum Whitespace */}
-      <div className="max-w-3xl mx-auto text-center space-y-6">
-        <h1 className={cn(currentStyle.card.title, "text-4xl")}>
+      <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6">
+        <h1 className={cn(currentStyle.card.title, "text-2xl sm:text-3xl md:text-4xl")}>
           Welcome to Acme Corp
         </h1>
-        <p className={cn(currentStyle.card.content, "text-lg leading-loose")}>
+        <p className={cn(currentStyle.card.content, "text-base sm:text-lg leading-loose")}>
           Your trusted partner in innovative business solutions. Explore our comprehensive dashboard to manage your projects, team, and resources all in one place.
         </p>
       </div>
 
       {/* Minimal Actions - Spaced Out */}
       <div className="max-w-2xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-6")}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-6")}>
             Create New Project
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-6")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-4 sm:py-5 md:py-6")}>
             View Analytics
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-6")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-4 sm:py-5 md:py-6")}>
             Team Settings
           </Button>
           <Button
-            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-6")}
+            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-6")}
             disabled
           >
             Export Report
@@ -64,15 +64,15 @@ export function PureMinimalismLayout() {
       </div>
 
       {/* Contact Form - Generous Spacing */}
-      <div className="max-w-2xl mx-auto space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Contact Us</h2>
-        <div className="space-y-8">
+      <div className="max-w-2xl mx-auto space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Contact Us</h2>
+        <div className="space-y-6 sm:space-y-8">
           <div className="space-y-3">
             <Label className={currentStyle.input.label}>Full Name</Label>
             <Input
               type="text"
               placeholder="John Doe"
-              className={cn(currentStyle.input.base, "py-6")}
+              className={cn(currentStyle.input.base, "py-4 sm:py-5 md:py-6")}
             />
           </div>
           <div className="space-y-3">
@@ -80,7 +80,7 @@ export function PureMinimalismLayout() {
             <Input
               type="email"
               placeholder="john@acmecorp.com"
-              className={cn(currentStyle.input.base, "py-6")}
+              className={cn(currentStyle.input.base, "py-4 sm:py-5 md:py-6")}
             />
           </div>
           <div className="space-y-3">
@@ -88,7 +88,7 @@ export function PureMinimalismLayout() {
             <Input
               type="text"
               placeholder="Your Company Inc."
-              className={cn(currentStyle.input.base, "py-6")}
+              className={cn(currentStyle.input.base, "py-4 sm:py-5 md:py-6")}
             />
           </div>
           <div className="space-y-3">
@@ -96,7 +96,7 @@ export function PureMinimalismLayout() {
             <Input
               type="tel"
               placeholder="+1 (555) 123-4567"
-              className={cn(currentStyle.input.base, "py-6")}
+              className={cn(currentStyle.input.base, "py-4 sm:py-5 md:py-6")}
             />
           </div>
           <div className="space-y-3">
@@ -111,8 +111,8 @@ export function PureMinimalismLayout() {
       </div>
 
       {/* Dashboard */}
-      <div className="max-w-4xl mx-auto space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Dashboard</h2>
+      <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Dashboard</h2>
         <Tabs defaultValue="overview">
           <TabsList className={cn(currentStyle.tabs.list, "w-full justify-center")}>
             <StyledTabTrigger value="overview">Overview</StyledTabTrigger>
@@ -120,32 +120,32 @@ export function PureMinimalismLayout() {
             <StyledTabTrigger value="team">Team</StyledTabTrigger>
             <StyledTabTrigger value="settings">Settings</StyledTabTrigger>
           </TabsList>
-          <TabsContent value="overview" className={cn(currentStyle.tabs.content, "py-12")}>
-            <h3 className={cn('text-2xl mb-6', currentStyle.card.title)}>
+          <TabsContent value="overview" className={cn(currentStyle.tabs.content, "py-6 sm:py-8 md:py-12")}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6', currentStyle.card.title)}>
               Overview
             </h3>
             <p className={cn(currentStyle.card.content, "leading-loose")}>
               Welcome to your dashboard overview. Here you'll find key metrics, recent activity, and important updates from your team and projects.
             </p>
           </TabsContent>
-          <TabsContent value="analytics" className={cn(currentStyle.tabs.content, "py-12")}>
-            <h3 className={cn('text-2xl mb-6', currentStyle.card.title)}>
+          <TabsContent value="analytics" className={cn(currentStyle.tabs.content, "py-6 sm:py-8 md:py-12")}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6', currentStyle.card.title)}>
               Analytics
             </h3>
             <p className={cn(currentStyle.card.content, "leading-loose")}>
               Track your performance with detailed analytics. Monitor user engagement, conversion rates, and revenue growth across all your projects.
             </p>
           </TabsContent>
-          <TabsContent value="team" className={cn(currentStyle.tabs.content, "py-12")}>
-            <h3 className={cn('text-2xl mb-6', currentStyle.card.title)}>
+          <TabsContent value="team" className={cn(currentStyle.tabs.content, "py-6 sm:py-8 md:py-12")}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6', currentStyle.card.title)}>
               Team
             </h3>
             <p className={cn(currentStyle.card.content, "leading-loose")}>
               Manage your team members, assign roles, and collaborate effectively. View team performance and resource allocation at a glance.
             </p>
           </TabsContent>
-          <TabsContent value="settings" className={cn(currentStyle.tabs.content, "py-12")}>
-            <h3 className={cn('text-2xl mb-6', currentStyle.card.title)}>
+          <TabsContent value="settings" className={cn(currentStyle.tabs.content, "py-6 sm:py-8 md:py-12")}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6', currentStyle.card.title)}>
               Settings
             </h3>
             <p className={cn(currentStyle.card.content, "leading-loose")}>
@@ -156,9 +156,9 @@ export function PureMinimalismLayout() {
       </div>
 
       {/* Project Status */}
-      <div className="max-w-2xl mx-auto space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Project Status</h2>
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div className="max-w-2xl mx-auto space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Project Status</h2>
+        <div className="flex flex-wrap justify-center gap-4 mb-8 sm:mb-10 md:mb-12">
           <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success)}>
             Active
           </Badge>
@@ -175,7 +175,7 @@ export function PureMinimalismLayout() {
             Completed
           </Badge>
         </div>
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-10 md:space-y-12">
           <div className="space-y-4">
             <div className="flex justify-between items-center">
               <Label className={currentStyle.input.label}>Website Redesign</Label>
@@ -203,11 +203,11 @@ export function PureMinimalismLayout() {
       </div>
 
       {/* Account Preferences */}
-      <div className="max-w-2xl mx-auto space-y-12">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Account Preferences</h2>
-        <div className="space-y-12">
+      <div className="max-w-2xl mx-auto space-y-8 sm:space-y-10 md:space-y-12">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Account Preferences</h2>
+        <div className="space-y-8 sm:space-y-10 md:space-y-12">
           <div className="space-y-6">
-            <h3 className={cn('text-xl', currentStyle.input.label)}>Email Preferences</h3>
+            <h3 className={cn('text-lg sm:text-xl', currentStyle.input.label)}>Email Preferences</h3>
             <div className="space-y-5">
               <label className="flex items-center gap-4 cursor-pointer">
                 <Checkbox
@@ -234,7 +234,7 @@ export function PureMinimalismLayout() {
             </div>
           </div>
           <div className="space-y-6">
-            <h3 className={cn('text-xl', currentStyle.input.label)}>Notifications</h3>
+            <h3 className={cn('text-lg sm:text-xl', currentStyle.input.label)}>Notifications</h3>
             <div className="space-y-5">
               <div className="flex items-center justify-between py-2">
                 <span className={currentStyle.checkbox.label}>Email Notifications</span>
@@ -257,9 +257,9 @@ export function PureMinimalismLayout() {
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-6xl mx-auto space-y-12">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10 md:space-y-12">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           <StyledCard
             title="Cloud Solutions"
             content="Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly."
@@ -288,8 +288,8 @@ export function PureMinimalismLayout() {
       </div>
 
       {/* FAQ */}
-      <div className="max-w-3xl mx-auto space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Frequently Asked Questions</h2>
+      <div className="max-w-3xl mx-auto space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Frequently Asked Questions</h2>
         <Accordion>
           <AccordionItem value="item-1" className={currentStyle.accordion.item}>
             <AccordionTrigger className={currentStyle.accordion.trigger}>
@@ -327,8 +327,8 @@ export function PureMinimalismLayout() {
       </div>
 
       {/* System Notifications */}
-      <div className="max-w-3xl mx-auto space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>System Notifications</h2>
+      <div className="max-w-3xl mx-auto space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>System Notifications</h2>
         <div className="space-y-6">
           <Alert className={cn(currentStyle.alert.base, 'bg-blue-50 border-blue-200 text-blue-900')}>
             <AlertTitle className={currentStyle.alert.title}>New Feature Available</AlertTitle>
@@ -358,10 +358,10 @@ export function PureMinimalismLayout() {
       </div>
 
       {/* Important Actions */}
-      <div className="max-w-md mx-auto text-center space-y-6">
-        <h2 className={cn(currentStyle.card.title, "text-3xl")}>Important Actions</h2>
+      <div className="max-w-md mx-auto text-center space-y-4 sm:space-y-6">
+        <h2 className={cn(currentStyle.card.title, "text-xl sm:text-2xl md:text-3xl")}>Important Actions</h2>
         <Dialog>
-          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "py-6 w-full")}>
+          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-6 w-full")}>
             Delete Project
           </DialogTrigger>
           <DialogContent className={currentStyle.dialog.content}>

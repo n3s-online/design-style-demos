@@ -18,7 +18,8 @@ export const StyledTabTrigger = React.forwardRef<HTMLButtonElement, StyledTabTri
         ref={ref}
         className={cn(
           currentStyle.tabs.trigger,
-          isActive ? currentStyle.tabs.triggerActive : currentStyle.tabs.triggerInactive
+          isActive ? currentStyle.tabs.triggerActive : currentStyle.tabs.triggerInactive,
+          "text-xs sm:text-sm whitespace-nowrap"
         )}
         data-state={isActive ? "active" : "inactive"}
         onClick={() => setActiveTab(value)}

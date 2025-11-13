@@ -26,7 +26,7 @@ export function BaseLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-12">
+    <div className="w-full space-y-8 sm:space-y-10 md:space-y-12">
       {/* Welcome Section */}
       <div className="space-y-6">
         <StyledCard
@@ -38,7 +38,7 @@ export function BaseLayout() {
 
       {/* Action Buttons */}
       <DemoSection title="Quick Actions">
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-3 sm:gap-4">
           <Button className={cn(currentStyle.button.base, currentStyle.button.primary)}>
             Create New Project
           </Button>
@@ -59,7 +59,7 @@ export function BaseLayout() {
 
       {/* Contact Form */}
       <DemoSection title="Contact Us">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <div className="space-y-2">
             <Label className={currentStyle.input.label}>Full Name</Label>
             <Input
@@ -105,7 +105,7 @@ export function BaseLayout() {
 
       {/* Preferences */}
       <DemoSection title="Account Preferences">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <div className="space-y-4">
             <h3 className={cn('text-lg font-semibold', currentStyle.input.label)}>Email Preferences</h3>
             <div className="space-y-3">
@@ -343,7 +343,7 @@ export function BaseLayout() {
 
       {/* Services Grid */}
       <DemoSection title="Our Services">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           <StyledCard
             title="Cloud Solutions"
             content="Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly."

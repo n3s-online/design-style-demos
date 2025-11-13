@@ -26,7 +26,7 @@ export function ModernFlatLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-12">
+    <div className="w-full space-y-8 sm:space-y-10 md:space-y-12">
       {/* Welcome Section */}
       <div className="space-y-6">
         <StyledCard

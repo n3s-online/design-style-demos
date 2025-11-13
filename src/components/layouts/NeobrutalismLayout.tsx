@@ -32,17 +32,17 @@ export function NeobrutalismLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-8">
+    <div className="w-full space-y-6 sm:space-y-8">
       {/* Hero Welcome Section - Bold and Prominent */}
       <div className="space-y-6">
         <div className={cn(
           currentStyle.card.container,
           "relative overflow-hidden"
         )}>
-          <div className="absolute top-0 right-0 w-32 h-32 bg-pink-400 -mr-8 -mt-8 rotate-12" />
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-cyan-400 -ml-6 -mb-6 rotate-45" />
-          <div className="relative p-8">
-            <h1 className={cn(currentStyle.card.title, "mb-4")}>
+          <div className="absolute top-0 right-0 w-16 h-16 sm:w-32 sm:h-32 bg-pink-400 -mr-4 -mt-4 sm:-mr-8 sm:-mt-8 rotate-12" />
+          <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-24 sm:h-24 bg-cyan-400 -ml-3 -mb-3 sm:-ml-6 sm:-mb-6 rotate-45" />
+          <div className="relative p-4 sm:p-6 md:p-8">
+            <h1 className={cn(currentStyle.card.title, "mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl")}>
               WELCOME TO ACME CORP
             </h1>
             <p className={currentStyle.card.content}>
@@ -54,18 +54,18 @@ export function NeobrutalismLayout() {
 
       {/* Quick Actions Grid - Prominent CTA */}
       <DemoSection title="QUICK ACTIONS">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "text-xl py-6")}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "text-base sm:text-lg md:text-xl py-3 sm:py-4 md:py-6")}>
             CREATE NEW PROJECT
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "text-xl py-6")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "text-base sm:text-lg md:text-xl py-3 sm:py-4 md:py-6")}>
             VIEW ANALYTICS
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "text-xl py-6")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "text-base sm:text-lg md:text-xl py-3 sm:py-4 md:py-6")}>
             TEAM SETTINGS
           </Button>
           <Button
-            className={cn(currentStyle.button.base, currentStyle.button.primary, "text-xl py-6")}
+            className={cn(currentStyle.button.base, currentStyle.button.primary, "text-base sm:text-lg md:text-xl py-3 sm:py-4 md:py-6")}
             disabled
           >
             EXPORT REPORT
@@ -74,10 +74,10 @@ export function NeobrutalismLayout() {
       </DemoSection>
 
       {/* Two Column Layout: Contact + Status */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {/* Contact Form */}
-        <div className={cn(currentStyle.card.container, "p-6")}>
-          <h2 className={cn(currentStyle.card.title, "mb-6")}>CONTACT US</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6")}>
+          <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl")}>CONTACT US</h2>
           <div className="space-y-4">
             <div className="space-y-2">
               <Label className={currentStyle.input.label}>FULL NAME</Label>
@@ -123,8 +123,8 @@ export function NeobrutalismLayout() {
         </div>
 
         {/* Project Status */}
-        <div className={cn(currentStyle.card.container, "p-6")}>
-          <h2 className={cn(currentStyle.card.title, "mb-6")}>PROJECT STATUS</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6")}>
+          <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl")}>PROJECT STATUS</h2>
           <div className="flex flex-wrap gap-3 mb-6">
             <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success)}>
               ACTIVE
@@ -146,7 +146,7 @@ export function NeobrutalismLayout() {
             <div className="space-y-2">
               <div className="flex justify-between items-center mb-2">
                 <Label className={currentStyle.input.label}>WEBSITE REDESIGN</Label>
-                <span className={cn(currentStyle.checkbox.label, "text-2xl")}>{uploadProgress}%</span>
+                <span className={cn(currentStyle.checkbox.label, "text-base sm:text-xl md:text-2xl")}>{uploadProgress}%</span>
               </div>
               <Progress
                 value={uploadProgress}
@@ -156,7 +156,7 @@ export function NeobrutalismLayout() {
             <div className="space-y-2">
               <div className="flex justify-between items-center mb-2">
                 <Label className={currentStyle.input.label}>TEAM RESOURCES</Label>
-                <span className={cn(currentStyle.checkbox.label, "text-2xl")}>{volume}%</span>
+                <span className={cn(currentStyle.checkbox.label, "text-base sm:text-xl md:text-2xl")}>{volume}%</span>
               </div>
               <Slider
                 value={volume}
@@ -173,8 +173,8 @@ export function NeobrutalismLayout() {
       {/* Account Preferences */}
       <DemoSection title="ACCOUNT PREFERENCES">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className={cn(currentStyle.card.container, "p-6")}>
-            <h3 className={cn(currentStyle.input.label, "text-2xl mb-4")}>EMAIL PREFERENCES</h3>
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6")}>
+            <h3 className={cn(currentStyle.input.label, "text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4")}>EMAIL PREFERENCES</h3>
             <div className="space-y-4">
               <label className="flex items-center gap-3 cursor-pointer">
                 <Checkbox
@@ -200,8 +200,8 @@ export function NeobrutalismLayout() {
               </label>
             </div>
           </div>
-          <div className={cn(currentStyle.card.container, "p-6")}>
-            <h3 className={cn(currentStyle.input.label, "text-2xl mb-4")}>NOTIFICATIONS</h3>
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6")}>
+            <h3 className={cn(currentStyle.input.label, "text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4")}>NOTIFICATIONS</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className={currentStyle.checkbox.label}>EMAIL NOTIFICATIONS</span>
@@ -233,7 +233,7 @@ export function NeobrutalismLayout() {
             <StyledTabTrigger value="settings">SETTINGS</StyledTabTrigger>
           </TabsList>
           <TabsContent value="overview" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               OVERVIEW
             </h3>
             <p className={currentStyle.card.content}>
@@ -241,7 +241,7 @@ export function NeobrutalismLayout() {
             </p>
           </TabsContent>
           <TabsContent value="analytics" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               ANALYTICS
             </h3>
             <p className={currentStyle.card.content}>
@@ -249,7 +249,7 @@ export function NeobrutalismLayout() {
             </p>
           </TabsContent>
           <TabsContent value="team" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               TEAM
             </h3>
             <p className={currentStyle.card.content}>
@@ -257,7 +257,7 @@ export function NeobrutalismLayout() {
             </p>
           </TabsContent>
           <TabsContent value="settings" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               SETTINGS
             </h3>
             <p className={currentStyle.card.content}>
@@ -269,7 +269,7 @@ export function NeobrutalismLayout() {
 
       {/* Services Grid - Stacked Cards */}
       <DemoSection title="OUR SERVICES">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <StyledCard
             title="CLOUD SOLUTIONS"
             content="Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly."
@@ -368,7 +368,7 @@ export function NeobrutalismLayout() {
       {/* Important Actions Dialog */}
       <DemoSection title="IMPORTANT ACTIONS">
         <Dialog>
-          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "text-xl py-6 px-8")}>
+          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "text-base sm:text-lg md:text-xl py-3 sm:py-4 md:py-6 px-4 sm:px-6 md:px-8")}>
             DELETE PROJECT
           </DialogTrigger>
           <DialogContent className={currentStyle.dialog.content}>

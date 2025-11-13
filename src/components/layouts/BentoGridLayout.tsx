@@ -28,10 +28,10 @@ export function BentoGridLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-6">
+    <div className="w-full space-y-4 sm:space-y-6">
       {/* Welcome Section - Large Hero Tile */}
-      <div className={cn(currentStyle.card.container, 'p-8 md:p-12')}>
-        <h1 className={cn(currentStyle.card.title, 'text-3xl md:text-4xl mb-4')}>
+      <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 md:p-8 lg:p-12')}>
+        <h1 className={cn(currentStyle.card.title, 'text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 sm:mb-4')}>
           Welcome to Acme Corp
         </h1>
         <p className={cn(currentStyle.card.content, 'max-w-3xl')}>
@@ -41,22 +41,22 @@ export function BentoGridLayout() {
 
       {/* Quick Actions Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
           <Button className={cn(currentStyle.button.base, currentStyle.button.primary, 'w-full')}>
             Create New Project
           </Button>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
           <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, 'w-full')}>
             View Analytics
           </Button>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
           <Button className={cn(currentStyle.button.base, currentStyle.button.outline, 'w-full')}>
             Team Settings
           </Button>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
           <Button
             className={cn(currentStyle.button.base, currentStyle.button.primary, 'w-full')}
             disabled
@@ -67,9 +67,9 @@ export function BentoGridLayout() {
       </div>
 
       {/* Contact Form - Wide Tile */}
-      <div className={cn(currentStyle.card.container, 'p-8')}>
-        <h2 className={cn(currentStyle.card.title, 'mb-6')}>Contact Us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 md:p-8')}>
+        <h2 className={cn(currentStyle.card.title, 'mb-4 sm:mb-6')}>Contact Us</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <div className="space-y-2">
             <Label className={currentStyle.input.label}>Full Name</Label>
             <Input
@@ -115,8 +115,8 @@ export function BentoGridLayout() {
 
       {/* Preferences Grid - Two Column Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className={cn(currentStyle.card.container, 'p-6')}>
-          <h3 className={cn(currentStyle.card.title, 'text-lg mb-4')}>Email Preferences</h3>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6')}>
+          <h3 className={cn(currentStyle.card.title, 'text-base sm:text-lg mb-3 sm:mb-4')}>Email Preferences</h3>
           <div className="space-y-3">
             <label className="flex items-center gap-3 cursor-pointer">
               <Checkbox
@@ -142,8 +142,8 @@ export function BentoGridLayout() {
             </label>
           </div>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6')}>
-          <h3 className={cn(currentStyle.card.title, 'text-lg mb-4')}>Notifications</h3>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6')}>
+          <h3 className={cn(currentStyle.card.title, 'text-base sm:text-lg mb-3 sm:mb-4')}>Notifications</h3>
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <span className={currentStyle.checkbox.label}>Email Notifications</span>
@@ -166,8 +166,8 @@ export function BentoGridLayout() {
 
       {/* Project Status - Mixed Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div className={cn(currentStyle.card.container, 'p-6 lg:col-span-2')}>
-          <h2 className={cn(currentStyle.card.title, 'mb-4')}>Project Progress</h2>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 lg:col-span-2')}>
+          <h2 className={cn(currentStyle.card.title, 'mb-3 sm:mb-4')}>Project Progress</h2>
           <div className="space-y-6">
             <div className="space-y-2">
               <div className="flex justify-between items-center mb-2">
@@ -194,8 +194,8 @@ export function BentoGridLayout() {
             </div>
           </div>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6')}>
-          <h3 className={cn(currentStyle.card.title, 'text-lg mb-4')}>Status</h3>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6')}>
+          <h3 className={cn(currentStyle.card.title, 'text-base sm:text-lg mb-3 sm:mb-4')}>Status</h3>
           <div className="flex flex-wrap gap-2">
             <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success)}>
               Active
@@ -217,8 +217,8 @@ export function BentoGridLayout() {
       </div>
 
       {/* Dashboard Tabs - Full Width Tile */}
-      <div className={cn(currentStyle.card.container, 'p-6')}>
-        <h2 className={cn(currentStyle.card.title, 'mb-4')}>Dashboard</h2>
+      <div className={cn(currentStyle.card.container, 'p-4 sm:p-6')}>
+        <h2 className={cn(currentStyle.card.title, 'mb-3 sm:mb-4')}>Dashboard</h2>
         <Tabs defaultValue="overview">
           <TabsList className={currentStyle.tabs.list}>
             <StyledTabTrigger value="overview">Overview</StyledTabTrigger>
@@ -262,8 +262,8 @@ export function BentoGridLayout() {
       </div>
 
       {/* FAQ - Full Width */}
-      <div className={cn(currentStyle.card.container, 'p-6')}>
-        <h2 className={cn(currentStyle.card.title, 'mb-4')}>Frequently Asked Questions</h2>
+      <div className={cn(currentStyle.card.container, 'p-4 sm:p-6')}>
+        <h2 className={cn(currentStyle.card.title, 'mb-3 sm:mb-4')}>Frequently Asked Questions</h2>
         <Accordion>
           <AccordionItem value="item-1" className={currentStyle.accordion.item}>
             <AccordionTrigger className={currentStyle.accordion.trigger}>
@@ -329,8 +329,8 @@ export function BentoGridLayout() {
       </div>
 
       {/* Important Actions */}
-      <div className={cn(currentStyle.card.container, 'p-6')}>
-        <h2 className={cn(currentStyle.card.title, 'mb-4')}>Important Actions</h2>
+      <div className={cn(currentStyle.card.container, 'p-4 sm:p-6')}>
+        <h2 className={cn(currentStyle.card.title, 'mb-3 sm:mb-4')}>Important Actions</h2>
         <Dialog>
           <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary)}>
             Delete Project
@@ -358,38 +358,38 @@ export function BentoGridLayout() {
 
       {/* Services Grid - 3 Column Bento Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
-          <h3 className={cn(currentStyle.card.title, 'mb-3')}>Cloud Solutions</h3>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
+          <h3 className={cn(currentStyle.card.title, 'mb-2 sm:mb-3')}>Cloud Solutions</h3>
           <p className={currentStyle.card.content}>
             Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly.
           </p>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
-          <h3 className={cn(currentStyle.card.title, 'mb-3')}>Data Analytics</h3>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
+          <h3 className={cn(currentStyle.card.title, 'mb-2 sm:mb-3')}>Data Analytics</h3>
           <p className={currentStyle.card.content}>
             Transform your data into actionable insights with our powerful analytics platform and visualization tools.
           </p>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
-          <h3 className={cn(currentStyle.card.title, 'mb-3')}>Security Services</h3>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
+          <h3 className={cn(currentStyle.card.title, 'mb-2 sm:mb-3')}>Security Services</h3>
           <p className={currentStyle.card.content}>
             Enterprise-grade security solutions to protect your business from modern cyber threats and vulnerabilities.
           </p>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
-          <h3 className={cn(currentStyle.card.title, 'mb-3')}>Team Collaboration</h3>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
+          <h3 className={cn(currentStyle.card.title, 'mb-2 sm:mb-3')}>Team Collaboration</h3>
           <p className={currentStyle.card.content}>
             Streamline communication and boost productivity with integrated collaboration tools for distributed teams.
           </p>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
-          <h3 className={cn(currentStyle.card.title, 'mb-3')}>API Integration</h3>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
+          <h3 className={cn(currentStyle.card.title, 'mb-2 sm:mb-3')}>API Integration</h3>
           <p className={currentStyle.card.content}>
             Seamlessly connect with third-party services and build custom integrations with our robust API platform.
           </p>
         </div>
-        <div className={cn(currentStyle.card.container, 'p-6 hover:shadow-lg transition-all')}>
-          <h3 className={cn(currentStyle.card.title, 'mb-3')}>24/7 Support</h3>
+        <div className={cn(currentStyle.card.container, 'p-4 sm:p-6 hover:shadow-lg transition-all')}>
+          <h3 className={cn(currentStyle.card.title, 'mb-2 sm:mb-3')}>24/7 Support</h3>
           <p className={currentStyle.card.content}>
             Round-the-clock technical support from our expert team to keep your operations running smoothly.
           </p>
