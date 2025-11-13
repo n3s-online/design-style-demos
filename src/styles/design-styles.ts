@@ -1370,45 +1370,45 @@ const modernFlatStyle: DesignStyle = {
   displayName: 'Modern Flat',
   colorPalettes: [
     {
-      id: 'emerald',
-      name: 'Emerald',
+      id: 'sky',
+      name: 'Sky',
       colors: {
-        primary: '#10b981',
-        secondary: '#059669',
-        accent: '#34d399',
-        background: '#18181b',
-        surface: '#27272a',
-        text: '#ffffff',
-        textSecondary: '#a1a1aa',
-        border: '#3f3f46'
+        primary: '#0ea5e9',      // Sky blue
+        secondary: '#0284c7',    // Darker blue
+        accent: '#38bdf8',       // Light blue
+        background: '#0c1220',   // Deep blue-black
+        surface: '#1e293b',      // Dark slate
+        text: '#f0f9ff',         // Light blue-white
+        textSecondary: '#cbd5e1', // Gray-blue
+        border: '#334155'        // Slate border
+      }
+    },
+    {
+      id: 'coral',
+      name: 'Coral',
+      colors: {
+        primary: '#f97316',      // Orange
+        secondary: '#ea580c',    // Dark orange
+        accent: '#fb923c',       // Light coral
+        background: '#1a0f0a',   // Deep orange-black
+        surface: '#292524',      // Dark brown
+        text: '#fef3c7',         // Light cream
+        textSecondary: '#d6d3d1', // Stone gray
+        border: '#44403c'        // Brown border
       }
     },
     {
       id: 'violet',
       name: 'Violet',
       colors: {
-        primary: '#8b5cf6',
-        secondary: '#7c3aed',
-        accent: '#a78bfa',
-        background: '#18181b',
-        surface: '#27272a',
-        text: '#ffffff',
-        textSecondary: '#a1a1aa',
-        border: '#3f3f46'
-      }
-    },
-    {
-      id: 'rose',
-      name: 'Rose',
-      colors: {
-        primary: '#f43f5e',
-        secondary: '#e11d48',
-        accent: '#fb7185',
-        background: '#18181b',
-        surface: '#27272a',
-        text: '#ffffff',
-        textSecondary: '#a1a1aa',
-        border: '#3f3f46'
+        primary: '#8b5cf6',      // Violet
+        secondary: '#7c3aed',    // Dark purple
+        accent: '#a78bfa',       // Light violet
+        background: '#0f0a1a',   // Deep purple-black
+        surface: '#27272a',      // Dark zinc
+        text: '#faf5ff',         // Light lavender
+        textSecondary: '#d4d4d8', // Zinc gray
+        border: '#3f3f46'        // Zinc border
       }
     }
   ],
