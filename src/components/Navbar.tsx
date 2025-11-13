@@ -6,7 +6,7 @@ import { getAvailableStyles } from '@/styles/design-styles'
 import type { DesignStyleName } from '@/types/design-style'
 
 export function Navbar() {
-  const { currentStyle, styleName, setStyleName, currentPalette, paletteId, setPaletteId } = useDesignStyle()
+  const { currentStyle, styleName, setStyleName, paletteId, setPaletteId } = useDesignStyle()
 
   const availableStyles = getAvailableStyles()
   const styleNames: DesignStyleName[] = availableStyles.map((style) => style.name)
