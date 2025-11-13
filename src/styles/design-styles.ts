@@ -1152,41 +1152,41 @@ const vaporwaveStyle: DesignStyle = {
   button: {
     base: 'border-2 rounded-lg font-bold italic transition-all shadow-md hover:shadow-lg hover:scale-105 active:scale-100',
     // For style selector dialog
-    selected: 'bg-palette-primary text-palette-text border-palette-border shadow-[0_0_20px_rgba(255,192,203,0.4)]',
-    unselected: 'bg-palette-accent text-palette-text border-palette-border hover:bg-palette-secondary',
+    selected: 'bg-palette-primary text-palette-background border-palette-border shadow-[0_0_20px_rgba(255,192,203,0.4)]',
+    unselected: 'bg-palette-surface text-palette-text border-palette-border hover:bg-palette-background',
     // For general button usage
-    primary: 'bg-palette-primary text-palette-text border-palette-border shadow-md',
-    secondary: 'bg-palette-secondary text-palette-text border-palette-border shadow-md',
-    outline: 'bg-palette-surface backdrop-blur-sm text-palette-text border-palette-border hover:bg-palette-accent',
+    primary: 'bg-palette-primary text-palette-background border-palette-border shadow-md',
+    secondary: 'bg-palette-secondary text-palette-background border-palette-border shadow-md',
+    outline: 'bg-palette-surface backdrop-blur-sm text-palette-text border-palette-border hover:bg-palette-background',
   },
   input: {
-    base: 'bg-white/70 backdrop-blur-sm border-2 border-palette-border rounded-lg text-palette-text-secondary font-medium italic placeholder:text-purple-300 focus:ring-2 focus:ring-pink-300 focus:outline-none shadow-inner',
-    label: 'font-bold italic text-palette-primary',
+    base: 'bg-palette-surface/90 backdrop-blur-sm border-2 border-palette-border rounded-lg text-palette-text font-medium italic placeholder:text-palette-text-secondary/50 focus:ring-2 focus:ring-palette-accent focus:outline-none shadow-inner',
+    label: 'font-bold italic text-palette-text',
   },
   textarea: {
-    base: 'bg-white/70 backdrop-blur-sm border-2 border-palette-border rounded-lg text-palette-text-secondary font-medium italic placeholder:text-purple-300 focus:ring-2 focus:ring-pink-300 focus:outline-none shadow-inner',
+    base: 'bg-palette-surface/90 backdrop-blur-sm border-2 border-palette-border rounded-lg text-palette-text font-medium italic placeholder:text-palette-text-secondary/50 focus:ring-2 focus:ring-palette-accent focus:outline-none shadow-inner',
   },
   checkbox: {
-    base: 'border-2 border-palette-border rounded w-5 h-5 accent-palette-accent focus:ring-2 focus:ring-pink-300 bg-white/70',
+    base: 'border-2 border-palette-border rounded w-5 h-5 accent-palette-accent focus:ring-2 focus:ring-palette-accent bg-palette-surface',
     label: 'font-medium italic text-palette-text',
   },
   switch: {
     base: 'border-2 border-palette-border',
   },
   tabs: {
-    list: 'bg-gradient-to-r from-pink-200 to-cyan-200 border-2 border-palette-border rounded-xl p-2 gap-2 shadow-inner',
+    list: 'bg-palette-surface border-2 border-palette-border rounded-xl p-2 gap-2 shadow-inner',
     trigger: 'font-bold italic text-palette-text px-4 py-2 rounded-lg transition-all',
-    triggerActive: 'bg-white/80 backdrop-blur-sm text-palette-primary shadow-md',
-    triggerInactive: 'hover:bg-white/40',
-    content: 'bg-white/60 backdrop-blur-sm border-2 border-palette-border rounded-xl p-6 mt-2 shadow-lg',
+    triggerActive: 'bg-palette-primary text-palette-background shadow-md',
+    triggerInactive: 'hover:bg-palette-background',
+    content: 'bg-palette-surface/90 backdrop-blur-sm border-2 border-palette-border rounded-xl p-6 mt-2 shadow-lg',
   },
   accordion: {
-    item: 'bg-gradient-to-br from-pink-200/60 to-purple-200/60 backdrop-blur-sm border-2 border-palette-border rounded-xl mb-2 overflow-hidden shadow-md',
-    trigger: 'font-bold italic text-palette-text hover:bg-pink-200/50 p-4 transition-colors',
-    content: 'font-normal italic text-palette-text-secondary p-4 bg-white/50 border-t-2 border-pink-200',
+    item: 'bg-palette-surface/80 backdrop-blur-sm border-2 border-palette-border rounded-xl mb-2 overflow-hidden shadow-md',
+    trigger: 'font-bold italic text-palette-text hover:bg-palette-background/50 p-4 transition-colors',
+    content: 'font-normal italic text-palette-text-secondary p-4 bg-palette-background/50 border-t-2 border-palette-border',
   },
   alert: {
-    base: 'bg-gradient-to-br from-pink-200/70 to-purple-200/70 backdrop-blur-sm border-2 border-palette-border rounded-xl shadow-lg p-4',
+    base: 'bg-palette-surface/80 backdrop-blur-sm border-2 border-palette-border rounded-xl shadow-lg p-4',
     title: 'font-bold italic text-transparent bg-gradient-to-r from-pink-500 to-cyan-500 bg-clip-text',
     description: 'font-normal italic text-palette-text',
   },
