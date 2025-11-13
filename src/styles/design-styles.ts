@@ -764,45 +764,45 @@ const popArtStyle: DesignStyle = {
   displayName: 'Pop Art',
   colorPalettes: [
     {
-      id: 'classic',
-      name: 'Classic',
+      id: 'comic',
+      name: 'Comic',
       colors: {
-        primary: '#ef4444',
-        secondary: '#3b82f6',
-        accent: '#facc15',
-        background: '#fef3c7',
-        surface: '#fef08a',
-        text: '#000000',
-        textSecondary: '#ffffff',
-        border: '#000000'
-      }
-    },
-    {
-      id: 'neon',
-      name: 'Neon',
-      colors: {
-        primary: '#ec4899',
-        secondary: '#8b5cf6',
-        accent: '#06b6d4',
-        background: '#fdf4ff',
-        surface: '#f0abfc',
-        text: '#000000',
-        textSecondary: '#ffffff',
-        border: '#000000'
+        primary: '#ef4444',      // Bright red
+        secondary: '#3b82f6',    // Blue
+        accent: '#fbbf24',       // Yellow
+        background: '#fef3c7',   // Light yellow bg
+        surface: '#fed7aa',      // Peach surface
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#374151', // Dark gray
+        border: '#000000'        // Black borders
       }
     },
     {
       id: 'retro',
       name: 'Retro',
       colors: {
-        primary: '#f97316',
-        secondary: '#84cc16',
-        accent: '#eab308',
-        background: '#fef9c3',
-        surface: '#fde047',
-        text: '#000000',
-        textSecondary: '#ffffff',
-        border: '#000000'
+        primary: '#ec4899',      // Hot pink
+        secondary: '#f97316',    // Orange
+        accent: '#06b6d4',       // Cyan
+        background: '#fdf2f8',   // Light pink bg
+        surface: '#fbcfe8',      // Pink surface
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#374151', // Dark gray
+        border: '#000000'        // Black borders
+      }
+    },
+    {
+      id: 'neon',
+      name: 'Neon',
+      colors: {
+        primary: '#a855f7',      // Purple
+        secondary: '#22c55e',    // Green
+        accent: '#eab308',       // Yellow
+        background: '#faf5ff',   // Light purple bg
+        surface: '#e9d5ff',      // Lavender surface
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#374151', // Dark gray
+        border: '#000000'        // Black borders
       }
     }
   ],
