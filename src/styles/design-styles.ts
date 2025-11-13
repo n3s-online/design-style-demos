@@ -163,42 +163,42 @@ const artDecoStyle: DesignStyle = {
       id: 'golden',
       name: 'Golden',
       colors: {
-        primary: '#fbbf24',
-        secondary: '#d97706',
-        accent: '#f59e0b',
-        background: '#0f172a',
-        surface: '#1e293b',
-        text: '#fbbf24',
-        textSecondary: '#cbd5e1',
-        border: '#fbbf24'
+        primary: '#d4af37',      // Classic gold
+        secondary: '#8b7355',    // Bronze
+        accent: '#ffd700',       // Bright gold
+        background: '#1a1410',   // Deep brown-black
+        surface: '#2a2118',      // Rich brown
+        text: '#f5deb3',         // Wheat/champagne
+        textSecondary: '#c4a876', // Muted gold
+        border: '#d4af37'        // Gold border
       }
     },
     {
       id: 'silver',
       name: 'Silver',
       colors: {
-        primary: '#e2e8f0',
-        secondary: '#94a3b8',
-        accent: '#cbd5e1',
-        background: '#0f172a',
-        surface: '#1e293b',
-        text: '#e2e8f0',
-        textSecondary: '#94a3b8',
-        border: '#e2e8f0'
+        primary: '#c0c0c0',      // Pure silver
+        secondary: '#8c92ac',    // Steel blue
+        accent: '#e8e8e8',       // Bright silver
+        background: '#0a0a0f',   // Deep navy-black
+        surface: '#1a1a24',      // Midnight blue
+        text: '#e6e6fa',         // Lavender-white
+        textSecondary: '#9d9daa', // Silver-gray
+        border: '#c0c0c0'        // Silver border
       }
     },
     {
-      id: 'emerald',
-      name: 'Emerald',
+      id: 'ruby',
+      name: 'Ruby',
       colors: {
-        primary: '#10b981',
-        secondary: '#059669',
-        accent: '#34d399',
-        background: '#0f172a',
-        surface: '#1e293b',
-        text: '#10b981',
-        textSecondary: '#cbd5e1',
-        border: '#10b981'
+        primary: '#e0115f',      // Ruby red
+        secondary: '#8b0000',    // Dark red
+        accent: '#ff1f8f',       // Hot pink
+        background: '#150a0a',   // Deep wine-black
+        surface: '#2a1414',      // Dark burgundy
+        text: '#ffc0cb',         // Light pink
+        textSecondary: '#d4a5a5', // Rose
+        border: '#e0115f'        // Ruby border
       }
     }
   ],
