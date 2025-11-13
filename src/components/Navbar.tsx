@@ -28,24 +28,22 @@ export function Navbar() {
         <h1 className={`text-lg sm:text-xl font-bold ${currentStyle.navbar.text}`}>{currentStyle.displayName}</h1>
 
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-          {/* Color Palette Selector */}
-          <div className="flex items-center gap-1 sm:gap-2">
-            <span className={`text-xs sm:text-sm ${currentStyle.navbar.label} hidden md:inline`}>Colors:</span>
-            <div className="flex gap-1">
-              {currentStyle.colorPalettes.map((palette) => (
-                <button
-                  key={palette.id}
-                  onClick={() => setPaletteId(palette.id)}
-                  className={`px-2 py-1 sm:px-3 sm:py-2 text-xs font-semibold transition-all ${currentStyle.navbar.select} ${
-                    paletteId === palette.id ? 'opacity-100' : 'opacity-50 hover:opacity-75'
-                  }`}
-                  aria-label={`Switch to ${palette.name} color palette`}
-                  title={palette.name}
-                >
-                  {palette.name}
-                </button>
-              ))}
-            </div>
+          {/* Color Palette Selector - Visual Swatches */}
+          <div className="flex gap-1.5 sm:gap-2">
+            {currentStyle.colorPalettes.map((palette) => (
+              <button
+                key={palette.id}
+                onClick={() => setPaletteId(palette.id)}
+                className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 transition-all ${
+                  paletteId === palette.id
+                    ? 'border-current scale-110 shadow-lg'
+                    : 'border-transparent opacity-60 hover:opacity-100 hover:scale-105'
+                }`}
+                style={{ backgroundColor: palette.colors.primary }}
+                aria-label={`Switch to ${palette.name} color palette`}
+                title={palette.name}
+              />
+            ))}
           </div>
 
           <div className="hidden sm:block w-px h-6 bg-current opacity-20" />
