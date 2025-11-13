@@ -6,7 +6,7 @@ import { getAvailableStyles } from '@/styles/design-styles'
 import type { DesignStyleName } from '@/types/design-style'
 
 export function Navbar() {
-  const { currentStyle, styleName, setStyleName } = useDesignStyle()
+  const { currentStyle, styleName, setStyleName, currentPalette, paletteId, setPaletteId } = useDesignStyle()
 
   const availableStyles = getAvailableStyles()
   const styleNames: DesignStyleName[] = availableStyles.map((style) => style.name)
@@ -28,6 +28,28 @@ export function Navbar() {
         <h1 className={`text-xl font-bold ${currentStyle.navbar.text}`}>{currentStyle.displayName}</h1>
 
         <div className="flex items-center gap-3">
+          {/* Color Palette Selector */}
+          <div className="flex items-center gap-2">
+            <span className={`text-sm ${currentStyle.navbar.label} hidden sm:inline`}>Colors:</span>
+            <div className="flex gap-1">
+              {currentStyle.colorPalettes.map((palette) => (
+                <button
+                  key={palette.id}
+                  onClick={() => setPaletteId(palette.id)}
+                  className={`px-3 py-2 text-xs font-semibold transition-all ${currentStyle.navbar.select} ${
+                    paletteId === palette.id ? 'opacity-100' : 'opacity-50 hover:opacity-75'
+                  }`}
+                  aria-label={`Switch to ${palette.name} color palette`}
+                  title={palette.name}
+                >
+                  {palette.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="w-px h-6 bg-current opacity-20" />
+
           <HowThisWorksDialog
             triggerClassName={`px-4 py-2 font-semibold ${currentStyle.navbar.select}`}
           />

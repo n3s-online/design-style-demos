@@ -7,6 +7,50 @@ import type { DesignStyle, DesignStyleName } from '@/types/design-style'
 const neobrutalismStyle: DesignStyle = {
   name: 'neobrutalism',
   displayName: 'Neobrutalism',
+  colorPalettes: [
+    {
+      id: 'sunny',
+      name: 'Sunny',
+      colors: {
+        primary: '#fde047',
+        secondary: '#f472b6',
+        accent: '#06b6d4',
+        background: '#ffffff',
+        surface: '#fde047',
+        text: '#000000',
+        textSecondary: '#374151',
+        border: '#000000'
+      }
+    },
+    {
+      id: 'ocean',
+      name: 'Ocean',
+      colors: {
+        primary: '#06b6d4',
+        secondary: '#3b82f6',
+        accent: '#a855f7',
+        background: '#ffffff',
+        surface: '#06b6d4',
+        text: '#000000',
+        textSecondary: '#374151',
+        border: '#000000'
+      }
+    },
+    {
+      id: 'forest',
+      name: 'Forest',
+      colors: {
+        primary: '#10b981',
+        secondary: '#84cc16',
+        accent: '#f59e0b',
+        background: '#ffffff',
+        surface: '#10b981',
+        text: '#000000',
+        textSecondary: '#374151',
+        border: '#000000'
+      }
+    }
+  ],
   metadata: {
     description: 'A bold, unapologetic design style featuring thick borders, hard shadows, and high-contrast colors',
     characteristics: [
@@ -114,6 +158,50 @@ const neobrutalismStyle: DesignStyle = {
 const artDecoStyle: DesignStyle = {
   name: 'art-deco',
   displayName: 'Art Deco',
+  colorPalettes: [
+    {
+      id: 'golden',
+      name: 'Golden',
+      colors: {
+        primary: '#fbbf24',
+        secondary: '#d97706',
+        accent: '#f59e0b',
+        background: '#0f172a',
+        surface: '#1e293b',
+        text: '#fbbf24',
+        textSecondary: '#cbd5e1',
+        border: '#fbbf24'
+      }
+    },
+    {
+      id: 'silver',
+      name: 'Silver',
+      colors: {
+        primary: '#e2e8f0',
+        secondary: '#94a3b8',
+        accent: '#cbd5e1',
+        background: '#0f172a',
+        surface: '#1e293b',
+        text: '#e2e8f0',
+        textSecondary: '#94a3b8',
+        border: '#e2e8f0'
+      }
+    },
+    {
+      id: 'emerald',
+      name: 'Emerald',
+      colors: {
+        primary: '#10b981',
+        secondary: '#059669',
+        accent: '#34d399',
+        background: '#0f172a',
+        surface: '#1e293b',
+        text: '#10b981',
+        textSecondary: '#cbd5e1',
+        border: '#10b981'
+      }
+    }
+  ],
   metadata: {
     description: 'An elegant design style inspired by 1920s luxury, featuring geometric patterns, gold accents, and sophisticated typography',
     characteristics: [
@@ -221,6 +309,50 @@ const artDecoStyle: DesignStyle = {
 const pureMinimalismStyle: DesignStyle = {
   name: 'pure-minimalism',
   displayName: 'Pure Minimalism',
+  colorPalettes: [
+    {
+      id: 'classic',
+      name: 'Classic',
+      colors: {
+        primary: '#111827',
+        secondary: '#6b7280',
+        accent: '#3b82f6',
+        background: '#ffffff',
+        surface: '#f9fafb',
+        text: '#111827',
+        textSecondary: '#6b7280',
+        border: '#e5e7eb'
+      }
+    },
+    {
+      id: 'warm',
+      name: 'Warm',
+      colors: {
+        primary: '#78350f',
+        secondary: '#92400e',
+        accent: '#f59e0b',
+        background: '#fefce8',
+        surface: '#fef3c7',
+        text: '#78350f',
+        textSecondary: '#92400e',
+        border: '#fde68a'
+      }
+    },
+    {
+      id: 'cool',
+      name: 'Cool',
+      colors: {
+        primary: '#0f172a',
+        secondary: '#475569',
+        accent: '#06b6d4',
+        background: '#f8fafc',
+        surface: '#e0f2fe',
+        text: '#0f172a',
+        textSecondary: '#475569',
+        border: '#bae6fd'
+      }
+    }
+  ],
   metadata: {
     description: 'An ultra-clean design style emphasizing whitespace, simplicity, and the bare essentials',
     characteristics: [
@@ -328,6 +460,50 @@ const pureMinimalismStyle: DesignStyle = {
 const glassmorphismStyle: DesignStyle = {
   name: 'glassmorphism',
   displayName: 'Glassmorphism',
+  colorPalettes: [
+    {
+      id: 'sunset',
+      name: 'Sunset',
+      colors: {
+        primary: '#f472b6',
+        secondary: '#a855f7',
+        accent: '#ec4899',
+        background: '#fdf2f8',
+        surface: 'rgba(255, 255, 255, 0.2)',
+        text: '#ffffff',
+        textSecondary: 'rgba(255, 255, 255, 0.9)',
+        border: 'rgba(255, 255, 255, 0.3)'
+      }
+    },
+    {
+      id: 'aurora',
+      name: 'Aurora',
+      colors: {
+        primary: '#06b6d4',
+        secondary: '#3b82f6',
+        accent: '#8b5cf6',
+        background: '#eff6ff',
+        surface: 'rgba(255, 255, 255, 0.2)',
+        text: '#ffffff',
+        textSecondary: 'rgba(255, 255, 255, 0.9)',
+        border: 'rgba(255, 255, 255, 0.3)'
+      }
+    },
+    {
+      id: 'mint',
+      name: 'Mint',
+      colors: {
+        primary: '#10b981',
+        secondary: '#14b8a6',
+        accent: '#06b6d4',
+        background: '#f0fdfa',
+        surface: 'rgba(255, 255, 255, 0.2)',
+        text: '#ffffff',
+        textSecondary: 'rgba(255, 255, 255, 0.9)',
+        border: 'rgba(255, 255, 255, 0.3)'
+      }
+    }
+  ],
   metadata: {
     description: 'A modern design style featuring frosted glass effects, transparency, and beautiful blur',
     characteristics: [
@@ -435,6 +611,50 @@ const glassmorphismStyle: DesignStyle = {
 const claymorphismStyle: DesignStyle = {
   name: 'claymorphism',
   displayName: 'Claymorphism',
+  colorPalettes: [
+    {
+      id: 'peach',
+      name: 'Peach',
+      colors: {
+        primary: '#f472b6',
+        secondary: '#fb923c',
+        accent: '#a855f7',
+        background: '#fff1f2',
+        surface: '#fce7f3',
+        text: '#831843',
+        textSecondary: '#9f1239',
+        border: '#f9a8d4'
+      }
+    },
+    {
+      id: 'lavender',
+      name: 'Lavender',
+      colors: {
+        primary: '#a855f7',
+        secondary: '#c084fc',
+        accent: '#f472b6',
+        background: '#faf5ff',
+        surface: '#f3e8ff',
+        text: '#581c87',
+        textSecondary: '#6b21a8',
+        border: '#d8b4fe'
+      }
+    },
+    {
+      id: 'mint',
+      name: 'Mint',
+      colors: {
+        primary: '#34d399',
+        secondary: '#10b981',
+        accent: '#06b6d4',
+        background: '#ecfdf5',
+        surface: '#d1fae5',
+        text: '#065f46',
+        textSecondary: '#047857',
+        border: '#6ee7b7'
+      }
+    }
+  ],
   metadata: {
     description: 'A playful design style featuring soft, clay-like 3D elements with a puffy, inflated appearance',
     characteristics: [
@@ -542,6 +762,50 @@ const claymorphismStyle: DesignStyle = {
 const popArtStyle: DesignStyle = {
   name: 'pop-art',
   displayName: 'Pop Art',
+  colorPalettes: [
+    {
+      id: 'classic',
+      name: 'Classic',
+      colors: {
+        primary: '#ef4444',
+        secondary: '#3b82f6',
+        accent: '#facc15',
+        background: '#fef3c7',
+        surface: '#fef08a',
+        text: '#000000',
+        textSecondary: '#ffffff',
+        border: '#000000'
+      }
+    },
+    {
+      id: 'neon',
+      name: 'Neon',
+      colors: {
+        primary: '#ec4899',
+        secondary: '#8b5cf6',
+        accent: '#06b6d4',
+        background: '#fdf4ff',
+        surface: '#f0abfc',
+        text: '#000000',
+        textSecondary: '#ffffff',
+        border: '#000000'
+      }
+    },
+    {
+      id: 'retro',
+      name: 'Retro',
+      colors: {
+        primary: '#f97316',
+        secondary: '#84cc16',
+        accent: '#eab308',
+        background: '#fef9c3',
+        surface: '#fde047',
+        text: '#000000',
+        textSecondary: '#ffffff',
+        border: '#000000'
+      }
+    }
+  ],
   metadata: {
     description: 'A vibrant design style inspired by 1960s pop art, featuring bold colors, comic aesthetics, and high contrast',
     characteristics: [
@@ -650,6 +914,50 @@ const popArtStyle: DesignStyle = {
 const y2kStyle: DesignStyle = {
   name: 'y2k',
   displayName: 'Y2K Aesthetic',
+  colorPalettes: [
+    {
+      id: 'cyber',
+      name: 'Cyber',
+      colors: {
+        primary: '#84cc16',
+        secondary: '#ec4899',
+        accent: '#38bdf8',
+        background: '#f0f9ff',
+        surface: '#e0f2fe',
+        text: '#0369a1',
+        textSecondary: '#ffffff',
+        border: '#38bdf8'
+      }
+    },
+    {
+      id: 'candy',
+      name: 'Candy',
+      colors: {
+        primary: '#f0abfc',
+        secondary: '#fbbf24',
+        accent: '#fb923c',
+        background: '#fef3c7',
+        surface: '#fde68a',
+        text: '#92400e',
+        textSecondary: '#ffffff',
+        border: '#f0abfc'
+      }
+    },
+    {
+      id: 'chrome',
+      name: 'Chrome',
+      colors: {
+        primary: '#cbd5e1',
+        secondary: '#94a3b8',
+        accent: '#06b6d4',
+        background: '#f8fafc',
+        surface: '#e2e8f0',
+        text: '#0f172a',
+        textSecondary: '#ffffff',
+        border: '#cbd5e1'
+      }
+    }
+  ],
   metadata: {
     description: 'A nostalgic design style inspired by early 2000s internet culture, featuring chrome effects, bright colors, and glossy aesthetics',
     characteristics: [
@@ -758,6 +1066,50 @@ const y2kStyle: DesignStyle = {
 const vaporwaveStyle: DesignStyle = {
   name: 'vaporwave',
   displayName: 'Vaporwave',
+  colorPalettes: [
+    {
+      id: 'sunset',
+      name: 'Sunset',
+      colors: {
+        primary: '#f472b6',
+        secondary: '#a855f7',
+        accent: '#06b6d4',
+        background: '#fdf2f8',
+        surface: '#fae8ff',
+        text: '#a21caf',
+        textSecondary: '#9333ea',
+        border: '#f0abfc'
+      }
+    },
+    {
+      id: 'oceanic',
+      name: 'Oceanic',
+      colors: {
+        primary: '#06b6d4',
+        secondary: '#8b5cf6',
+        accent: '#ec4899',
+        background: '#ecfeff',
+        surface: '#cffafe',
+        text: '#0e7490',
+        textSecondary: '#7c3aed',
+        border: '#67e8f9'
+      }
+    },
+    {
+      id: 'peachy',
+      name: 'Peachy',
+      colors: {
+        primary: '#fb923c',
+        secondary: '#fbbf24',
+        accent: '#f472b6',
+        background: '#fff7ed',
+        surface: '#fed7aa',
+        text: '#c2410c',
+        textSecondary: '#92400e',
+        border: '#fdba74'
+      }
+    }
+  ],
   metadata: {
     description: 'A nostalgic design style inspired by 80s/90s aesthetics, featuring soft pastels, dreamy vibes, and retro nostalgia',
     characteristics: [
@@ -866,6 +1218,50 @@ const vaporwaveStyle: DesignStyle = {
 const boldMinimalismStyle: DesignStyle = {
   name: 'bold-minimalism',
   displayName: 'Bold Minimalism',
+  colorPalettes: [
+    {
+      id: 'monochrome',
+      name: 'Monochrome',
+      colors: {
+        primary: '#000000',
+        secondary: '#1f2937',
+        accent: '#4b5563',
+        background: '#ffffff',
+        surface: '#f9fafb',
+        text: '#000000',
+        textSecondary: '#6b7280',
+        border: '#e5e7eb'
+      }
+    },
+    {
+      id: 'blue',
+      name: 'Blue',
+      colors: {
+        primary: '#1e3a8a',
+        secondary: '#1e40af',
+        accent: '#3b82f6',
+        background: '#ffffff',
+        surface: '#eff6ff',
+        text: '#1e3a8a',
+        textSecondary: '#3b82f6',
+        border: '#dbeafe'
+      }
+    },
+    {
+      id: 'emerald',
+      name: 'Emerald',
+      colors: {
+        primary: '#064e3b',
+        secondary: '#065f46',
+        accent: '#10b981',
+        background: '#ffffff',
+        surface: '#ecfdf5',
+        text: '#064e3b',
+        textSecondary: '#059669',
+        border: '#d1fae5'
+      }
+    }
+  ],
   metadata: {
     description: 'A clean, minimal design style with bold typography as the focal point, using ample white space for a modern, professional look',
     characteristics: [
@@ -972,6 +1368,50 @@ const boldMinimalismStyle: DesignStyle = {
 const modernFlatStyle: DesignStyle = {
   name: 'modern-flat',
   displayName: 'Modern Flat',
+  colorPalettes: [
+    {
+      id: 'emerald',
+      name: 'Emerald',
+      colors: {
+        primary: '#10b981',
+        secondary: '#059669',
+        accent: '#34d399',
+        background: '#18181b',
+        surface: '#27272a',
+        text: '#ffffff',
+        textSecondary: '#a1a1aa',
+        border: '#3f3f46'
+      }
+    },
+    {
+      id: 'violet',
+      name: 'Violet',
+      colors: {
+        primary: '#8b5cf6',
+        secondary: '#7c3aed',
+        accent: '#a78bfa',
+        background: '#18181b',
+        surface: '#27272a',
+        text: '#ffffff',
+        textSecondary: '#a1a1aa',
+        border: '#3f3f46'
+      }
+    },
+    {
+      id: 'rose',
+      name: 'Rose',
+      colors: {
+        primary: '#f43f5e',
+        secondary: '#e11d48',
+        accent: '#fb7185',
+        background: '#18181b',
+        surface: '#27272a',
+        text: '#ffffff',
+        textSecondary: '#a1a1aa',
+        border: '#3f3f46'
+      }
+    }
+  ],
   metadata: {
     description: 'A modern flat design with darker backgrounds and strategic use of vibrant accent colors to focus attention on key elements',
     characteristics: [
@@ -1078,6 +1518,50 @@ const modernFlatStyle: DesignStyle = {
 const bentoGridStyle: DesignStyle = {
   name: 'bento-grid',
   displayName: 'Bento Grid',
+  colorPalettes: [
+    {
+      id: 'neutral',
+      name: 'Neutral',
+      colors: {
+        primary: '#3b82f6',
+        secondary: '#6366f1',
+        accent: '#8b5cf6',
+        background: '#f9fafb',
+        surface: '#ffffff',
+        text: '#111827',
+        textSecondary: '#6b7280',
+        border: '#e5e7eb'
+      }
+    },
+    {
+      id: 'warm',
+      name: 'Warm',
+      colors: {
+        primary: '#f59e0b',
+        secondary: '#f97316',
+        accent: '#ef4444',
+        background: '#fef3c7',
+        surface: '#fffbeb',
+        text: '#78350f',
+        textSecondary: '#92400e',
+        border: '#fde68a'
+      }
+    },
+    {
+      id: 'cool',
+      name: 'Cool',
+      colors: {
+        primary: '#06b6d4',
+        secondary: '#0ea5e9',
+        accent: '#3b82f6',
+        background: '#ecfeff',
+        surface: '#f0f9ff',
+        text: '#164e63',
+        textSecondary: '#0c4a6e',
+        border: '#cffafe'
+      }
+    }
+  ],
   metadata: {
     description: 'A tile-based grid layout inspired by bento boxes, organizing content in customizable boxes with different sizes for emphasis',
     characteristics: [

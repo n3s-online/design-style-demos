@@ -53,6 +53,17 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        // Dynamic color palette variables
+        palette: {
+          primary: "var(--color-primary)",
+          secondary: "var(--color-secondary)",
+          accent: "var(--color-accent)",
+          background: "var(--color-background)",
+          surface: "var(--color-surface)",
+          text: "var(--color-text)",
+          'text-secondary': "var(--color-text-secondary)",
+          border: "var(--color-border)",
+        },
       },
     },
   },

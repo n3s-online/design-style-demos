@@ -6,12 +6,32 @@
 export type DesignStyleName = 'neobrutalism' | 'bold-minimalism' | 'modern-flat' | 'bento-grid' | 'art-deco' | 'pure-minimalism' | 'glassmorphism' | 'claymorphism' | 'pop-art' | 'y2k' | 'vaporwave'
 
 /**
+ * Color Palette definition
+ * Each design style has 3 color palettes that users can switch between
+ */
+export interface ColorPalette {
+  id: string
+  name: string
+  colors: {
+    primary: string
+    secondary: string
+    accent: string
+    background: string
+    surface: string
+    text: string
+    textSecondary: string
+    border: string
+  }
+}
+
+/**
  * Interface defining the structure of a design style
  * New styles must implement this interface
  */
 export interface DesignStyle {
   name: DesignStyleName
   displayName: string
+  colorPalettes: ColorPalette[]
   metadata: {
     description: string
     characteristics: string[]
