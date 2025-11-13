@@ -529,7 +529,7 @@ const glassmorphismStyle: DesignStyle = {
   },
   background: {
     body: 'bg-gradient-to-br from-palette-primary via-palette-accent to-palette-secondary',
-    container: 'bg-palette-surface backdrop-blur-xl border border-palette-border shadow-xl rounded-2xl',
+    container: 'bg-transparent',
   },
   card: {
     container: 'bg-palette-surface backdrop-blur-lg border border-palette-border shadow-lg rounded-xl',
