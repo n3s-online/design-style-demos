@@ -62,8 +62,8 @@ const neobrutalismStyle: DesignStyle = {
       'Playful, energetic aesthetic'
     ],
     colorPalette: [
-      'Bright yellows (#fde047)',
-      'Pink accents (#f472b6)',
+      'Bright primary colors (yellow, cyan, or green)',
+      'Vibrant secondary colors (pink, blue, or lime)',
       'Pure black borders',
       'White backgrounds'
     ],
@@ -213,9 +213,9 @@ const artDecoStyle: DesignStyle = {
       'Sophisticated, timeless aesthetic'
     ],
     colorPalette: [
-      'Dark slate backgrounds (#0f172a, #1e293b)',
-      'Gold/amber accents (#fbbf24, #d97706)',
-      'Amber borders and highlights',
+      'Dark rich backgrounds',
+      'Luxurious metallic accents (gold, silver, or ruby tones)',
+      'Elegant borders and highlights',
       'Subtle gradient overlays'
     ],
     typography: [
@@ -364,10 +364,10 @@ const pureMinimalismStyle: DesignStyle = {
       'Focus on content over decoration'
     ],
     colorPalette: [
-      'Pure white backgrounds (#ffffff)',
-      'Light gray accents (#f9fafb)',
-      'Dark gray text (#111827)',
-      'Subtle blue accents (#3b82f6)'
+      'Clean white or off-white backgrounds',
+      'Minimal gray accents',
+      'Dark text for contrast',
+      'Subtle color accents (monochrome, warm, or cool tones)'
     ],
     typography: [
       'Light font weights (300-400)',
@@ -666,7 +666,7 @@ const claymorphismStyle: DesignStyle = {
       'Inflated, tactile appearance'
     ],
     colorPalette: [
-      'Soft pastels (peach, mint, lavender)',
+      'Soft pastel colors (terracotta, lavender, or sage tones)',
       'Light backgrounds',
       'Muted, warm tones',
       'Subtle color variations'
@@ -817,11 +817,10 @@ const popArtStyle: DesignStyle = {
       'Playful, energetic vibe'
     ],
     colorPalette: [
-      'Bright red (#ef4444)',
-      'Electric blue (#3b82f6)',
-      'Vivid yellow (#facc15)',
-      'Hot pink (#ec4899)',
-      'Black outlines'
+      'Bold primary colors (red, blue, yellow, or pink tones)',
+      'High-contrast combinations',
+      'Vibrant, saturated hues',
+      'Black outlines and borders'
     ],
     typography: [
       'Bold, heavy fonts',
@@ -969,11 +968,10 @@ const y2kStyle: DesignStyle = {
       'Pixel art and low-fi graphics'
     ],
     colorPalette: [
-      'Chrome silver/white (#f0f0f0)',
-      'Lime green (#84cc16)',
-      'Hot pink (#ff0080)',
-      'Sky blue (#38bdf8)',
-      'Bright orange (#fb923c)'
+      'Metallic chrome/silver tones',
+      'Bright neon colors (cyan, pink, or lime)',
+      'Glossy, reflective surfaces',
+      'Dark futuristic backgrounds'
     ],
     typography: [
       'Chunky, rounded fonts',
@@ -1121,11 +1119,10 @@ const vaporwaveStyle: DesignStyle = {
       'Washed-out, nostalgic atmosphere'
     ],
     colorPalette: [
-      'Pastel pink (#ffc0cb)',
-      'Soft cyan/teal (#7dd3c0)',
-      'Lavender purple (#d8b5ff)',
-      'Peach (#ffd4a3)',
-      'Soft gradients'
+      'Neon pink and purple tones',
+      'Soft cyan and teal accents',
+      'Dark atmospheric backgrounds',
+      'Dreamy gradient overlays'
     ],
     typography: [
       'Retro, smooth fonts',
@@ -1273,10 +1270,10 @@ const boldMinimalismStyle: DesignStyle = {
       'Professional, modern aesthetic'
     ],
     colorPalette: [
-      'Pure white backgrounds (#ffffff)',
-      'Deep black text (#000000)',
-      'Light gray accents (#f5f5f5)',
-      'Subtle shadows for depth'
+      'Clean white backgrounds',
+      'Bold accent colors (crimson, indigo, or emerald)',
+      'High contrast typography',
+      'Minimal use of color for impact'
     ],
     typography: [
       'Extra bold headings (800-900)',
@@ -1423,11 +1420,10 @@ const modernFlatStyle: DesignStyle = {
       'Strategic color use for CTAs'
     ],
     colorPalette: [
-      'Dark charcoal (#1a1a1a)',
-      'Vibrant green (#10b981)',
-      'Electric blue (#3b82f6)',
-      'Bright red (#ef4444)',
-      'Pure white text (#ffffff)'
+      'Dark charcoal backgrounds',
+      'Vibrant accent colors (sky blue, coral, or violet)',
+      'Flat, non-gradient surfaces',
+      'High contrast white text'
     ],
     typography: [
       'Medium to bold fonts (500-700)',
@@ -1573,11 +1569,10 @@ const bentoGridStyle: DesignStyle = {
       'Modern, organized presentation'
     ],
     colorPalette: [
-      'Light backgrounds (#f8f9fa)',
-      'White tiles (#ffffff)',
-      'Soft borders (#e5e7eb)',
-      'Subtle shadows',
-      'Accent colors for highlights'
+      'Light neutral backgrounds',
+      'Clean white or tinted tiles',
+      'Soft borders',
+      'Accent colors for emphasis (slate, moss, or plum)'
     ],
     typography: [
       'Medium font weights (500-600)',
