@@ -17,9 +17,9 @@ interface PromptDialogProps {
 export function PromptDialog({ triggerClassName }: PromptDialogProps) {
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
-  const { currentStyle } = useDesignStyle()
+  const { currentStyle, currentPalette } = useDesignStyle()
 
-  const prompt = generateStylePrompt(currentStyle)
+  const prompt = generateStylePrompt(currentStyle, currentPalette)
 
   const handleCopy = async () => {
     try {

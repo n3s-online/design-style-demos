@@ -7,6 +7,50 @@ import type { DesignStyle, DesignStyleName } from '@/types/design-style'
 const neobrutalismStyle: DesignStyle = {
   name: 'neobrutalism',
   displayName: 'Neobrutalism',
+  colorPalettes: [
+    {
+      id: 'sunny',
+      name: 'Sunny',
+      colors: {
+        primary: '#fde047',
+        secondary: '#f472b6',
+        accent: '#06b6d4',
+        background: '#ffffff',
+        surface: '#fde047',
+        text: '#000000',
+        textSecondary: '#374151',
+        border: '#000000'
+      }
+    },
+    {
+      id: 'ocean',
+      name: 'Ocean',
+      colors: {
+        primary: '#06b6d4',
+        secondary: '#3b82f6',
+        accent: '#a855f7',
+        background: '#ffffff',
+        surface: '#06b6d4',
+        text: '#000000',
+        textSecondary: '#374151',
+        border: '#000000'
+      }
+    },
+    {
+      id: 'forest',
+      name: 'Forest',
+      colors: {
+        primary: '#10b981',
+        secondary: '#84cc16',
+        accent: '#f59e0b',
+        background: '#ffffff',
+        surface: '#10b981',
+        text: '#000000',
+        textSecondary: '#374151',
+        border: '#000000'
+      }
+    }
+  ],
   metadata: {
     description: 'A bold, unapologetic design style featuring thick borders, hard shadows, and high-contrast colors',
     characteristics: [
@@ -18,8 +62,8 @@ const neobrutalismStyle: DesignStyle = {
       'Playful, energetic aesthetic'
     ],
     colorPalette: [
-      'Bright yellows (#fde047)',
-      'Pink accents (#f472b6)',
+      'Bright primary colors (yellow, cyan, or green)',
+      'Vibrant secondary colors (pink, blue, or lime)',
       'Pure black borders',
       'White backgrounds'
     ],
@@ -32,78 +76,78 @@ const neobrutalismStyle: DesignStyle = {
   },
   background: {
     body: 'bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100',
-    container: 'bg-white border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]',
+    container: 'bg-palette-background border-4 border-palette-border shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]',
   },
   card: {
-    container: 'border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-yellow-300 rounded-none',
-    title: 'font-black text-3xl uppercase tracking-tight text-black',
-    content: 'font-bold text-lg text-black',
+    container: 'border-4 border-palette-border shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-palette-surface rounded-none',
+    title: 'font-black text-3xl uppercase tracking-tight text-palette-text',
+    content: 'font-bold text-lg text-palette-text',
   },
   navbar: {
-    container: 'border-b-4 border-black bg-pink-400 shadow-[0_4px_0px_0px_rgba(0,0,0,1)]',
-    select: 'border-4 border-black bg-white font-bold text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:ring-4 focus:ring-black',
-    text: 'text-black',
-    label: 'text-black',
+    container: 'border-b-4 border-palette-border bg-palette-secondary shadow-[0_4px_0px_0px_rgba(0,0,0,1)]',
+    select: 'border-4 border-palette-border bg-palette-background font-bold text-palette-text shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:ring-4 focus:ring-palette-border',
+    text: 'text-palette-text',
+    label: 'text-palette-text',
   },
   button: {
-    base: 'border-4 border-black rounded-none font-black uppercase tracking-tight transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-0 active:translate-y-0 active:shadow-none',
+    base: 'border-4 border-palette-border rounded-none font-black uppercase tracking-tight transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-0 active:translate-y-0 active:shadow-none',
     // For style selector dialog
-    selected: 'bg-yellow-300 text-black',
-    unselected: 'bg-white text-black hover:bg-gray-100',
+    selected: 'bg-palette-surface text-palette-text',
+    unselected: 'bg-palette-background text-palette-text hover:bg-gray-100',
     // For general button usage
-    primary: 'bg-cyan-400 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
-    secondary: 'bg-pink-300 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
-    outline: 'bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    primary: 'bg-palette-accent text-palette-text shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    secondary: 'bg-palette-secondary text-palette-text shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    outline: 'bg-palette-background text-palette-text shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
   },
   input: {
-    base: 'border-4 border-black rounded-none bg-white font-bold text-black placeholder:text-gray-500 focus:ring-4 focus:ring-black focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
-    label: 'font-black uppercase tracking-tight text-black',
+    base: 'border-4 border-palette-border rounded-none bg-palette-background font-bold text-palette-text placeholder:text-gray-500 focus:ring-4 focus:ring-palette-border focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    label: 'font-black uppercase tracking-tight text-palette-text',
   },
   textarea: {
-    base: 'border-4 border-black rounded-none bg-white font-bold text-black placeholder:text-gray-500 focus:ring-4 focus:ring-black focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    base: 'border-4 border-palette-border rounded-none bg-palette-background font-bold text-palette-text placeholder:text-gray-500 focus:ring-4 focus:ring-palette-border focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
   },
   checkbox: {
-    base: 'border-4 border-black rounded-none w-6 h-6 accent-cyan-400 focus:ring-4 focus:ring-black',
-    label: 'font-bold text-black',
+    base: 'border-4 border-palette-border rounded-none w-6 h-6 accent-palette-accent focus:ring-4 focus:ring-palette-border',
+    label: 'font-bold text-palette-text',
   },
   switch: {
-    base: 'border-4 border-black rounded-none',
+    base: 'border-4 border-palette-border rounded-none',
   },
   tabs: {
-    list: 'border-4 border-black bg-pink-300 rounded-none p-1 gap-1',
-    trigger: 'font-black uppercase tracking-tight text-black border-4 border-black transition-all px-4 py-2',
-    triggerActive: 'bg-yellow-300 translate-y-[2px] shadow-none',
-    triggerInactive: 'bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]',
-    content: 'border-4 border-black bg-white p-4 mt-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]',
+    list: 'border-4 border-palette-border bg-palette-secondary rounded-none p-1 gap-1',
+    trigger: 'font-black uppercase tracking-tight text-palette-text border-4 border-palette-border transition-all px-4 py-2',
+    triggerActive: 'bg-palette-surface translate-y-[2px] shadow-none',
+    triggerInactive: 'bg-palette-background shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]',
+    content: 'border-4 border-palette-border bg-palette-background p-4 mt-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]',
   },
   accordion: {
-    item: 'border-4 border-black bg-yellow-300 mb-2',
-    trigger: 'font-black uppercase tracking-tight text-black hover:bg-cyan-400 p-4',
-    content: 'font-bold text-black p-4 bg-white border-t-4 border-black',
+    item: 'border-4 border-palette-border bg-palette-surface mb-2',
+    trigger: 'font-black uppercase tracking-tight text-palette-text hover:bg-palette-accent p-4',
+    content: 'font-bold text-palette-text p-4 bg-palette-background border-t-4 border-palette-border',
   },
   alert: {
-    base: 'border-4 border-black rounded-none shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-4',
-    title: 'font-black uppercase tracking-tight text-black',
-    description: 'font-bold text-black',
+    base: 'border-4 border-palette-border rounded-none shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-4',
+    title: 'font-black uppercase tracking-tight text-palette-text',
+    description: 'font-bold text-palette-text',
   },
   badge: {
-    base: 'border-2 border-black rounded-none font-black uppercase text-xs px-2 py-1',
+    base: 'border-2 border-palette-border rounded-none font-black uppercase text-xs px-2 py-1',
     success: 'bg-green-400 text-black',
-    warning: 'bg-yellow-400 text-black',
+    warning: 'bg-palette-surface text-palette-text',
     error: 'bg-red-400 text-black',
   },
   progress: {
-    container: 'border-4 border-black rounded-none bg-white h-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
-    bar: 'bg-cyan-400 h-full border-r-4 border-black',
+    container: 'border-4 border-palette-border rounded-none bg-palette-background h-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    bar: 'bg-palette-accent h-full border-r-4 border-palette-border',
   },
   slider: {
-    base: 'accent-cyan-400 h-4 border-2 border-black',
+    base: 'accent-palette-accent h-4 border-2 border-palette-border',
   },
   dialog: {
     overlay: 'bg-black/80',
-    content: 'border-4 border-black bg-pink-300 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rounded-none',
-    title: 'font-black text-2xl uppercase tracking-tight text-black',
-    description: 'font-bold text-black',
+    content: 'border-4 border-palette-border bg-palette-secondary shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rounded-none',
+    title: 'font-black text-2xl uppercase tracking-tight text-palette-text',
+    description: 'font-bold text-palette-text',
   },
 }
 
@@ -114,6 +158,50 @@ const neobrutalismStyle: DesignStyle = {
 const artDecoStyle: DesignStyle = {
   name: 'art-deco',
   displayName: 'Art Deco',
+  colorPalettes: [
+    {
+      id: 'golden',
+      name: 'Golden',
+      colors: {
+        primary: '#d4af37',      // Classic gold
+        secondary: '#8b7355',    // Bronze
+        accent: '#ffd700',       // Bright gold
+        background: '#1a1410',   // Deep brown-black
+        surface: '#2a2118',      // Rich brown
+        text: '#f5deb3',         // Wheat/champagne
+        textSecondary: '#c4a876', // Muted gold
+        border: '#d4af37'        // Gold border
+      }
+    },
+    {
+      id: 'silver',
+      name: 'Silver',
+      colors: {
+        primary: '#c0c0c0',      // Pure silver
+        secondary: '#8c92ac',    // Steel blue
+        accent: '#e8e8e8',       // Bright silver
+        background: '#0a0a0f',   // Deep navy-black
+        surface: '#1a1a24',      // Midnight blue
+        text: '#e6e6fa',         // Lavender-white
+        textSecondary: '#9d9daa', // Silver-gray
+        border: '#c0c0c0'        // Silver border
+      }
+    },
+    {
+      id: 'ruby',
+      name: 'Ruby',
+      colors: {
+        primary: '#e0115f',      // Ruby red
+        secondary: '#8b0000',    // Dark red
+        accent: '#ff1f8f',       // Hot pink
+        background: '#150a0a',   // Deep wine-black
+        surface: '#2a1414',      // Dark burgundy
+        text: '#ffc0cb',         // Light pink
+        textSecondary: '#d4a5a5', // Rose
+        border: '#e0115f'        // Ruby border
+      }
+    }
+  ],
   metadata: {
     description: 'An elegant design style inspired by 1920s luxury, featuring geometric patterns, gold accents, and sophisticated typography',
     characteristics: [
@@ -125,9 +213,9 @@ const artDecoStyle: DesignStyle = {
       'Sophisticated, timeless aesthetic'
     ],
     colorPalette: [
-      'Dark slate backgrounds (#0f172a, #1e293b)',
-      'Gold/amber accents (#fbbf24, #d97706)',
-      'Amber borders and highlights',
+      'Dark rich backgrounds',
+      'Luxurious metallic accents (gold, silver, or ruby tones)',
+      'Elegant borders and highlights',
       'Subtle gradient overlays'
     ],
     typography: [
@@ -139,78 +227,78 @@ const artDecoStyle: DesignStyle = {
   },
   background: {
     body: 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950',
-    container: 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-2 border-amber-600 shadow-2xl shadow-amber-900/20',
+    container: 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-2 border-palette-border shadow-2xl shadow-amber-900/20',
   },
   card: {
-    container: 'border border-amber-600 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-xl rounded-sm relative before:absolute before:inset-0 before:border-2 before:border-amber-500/20 before:rounded-sm',
-    title: 'font-serif text-3xl tracking-widest text-amber-400 uppercase border-b-2 border-amber-600/50 pb-2',
-    content: 'font-serif text-base text-slate-300 leading-relaxed',
+    container: 'border border-palette-border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-xl rounded-sm relative before:absolute before:inset-0 before:border-2 before:border-amber-500/20 before:rounded-sm',
+    title: 'font-serif text-3xl tracking-widest text-palette-text uppercase border-b-2 border-palette-border/50 pb-2',
+    content: 'font-serif text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'border-b border-amber-600 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 shadow-lg',
-    select: 'border border-amber-600 bg-slate-900 text-amber-400 font-serif shadow-md focus:ring-2 focus:ring-amber-500',
-    text: 'text-amber-400 font-serif',
+    container: 'border-b border-palette-border bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 shadow-lg',
+    select: 'border border-palette-border bg-palette-surface text-palette-text font-serif shadow-md focus:ring-2 focus:ring-amber-500',
+    text: 'text-palette-text font-serif',
     label: 'text-amber-300 font-serif',
   },
   button: {
-    base: 'border border-amber-600 rounded-sm font-serif tracking-widest uppercase transition-all hover:shadow-lg hover:shadow-amber-500/20',
+    base: 'border border-palette-border rounded-sm font-serif tracking-widest uppercase transition-all hover:shadow-lg hover:shadow-amber-500/20',
     // For style selector dialog
     selected: 'bg-gradient-to-br from-amber-600 via-amber-500 to-amber-600 text-slate-900 font-bold',
-    unselected: 'bg-slate-900 text-amber-400 hover:bg-slate-800',
+    unselected: 'bg-palette-surface text-palette-text hover:bg-palette-background',
     // For general button usage
     primary: 'bg-gradient-to-r from-amber-600 to-amber-700 text-slate-900 shadow-md hover:from-amber-500 hover:to-amber-600',
-    secondary: 'bg-gradient-to-r from-slate-800 to-slate-900 text-amber-400 shadow-md hover:from-slate-700 hover:to-slate-800',
-    outline: 'bg-transparent text-amber-400 border-2 border-amber-600 hover:bg-amber-600/10',
+    secondary: 'bg-gradient-to-r from-slate-800 to-slate-900 text-palette-text shadow-md hover:from-slate-700 hover:to-slate-800',
+    outline: 'bg-transparent text-palette-text border-2 border-palette-border hover:bg-palette-primary/10',
   },
   input: {
-    base: 'border border-amber-600 rounded-sm bg-slate-900 font-serif text-amber-400 placeholder:text-slate-500 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 shadow-inner',
+    base: 'border border-palette-border rounded-sm bg-palette-surface font-serif text-palette-text placeholder:text-slate-500 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 shadow-inner',
     label: 'font-serif tracking-wider text-amber-300 uppercase text-sm',
   },
   textarea: {
-    base: 'border border-amber-600 rounded-sm bg-slate-900 font-serif text-amber-400 placeholder:text-slate-500 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 shadow-inner',
+    base: 'border border-palette-border rounded-sm bg-palette-surface font-serif text-palette-text placeholder:text-slate-500 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 shadow-inner',
   },
   checkbox: {
-    base: 'border-2 border-amber-600 rounded-sm w-5 h-5 accent-amber-500 focus:ring-2 focus:ring-amber-500 bg-slate-900',
-    label: 'font-serif text-slate-300',
+    base: 'border-2 border-palette-border rounded-sm w-5 h-5 accent-palette-accent focus:ring-2 focus:ring-amber-500 bg-palette-surface',
+    label: 'font-serif text-palette-text-secondary',
   },
   switch: {
-    base: 'border border-amber-600',
+    base: 'border border-palette-border',
   },
   tabs: {
-    list: 'border border-amber-600 bg-slate-900 rounded-sm p-1 shadow-inner gap-1',
-    trigger: 'font-serif tracking-wider text-amber-400 uppercase text-sm border border-amber-600/50 px-4 py-2 transition-all',
-    triggerActive: 'bg-gradient-to-r from-amber-600/30 to-amber-700/30 border-amber-600 shadow-md shadow-amber-500/20',
-    triggerInactive: 'bg-slate-800/50 hover:bg-slate-800 hover:border-amber-600/70',
-    content: 'border border-amber-600 bg-gradient-to-br from-slate-900 to-slate-800 p-6 mt-2 shadow-lg rounded-sm',
+    list: 'border border-palette-border bg-palette-surface rounded-sm p-1 shadow-inner gap-1',
+    trigger: 'font-serif tracking-wider text-palette-text uppercase text-sm border border-palette-border/50 px-4 py-2 transition-all',
+    triggerActive: 'bg-gradient-to-r from-amber-600/30 to-amber-700/30 border-palette-border shadow-md shadow-amber-500/20',
+    triggerInactive: 'bg-palette-background/50 hover:bg-palette-background hover:border-palette-border/70',
+    content: 'border border-palette-border bg-gradient-to-br from-slate-900 to-slate-800 p-6 mt-2 shadow-lg rounded-sm',
   },
   accordion: {
-    item: 'border border-amber-600/50 bg-gradient-to-r from-slate-900 to-slate-800 mb-1',
-    trigger: 'font-serif tracking-wider text-amber-400 uppercase text-sm hover:bg-amber-600/10 p-4 transition-colors',
-    content: 'font-serif text-slate-300 p-4 bg-slate-900/50 border-t border-amber-600/30',
+    item: 'border border-palette-border/50 bg-gradient-to-r from-slate-900 to-slate-800 mb-1',
+    trigger: 'font-serif tracking-wider text-palette-text uppercase text-sm hover:bg-palette-primary/10 p-4 transition-colors',
+    content: 'font-serif text-palette-text-secondary p-4 bg-palette-surface/50 border-t border-palette-border/30',
   },
   alert: {
-    base: 'border border-amber-600 rounded-sm shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 p-4',
-    title: 'font-serif tracking-widest text-amber-400 uppercase',
-    description: 'font-serif text-slate-300',
+    base: 'border border-palette-border rounded-sm shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 p-4',
+    title: 'font-serif tracking-widest text-palette-text uppercase',
+    description: 'font-serif text-palette-text-secondary',
   },
   badge: {
-    base: 'border border-amber-600 rounded-full font-serif uppercase text-xs px-3 py-1 tracking-wider shadow-sm',
+    base: 'border border-palette-border rounded-full font-serif uppercase text-xs px-3 py-1 tracking-wider shadow-sm',
     success: 'bg-green-900 text-green-300 border-green-600',
     warning: 'bg-yellow-900 text-yellow-300 border-yellow-600',
     error: 'bg-red-900 text-red-300 border-red-600',
   },
   progress: {
-    container: 'border border-amber-600 rounded-sm bg-slate-900 h-6 shadow-inner overflow-hidden',
+    container: 'border border-palette-border rounded-sm bg-palette-surface h-6 shadow-inner overflow-hidden',
     bar: 'bg-gradient-to-r from-amber-600 to-amber-700 h-full shadow-md',
   },
   slider: {
-    base: 'accent-amber-500 h-2 border border-amber-600',
+    base: 'accent-palette-accent h-2 border border-palette-border',
   },
   dialog: {
     overlay: 'bg-black/90',
-    content: 'border-2 border-amber-600 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-2xl shadow-amber-500/20 rounded-sm',
-    title: 'font-serif text-2xl tracking-widest text-amber-400 uppercase border-b border-amber-600/50 pb-3',
-    description: 'font-serif text-slate-300',
+    content: 'border-2 border-palette-border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-2xl shadow-amber-500/20 rounded-sm',
+    title: 'font-serif text-2xl tracking-widest text-palette-text uppercase border-b border-palette-border/50 pb-3',
+    description: 'font-serif text-palette-text-secondary',
   },
 }
 
@@ -221,6 +309,50 @@ const artDecoStyle: DesignStyle = {
 const pureMinimalismStyle: DesignStyle = {
   name: 'pure-minimalism',
   displayName: 'Pure Minimalism',
+  colorPalettes: [
+    {
+      id: 'monochrome',
+      name: 'Monochrome',
+      colors: {
+        primary: '#000000',      // Pure black
+        secondary: '#404040',    // Dark gray
+        accent: '#666666',       // Medium gray
+        background: '#ffffff',   // Pure white
+        surface: '#fafafa',      // Off-white
+        text: '#000000',         // Black text
+        textSecondary: '#737373', // Gray text
+        border: '#e5e5e5'        // Light gray border
+      }
+    },
+    {
+      id: 'warm',
+      name: 'Warm',
+      colors: {
+        primary: '#2c2218',      // Deep warm gray
+        secondary: '#5c4a3a',    // Warm brown
+        accent: '#8b7355',       // Light brown
+        background: '#fffef9',   // Warm white
+        surface: '#faf8f3',      // Cream
+        text: '#2c2218',         // Warm black
+        textSecondary: '#6b5d4f', // Warm gray
+        border: '#e8e2d8'        // Warm border
+      }
+    },
+    {
+      id: 'cool',
+      name: 'Cool',
+      colors: {
+        primary: '#1a2332',      // Deep blue-gray
+        secondary: '#384a5e',    // Blue gray
+        accent: '#5a7a9a',       // Light blue gray
+        background: '#f8fafb',   // Cool white
+        surface: '#f0f4f7',      // Light blue-white
+        text: '#1a2332',         // Cool black
+        textSecondary: '#546b84', // Blue-gray text
+        border: '#d9e2ec'        // Cool border
+      }
+    }
+  ],
   metadata: {
     description: 'An ultra-clean design style emphasizing whitespace, simplicity, and the bare essentials',
     characteristics: [
@@ -232,10 +364,10 @@ const pureMinimalismStyle: DesignStyle = {
       'Focus on content over decoration'
     ],
     colorPalette: [
-      'Pure white backgrounds (#ffffff)',
-      'Light gray accents (#f9fafb)',
-      'Dark gray text (#111827)',
-      'Subtle blue accents (#3b82f6)'
+      'Clean white or off-white backgrounds',
+      'Minimal gray accents',
+      'Dark text for contrast',
+      'Subtle color accents (monochrome, warm, or cool tones)'
     ],
     typography: [
       'Light font weights (300-400)',
@@ -245,36 +377,36 @@ const pureMinimalismStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-white',
-    container: 'bg-white border border-gray-100',
+    body: 'bg-palette-background',
+    container: 'bg-palette-background border border-palette-border',
   },
   card: {
-    container: 'border border-gray-100 bg-white rounded-sm',
-    title: 'font-light text-2xl text-gray-900',
-    content: 'font-light text-base text-gray-600 leading-relaxed',
+    container: 'border border-palette-border bg-palette-surface rounded-sm',
+    title: 'font-light text-2xl text-palette-text',
+    content: 'font-light text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'border-b border-gray-100 bg-white',
-    select: 'border border-gray-200 bg-white text-gray-900 rounded-sm font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
-    text: 'text-gray-900',
-    label: 'text-gray-600 font-light',
+    container: 'border-b border-palette-border bg-palette-background',
+    select: 'border border-palette-border bg-palette-surface text-palette-text rounded-sm font-light focus:ring-1 focus:ring-palette-primary focus:outline-none',
+    text: 'text-palette-text',
+    label: 'text-palette-text-secondary font-light',
   },
   button: {
-    base: 'border border-gray-200 rounded-sm font-light transition-all hover:border-gray-300',
+    base: 'border border-palette-border rounded-sm font-light transition-all hover:border-palette-primary',
     // For style selector dialog
-    selected: 'bg-gray-900 text-white border-gray-900',
-    unselected: 'bg-white text-gray-900 hover:bg-gray-50',
+    selected: 'bg-palette-primary text-palette-background border-palette-primary',
+    unselected: 'bg-palette-background text-palette-text hover:bg-palette-surface',
     // For general button usage
-    primary: 'bg-gray-900 text-white border-gray-900 hover:bg-gray-800',
-    secondary: 'bg-gray-100 text-gray-900 border-gray-200 hover:bg-gray-200',
-    outline: 'bg-white text-gray-900 border-gray-300 hover:bg-gray-50',
+    primary: 'bg-palette-primary text-palette-background border-palette-primary hover:bg-palette-secondary',
+    secondary: 'bg-palette-surface text-palette-text border-palette-border hover:bg-palette-accent',
+    outline: 'bg-palette-background text-palette-text border-palette-primary hover:bg-palette-surface',
   },
   input: {
-    base: 'border border-gray-200 rounded-sm bg-white text-gray-900 font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
+    base: 'border border-gray-200 rounded-sm bg-white text-palette-text font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
     label: 'font-light text-gray-600',
   },
   textarea: {
-    base: 'border border-gray-200 rounded-sm bg-white text-gray-900 font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
+    base: 'border border-gray-200 rounded-sm bg-white text-palette-text font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
   },
   checkbox: {
     base: 'border border-gray-300 rounded-sm w-4 h-4 accent-gray-900 focus:ring-1 focus:ring-blue-500',
@@ -286,18 +418,18 @@ const pureMinimalismStyle: DesignStyle = {
   tabs: {
     list: 'border-b border-gray-100 bg-white p-0 gap-0',
     trigger: 'font-light text-gray-600 px-4 py-2 transition-all border-b-2',
-    triggerActive: 'text-gray-900 border-gray-900',
-    triggerInactive: 'border-transparent hover:text-gray-900 hover:border-gray-200',
+    triggerActive: 'text-palette-text border-gray-900',
+    triggerInactive: 'border-transparent hover:text-palette-text hover:border-gray-200',
     content: 'bg-white p-4 mt-2',
   },
   accordion: {
     item: 'border-b border-gray-100 bg-white',
-    trigger: 'font-light text-gray-900 hover:text-gray-600 p-4',
+    trigger: 'font-light text-palette-text hover:text-gray-600 p-4',
     content: 'font-light text-gray-600 p-4 pt-0',
   },
   alert: {
     base: 'border border-gray-200 rounded-sm bg-white p-4',
-    title: 'font-normal text-gray-900',
+    title: 'font-normal text-palette-text',
     description: 'font-light text-gray-600',
   },
   badge: {
@@ -316,7 +448,7 @@ const pureMinimalismStyle: DesignStyle = {
   dialog: {
     overlay: 'bg-black/20',
     content: 'border border-gray-100 bg-white shadow-xl rounded-sm',
-    title: 'font-light text-xl text-gray-900',
+    title: 'font-light text-xl text-palette-text',
     description: 'font-light text-gray-600',
   },
 }
@@ -328,6 +460,50 @@ const pureMinimalismStyle: DesignStyle = {
 const glassmorphismStyle: DesignStyle = {
   name: 'glassmorphism',
   displayName: 'Glassmorphism',
+  colorPalettes: [
+    {
+      id: 'aurora',
+      name: 'Aurora',
+      colors: {
+        primary: '#8b5cf6',      // Purple
+        secondary: '#3b82f6',    // Blue
+        accent: '#06b6d4',       // Cyan
+        background: '#1e1b4b',   // Deep purple background
+        surface: 'rgba(139, 92, 246, 0.15)', // Purple glass tint
+        text: '#ffffff',         // White text on dark bg
+        textSecondary: 'rgba(255, 255, 255, 0.85)', // Slightly transparent white
+        border: 'rgba(139, 92, 246, 0.3)' // Purple border
+      }
+    },
+    {
+      id: 'sunset',
+      name: 'Sunset',
+      colors: {
+        primary: '#f97316',      // Orange
+        secondary: '#ec4899',    // Pink
+        accent: '#f59e0b',       // Amber
+        background: '#7c2d12',   // Deep orange-brown background
+        surface: 'rgba(249, 115, 22, 0.15)', // Orange glass tint
+        text: '#ffffff',         // White text on dark bg
+        textSecondary: 'rgba(255, 255, 255, 0.85)', // Slightly transparent white
+        border: 'rgba(249, 115, 22, 0.3)' // Orange border
+      }
+    },
+    {
+      id: 'ocean',
+      name: 'Ocean',
+      colors: {
+        primary: '#06b6d4',      // Cyan
+        secondary: '#0ea5e9',    // Sky blue
+        accent: '#14b8a6',       // Teal
+        background: '#082f49',   // Deep ocean blue background
+        surface: 'rgba(6, 182, 212, 0.15)', // Cyan glass tint
+        text: '#ffffff',         // White text on dark bg
+        textSecondary: 'rgba(255, 255, 255, 0.85)', // Slightly transparent white
+        border: 'rgba(6, 182, 212, 0.3)' // Cyan border
+      }
+    }
+  ],
   metadata: {
     description: 'A modern design style featuring frosted glass effects, transparency, and beautiful blur',
     characteristics: [
@@ -352,66 +528,66 @@ const glassmorphismStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-gradient-to-br from-pink-300 via-purple-300 to-blue-400',
-    container: 'bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl',
+    body: 'bg-palette-background',
+    container: 'bg-palette-surface backdrop-blur-xl border border-palette-border shadow-xl',
   },
   card: {
-    container: 'bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl rounded-2xl',
-    title: 'font-semibold text-2xl text-white',
-    content: 'font-normal text-base text-white/90 leading-relaxed',
+    container: 'bg-palette-surface backdrop-blur-lg border border-palette-border shadow-2xl rounded-2xl',
+    title: 'font-semibold text-2xl text-palette-text',
+    content: 'font-normal text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg',
-    select: 'bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-lg font-medium focus:ring-2 focus:ring-white/50 focus:outline-none',
-    text: 'text-white',
-    label: 'text-white/90 font-medium',
+    container: 'bg-palette-surface backdrop-blur-lg border-b border-palette-border shadow-lg',
+    select: 'bg-palette-surface backdrop-blur-md border border-palette-border text-palette-text rounded-lg font-medium focus:ring-2 focus:ring-palette-primary focus:outline-none',
+    text: 'text-palette-text',
+    label: 'text-palette-text-secondary font-medium',
   },
   button: {
-    base: 'backdrop-blur-md border border-white/30 rounded-xl font-medium transition-all hover:bg-white/20 hover:shadow-lg',
+    base: 'backdrop-blur-md border border-palette-border rounded-xl font-medium transition-all hover:bg-palette-surface hover:shadow-lg',
     // For style selector dialog
-    selected: 'bg-purple-500/40 text-white border-purple-400/60 shadow-lg backdrop-blur-md',
-    unselected: 'bg-purple-900/30 text-purple-100 border-purple-400/40 hover:bg-purple-800/40 backdrop-blur-md',
+    selected: 'bg-palette-primary text-palette-text border-palette-border shadow-lg backdrop-blur-md',
+    unselected: 'bg-palette-surface text-palette-text border-palette-border hover:bg-palette-background backdrop-blur-md',
     // For general button usage
-    primary: 'bg-white/20 text-white border-white/40 hover:bg-white/30 shadow-md',
-    secondary: 'bg-purple-500/30 text-white border-purple-300/50 hover:bg-purple-500/40 shadow-md',
-    outline: 'bg-transparent text-white border-white/50 hover:bg-white/10',
+    primary: 'bg-palette-primary text-palette-text border-palette-border hover:bg-palette-secondary shadow-md',
+    secondary: 'bg-palette-secondary text-palette-text border-palette-border hover:bg-palette-accent shadow-md',
+    outline: 'bg-transparent text-palette-text border-palette-border hover:bg-palette-surface',
   },
   input: {
-    base: 'bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
-    label: 'font-medium text-white/90',
+    base: 'bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-palette-text placeholder:text-palette-text/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
+    label: 'font-medium text-palette-text/90',
   },
   textarea: {
-    base: 'bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
+    base: 'bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-palette-text placeholder:text-palette-text/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
   },
   checkbox: {
     base: 'border-2 border-white/50 rounded w-4 h-4 accent-white focus:ring-2 focus:ring-white/50 bg-white/10',
-    label: 'font-medium text-white/90',
+    label: 'font-medium text-palette-text/90',
   },
   switch: {
     base: 'border border-white/30 bg-white/10',
   },
   tabs: {
     list: 'bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-1 gap-1',
-    trigger: 'font-medium text-white/70 px-4 py-2 rounded-lg transition-all',
-    triggerActive: 'bg-white/30 text-white shadow-md',
-    triggerInactive: 'hover:bg-white/10 hover:text-white',
+    trigger: 'font-medium text-palette-text/70 px-4 py-2 rounded-lg transition-all',
+    triggerActive: 'bg-white/30 text-palette-text shadow-md',
+    triggerInactive: 'hover:bg-white/10 hover:text-palette-text',
     content: 'bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 mt-2 shadow-lg',
   },
   accordion: {
     item: 'bg-white/10 backdrop-blur-md border border-white/20 rounded-xl mb-2 overflow-hidden',
-    trigger: 'font-medium text-white hover:bg-white/10 p-4 transition-colors',
-    content: 'font-normal text-white/90 p-4 bg-white/5 border-t border-white/20',
+    trigger: 'font-medium text-palette-text hover:bg-white/10 p-4 transition-colors',
+    content: 'font-normal text-palette-text/90 p-4 bg-white/5 border-t border-white/20',
   },
   alert: {
     base: 'bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg p-4',
-    title: 'font-semibold text-white',
-    description: 'font-normal text-white/90',
+    title: 'font-semibold text-palette-text',
+    description: 'font-normal text-palette-text/90',
   },
   badge: {
     base: 'bg-white/20 backdrop-blur-sm border border-white/30 rounded-full font-medium text-xs px-3 py-1',
-    success: 'bg-green-500/30 text-white border-green-300/50',
-    warning: 'bg-yellow-500/30 text-white border-yellow-300/50',
-    error: 'bg-red-500/30 text-white border-red-300/50',
+    success: 'bg-green-500/30 text-palette-text border-green-300/50',
+    warning: 'bg-yellow-500/30 text-palette-text border-yellow-300/50',
+    error: 'bg-palette-primary/30 text-palette-text border-red-300/50',
   },
   progress: {
     container: 'bg-white/10 backdrop-blur-sm border border-white/20 rounded-full h-3 overflow-hidden',
@@ -423,8 +599,8 @@ const glassmorphismStyle: DesignStyle = {
   dialog: {
     overlay: 'bg-black/60 backdrop-blur-md',
     content: 'bg-white border border-purple-400/60 shadow-2xl rounded-2xl',
-    title: 'font-semibold text-xl text-purple-900',
-    description: 'font-normal text-purple-700',
+    title: 'font-semibold text-xl text-palette-text',
+    description: 'font-normal text-palette-text-secondary',
   },
 }
 
@@ -435,6 +611,50 @@ const glassmorphismStyle: DesignStyle = {
 const claymorphismStyle: DesignStyle = {
   name: 'claymorphism',
   displayName: 'Claymorphism',
+  colorPalettes: [
+    {
+      id: 'terracotta',
+      name: 'Terracotta',
+      colors: {
+        primary: '#e07856',      // Warm terracotta
+        secondary: '#c85a3a',    // Burnt orange
+        accent: '#f4a261',       // Sandy peach
+        background: '#fef6f1',   // Warm off-white
+        surface: '#f9e9dd',      // Light terracotta
+        text: '#5d3a1a',         // Deep brown
+        textSecondary: '#8b5a3c', // Medium brown
+        border: '#e8b298'        // Soft terracotta border
+      }
+    },
+    {
+      id: 'lavender',
+      name: 'Lavender',
+      colors: {
+        primary: '#b197fc',      // Soft lavender
+        secondary: '#9775fa',    // Medium purple
+        accent: '#d0bfff',       // Light lavender
+        background: '#f8f5ff',   // Lavender white
+        surface: '#ede5ff',      // Pale lavender
+        text: '#4c2b85',         // Deep purple
+        textSecondary: '#6741b8', // Medium purple
+        border: '#c9b4f5'        // Lavender border
+      }
+    },
+    {
+      id: 'sage',
+      name: 'Sage',
+      colors: {
+        primary: '#8fb996',      // Soft sage
+        secondary: '#6e9e7a',    // Medium sage
+        accent: '#b8d4be',       // Light mint
+        background: '#f5f9f6',   // Sage white
+        surface: '#e7f2ea',      // Pale sage
+        text: '#2d4a34',         // Deep forest green
+        textSecondary: '#4a6b52', // Medium green
+        border: '#a8c9b0'        // Sage border
+      }
+    }
+  ],
   metadata: {
     description: 'A playful design style featuring soft, clay-like 3D elements with a puffy, inflated appearance',
     characteristics: [
@@ -446,7 +666,7 @@ const claymorphismStyle: DesignStyle = {
       'Inflated, tactile appearance'
     ],
     colorPalette: [
-      'Soft pastels (peach, mint, lavender)',
+      'Soft pastel colors (terracotta, lavender, or sage tones)',
       'Light backgrounds',
       'Muted, warm tones',
       'Subtle color variations'
@@ -459,36 +679,36 @@ const claymorphismStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50',
-    container: 'bg-gradient-to-br from-orange-100 to-pink-100 rounded-3xl shadow-[inset_-8px_-8px_16px_rgba(255,255,255,0.8),inset_8px_8px_16px_rgba(0,0,0,0.1),8px_8px_16px_rgba(0,0,0,0.1)]',
+    body: 'bg-palette-background',
+    container: 'bg-palette-surface rounded-3xl shadow-[inset_-8px_-8px_16px_rgba(255,255,255,0.8),inset_8px_8px_16px_rgba(0,0,0,0.1),8px_8px_16px_rgba(0,0,0,0.1)]',
   },
   card: {
-    container: 'bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl shadow-[inset_-5px_-5px_10px_rgba(255,255,255,0.7),inset_5px_5px_10px_rgba(0,0,0,0.1),8px_8px_20px_rgba(0,0,0,0.15)]',
-    title: 'font-bold text-2xl text-purple-900',
-    content: 'font-normal text-base text-purple-800 leading-relaxed',
+    container: 'bg-palette-primary rounded-3xl shadow-[inset_-5px_-5px_10px_rgba(255,255,255,0.7),inset_5px_5px_10px_rgba(0,0,0,0.1),8px_8px_20px_rgba(0,0,0,0.15)]',
+    title: 'font-bold text-2xl text-palette-text',
+    content: 'font-normal text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'bg-gradient-to-r from-pink-100 to-purple-100 border-b-0 shadow-[0_4px_12px_rgba(0,0,0,0.08)]',
-    select: 'bg-gradient-to-br from-white to-pink-50 text-purple-900 rounded-2xl font-medium shadow-[inset_-3px_-3px_6px_rgba(255,255,255,0.8),inset_3px_3px_6px_rgba(0,0,0,0.1)] focus:ring-0 focus:outline-none',
-    text: 'text-purple-900',
-    label: 'text-purple-800 font-medium',
+    container: 'bg-palette-surface border-b-0 shadow-[0_4px_12px_rgba(0,0,0,0.08)]',
+    select: 'bg-palette-background text-palette-text rounded-2xl font-medium shadow-[inset_-3px_-3px_6px_rgba(255,255,255,0.8),inset_3px_3px_6px_rgba(0,0,0,0.1)] focus:ring-0 focus:outline-none',
+    text: 'text-palette-text',
+    label: 'text-palette-text-secondary font-medium',
   },
   button: {
     base: 'rounded-2xl font-semibold transition-all shadow-[inset_-3px_-3px_6px_rgba(255,255,255,0.8),inset_3px_3px_6px_rgba(0,0,0,0.1),4px_4px_8px_rgba(0,0,0,0.1)] hover:shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.8),inset_2px_2px_4px_rgba(0,0,0,0.1),6px_6px_12px_rgba(0,0,0,0.12)] active:shadow-[inset_3px_3px_6px_rgba(0,0,0,0.15),inset_-3px_-3px_6px_rgba(255,255,255,0.7)]',
     // For style selector dialog
-    selected: 'bg-gradient-to-br from-purple-300 to-pink-300 text-purple-900',
-    unselected: 'bg-gradient-to-br from-purple-100 to-pink-100 text-purple-800 hover:from-purple-200 hover:to-pink-200',
+    selected: 'bg-palette-primary text-palette-text',
+    unselected: 'bg-palette-surface text-palette-text-secondary hover:bg-palette-accent',
     // For general button usage
-    primary: 'bg-gradient-to-br from-purple-300 to-pink-300 text-purple-900',
-    secondary: 'bg-gradient-to-br from-orange-200 to-yellow-200 text-orange-900',
-    outline: 'bg-gradient-to-br from-white to-purple-50 text-purple-800',
+    primary: 'bg-palette-primary text-palette-text',
+    secondary: 'bg-palette-secondary text-palette-text',
+    outline: 'bg-palette-background text-palette-text-secondary',
   },
   input: {
-    base: 'bg-gradient-to-br from-white to-purple-50 rounded-2xl text-purple-900 placeholder:text-purple-400 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.1),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] focus:outline-none focus:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.12),inset_-4px_-4px_8px_rgba(255,255,255,0.9)]',
+    base: 'bg-gradient-to-br from-white to-purple-50 rounded-2xl text-palette-text placeholder:text-purple-400 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.1),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] focus:outline-none focus:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.12),inset_-4px_-4px_8px_rgba(255,255,255,0.9)]',
     label: 'font-semibold text-purple-800',
   },
   textarea: {
-    base: 'bg-gradient-to-br from-white to-purple-50 rounded-2xl text-purple-900 placeholder:text-purple-400 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.1),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] focus:outline-none focus:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.12),inset_-4px_-4px_8px_rgba(255,255,255,0.9)]',
+    base: 'bg-gradient-to-br from-white to-purple-50 rounded-2xl text-palette-text placeholder:text-purple-400 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.1),inset_-3px_-3px_6px_rgba(255,255,255,0.8)] focus:outline-none focus:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.12),inset_-4px_-4px_8px_rgba(255,255,255,0.9)]',
   },
   checkbox: {
     base: 'rounded-md w-5 h-5 accent-purple-400 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)] focus:ring-0',
@@ -499,19 +719,19 @@ const claymorphismStyle: DesignStyle = {
   },
   tabs: {
     list: 'bg-gradient-to-r from-purple-100 to-pink-100 rounded-3xl p-2 gap-2 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08)]',
-    trigger: 'font-semibold text-purple-700 px-4 py-2 rounded-2xl transition-all',
-    triggerActive: 'bg-gradient-to-br from-purple-300 to-pink-300 text-purple-900 shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.7),4px_4px_8px_rgba(0,0,0,0.1)]',
+    trigger: 'font-semibold text-palette-text-secondary px-4 py-2 rounded-2xl transition-all',
+    triggerActive: 'bg-gradient-to-br from-purple-300 to-pink-300 text-palette-text shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.7),4px_4px_8px_rgba(0,0,0,0.1)]',
     triggerInactive: 'hover:bg-gradient-to-br hover:from-purple-200 hover:to-pink-200',
     content: 'bg-gradient-to-br from-white to-purple-50 rounded-3xl p-6 mt-2 shadow-[inset_-4px_-4px_8px_rgba(255,255,255,0.8),inset_4px_4px_8px_rgba(0,0,0,0.08),8px_8px_16px_rgba(0,0,0,0.08)]',
   },
   accordion: {
     item: 'bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl mb-3 overflow-hidden shadow-[4px_4px_12px_rgba(0,0,0,0.1)]',
-    trigger: 'font-semibold text-purple-900 hover:bg-purple-200/50 p-4 transition-colors',
+    trigger: 'font-semibold text-palette-text hover:bg-palette-surface/50 p-4 transition-colors',
     content: 'font-normal text-purple-800 p-4 bg-gradient-to-br from-white to-purple-50',
   },
   alert: {
     base: 'bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl shadow-[inset_-4px_-4px_8px_rgba(255,255,255,0.8),inset_4px_4px_8px_rgba(0,0,0,0.08),8px_8px_16px_rgba(0,0,0,0.1)] p-4',
-    title: 'font-bold text-purple-900',
+    title: 'font-bold text-palette-text',
     description: 'font-normal text-purple-800',
   },
   badge: {
@@ -530,7 +750,7 @@ const claymorphismStyle: DesignStyle = {
   dialog: {
     overlay: 'bg-purple-900/30 backdrop-blur-sm',
     content: 'bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl shadow-[inset_-8px_-8px_16px_rgba(255,255,255,0.8),inset_8px_8px_16px_rgba(0,0,0,0.1),12px_12px_24px_rgba(0,0,0,0.15)]',
-    title: 'font-bold text-xl text-purple-900',
+    title: 'font-bold text-xl text-palette-text',
     description: 'font-normal text-purple-800',
   },
 }
@@ -542,6 +762,50 @@ const claymorphismStyle: DesignStyle = {
 const popArtStyle: DesignStyle = {
   name: 'pop-art',
   displayName: 'Pop Art',
+  colorPalettes: [
+    {
+      id: 'comic',
+      name: 'Comic',
+      colors: {
+        primary: '#ef4444',      // Bright red
+        secondary: '#3b82f6',    // Blue
+        accent: '#fbbf24',       // Yellow
+        background: '#fef3c7',   // Light yellow bg
+        surface: '#fed7aa',      // Peach surface
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#374151', // Dark gray
+        border: '#000000'        // Black borders
+      }
+    },
+    {
+      id: 'retro',
+      name: 'Retro',
+      colors: {
+        primary: '#ec4899',      // Hot pink
+        secondary: '#f97316',    // Orange
+        accent: '#06b6d4',       // Cyan
+        background: '#fdf2f8',   // Light pink bg
+        surface: '#fbcfe8',      // Pink surface
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#374151', // Dark gray
+        border: '#000000'        // Black borders
+      }
+    },
+    {
+      id: 'neon',
+      name: 'Neon',
+      colors: {
+        primary: '#a855f7',      // Purple
+        secondary: '#22c55e',    // Green
+        accent: '#eab308',       // Yellow
+        background: '#faf5ff',   // Light purple bg
+        surface: '#e9d5ff',      // Lavender surface
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#374151', // Dark gray
+        border: '#000000'        // Black borders
+      }
+    }
+  ],
   metadata: {
     description: 'A vibrant design style inspired by 1960s pop art, featuring bold colors, comic aesthetics, and high contrast',
     characteristics: [
@@ -553,11 +817,10 @@ const popArtStyle: DesignStyle = {
       'Playful, energetic vibe'
     ],
     colorPalette: [
-      'Bright red (#ef4444)',
-      'Electric blue (#3b82f6)',
-      'Vivid yellow (#facc15)',
-      'Hot pink (#ec4899)',
-      'Black outlines'
+      'Bold primary colors (red, blue, yellow, or pink tones)',
+      'High-contrast combinations',
+      'Vibrant, saturated hues',
+      'Black outlines and borders'
     ],
     typography: [
       'Bold, heavy fonts',
@@ -568,28 +831,28 @@ const popArtStyle: DesignStyle = {
   },
   background: {
     body: 'bg-gradient-to-br from-yellow-300 via-pink-400 to-blue-400',
-    container: 'bg-yellow-300 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]',
+    container: 'bg-palette-surface border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]',
   },
   card: {
-    container: 'bg-red-500 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rounded-none',
-    title: 'font-black text-2xl uppercase text-white [text-shadow:3px_3px_0px_rgba(0,0,0,1)]',
-    content: 'font-bold text-base text-white leading-relaxed',
+    container: 'bg-palette-primary border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rounded-none',
+    title: 'font-black text-2xl uppercase text-palette-text [text-shadow:3px_3px_0px_rgba(0,0,0,1)]',
+    content: 'font-bold text-base text-palette-text leading-relaxed',
   },
   navbar: {
     container: 'bg-gradient-to-r from-red-500 via-yellow-400 to-blue-500 border-b-4 border-black',
     select: 'bg-white border-4 border-black text-black font-black rounded-none shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] focus:ring-0 focus:outline-none',
-    text: 'text-white font-black [text-shadow:2px_2px_0px_rgba(0,0,0,1)]',
-    label: 'text-white font-black [text-shadow:2px_2px_0px_rgba(0,0,0,1)]',
+    text: 'text-palette-text font-black [text-shadow:2px_2px_0px_rgba(0,0,0,1)]',
+    label: 'text-palette-text font-black [text-shadow:2px_2px_0px_rgba(0,0,0,1)]',
   },
   button: {
     base: 'border-4 border-black rounded-none font-black uppercase transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0 active:translate-y-0 active:shadow-none',
     // For style selector dialog
-    selected: 'bg-yellow-400 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    selected: 'bg-palette-surface text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
     unselected: 'bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-yellow-100',
     // For general button usage
-    primary: 'bg-red-500 text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]',
-    secondary: 'bg-blue-500 text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]',
-    outline: 'bg-yellow-300 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
+    primary: 'bg-palette-primary text-palette-text shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]',
+    secondary: 'bg-palette-secondary text-palette-text shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]',
+    outline: 'bg-palette-surface text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
   },
   input: {
     base: 'bg-white border-4 border-black rounded-none text-black font-bold placeholder:text-gray-600 focus:ring-0 focus:outline-none focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
@@ -599,23 +862,23 @@ const popArtStyle: DesignStyle = {
     base: 'bg-white border-4 border-black rounded-none text-black font-bold placeholder:text-gray-600 focus:ring-0 focus:outline-none focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
   },
   checkbox: {
-    base: 'border-4 border-black rounded-none w-6 h-6 accent-red-500 focus:ring-0',
+    base: 'border-4 border-black rounded-none w-6 h-6 accent-palette-accent focus:ring-0',
     label: 'font-bold text-black',
   },
   switch: {
     base: 'border-4 border-black rounded-none',
   },
   tabs: {
-    list: 'bg-pink-400 border-4 border-black p-1 gap-1 rounded-none',
+    list: 'bg-palette-secondary border-4 border-black p-1 gap-1 rounded-none',
     trigger: 'font-black uppercase text-black px-4 py-2 border-4 border-black transition-all',
-    triggerActive: 'bg-yellow-400 shadow-[inset_2px_2px_0px_0px_rgba(0,0,0,0.3)]',
+    triggerActive: 'bg-palette-surface shadow-[inset_2px_2px_0px_0px_rgba(0,0,0,0.3)]',
     triggerInactive: 'bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]',
     content: 'bg-white border-4 border-black p-6 mt-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rounded-none',
   },
   accordion: {
-    item: 'bg-blue-500 border-4 border-black mb-2 rounded-none',
-    trigger: 'font-black uppercase text-white hover:bg-blue-600 p-4 [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]',
-    content: 'font-bold text-black p-4 bg-yellow-300 border-t-4 border-black',
+    item: 'bg-palette-secondary border-4 border-black mb-2 rounded-none',
+    trigger: 'font-black uppercase text-palette-text hover:bg-blue-600 p-4 [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]',
+    content: 'font-bold text-black p-4 bg-palette-surface border-t-4 border-black',
   },
   alert: {
     base: 'border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-4 rounded-none',
@@ -625,19 +888,19 @@ const popArtStyle: DesignStyle = {
   badge: {
     base: 'border-3 border-black rounded-none font-black uppercase text-xs px-2 py-1',
     success: 'bg-green-400 text-black',
-    warning: 'bg-yellow-400 text-black',
-    error: 'bg-red-500 text-white',
+    warning: 'bg-palette-surface text-black',
+    error: 'bg-palette-primary text-palette-text',
   },
   progress: {
     container: 'bg-white border-4 border-black h-8 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]',
     bar: 'bg-gradient-to-r from-red-500 via-yellow-400 to-blue-500 h-full border-r-4 border-black',
   },
   slider: {
-    base: 'accent-red-500 h-4 border-2 border-black',
+    base: 'accent-palette-accent h-4 border-2 border-black',
   },
   dialog: {
     overlay: 'bg-black/60',
-    content: 'bg-yellow-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rounded-none',
+    content: 'bg-palette-surface border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rounded-none',
     title: 'font-black text-2xl uppercase text-black',
     description: 'font-bold text-black',
   },
@@ -650,6 +913,50 @@ const popArtStyle: DesignStyle = {
 const y2kStyle: DesignStyle = {
   name: 'y2k',
   displayName: 'Y2K Aesthetic',
+  colorPalettes: [
+    {
+      id: 'cyber',
+      name: 'Cyber',
+      colors: {
+        primary: '#06b6d4',      // Cyan chrome
+        secondary: '#3b82f6',    // Blue
+        accent: '#8b5cf6',       // Purple
+        background: '#0c1222',   // Deep cyber black
+        surface: '#1e293b',      // Dark slate
+        text: '#e0f2fe',         // Light cyan
+        textSecondary: '#cbd5e1', // Silver
+        border: '#06b6d4'        // Cyan border
+      }
+    },
+    {
+      id: 'bubblegum',
+      name: 'Bubblegum',
+      colors: {
+        primary: '#ec4899',      // Hot pink
+        secondary: '#f0abfc',    // Light pink
+        accent: '#fbbf24',       // Yellow
+        background: '#1a0e1a',   // Deep pink-black
+        surface: '#3b1e3b',      // Dark pink
+        text: '#fce7f3',         // Light pink
+        textSecondary: '#e9d5ff', // Light lavender
+        border: '#ec4899'        // Pink border
+      }
+    },
+    {
+      id: 'matrix',
+      name: 'Matrix',
+      colors: {
+        primary: '#84cc16',      // Lime green
+        secondary: '#22c55e',    // Green
+        accent: '#10b981',       // Emerald
+        background: '#0a1f0a',   // Deep matrix black
+        surface: '#1e3a1e',      // Dark green
+        text: '#d9f99d',         // Light lime
+        textSecondary: '#bbf7d0', // Light green
+        border: '#84cc16'        // Lime border
+      }
+    }
+  ],
   metadata: {
     description: 'A nostalgic design style inspired by early 2000s internet culture, featuring chrome effects, bright colors, and glossy aesthetics',
     characteristics: [
@@ -661,11 +968,10 @@ const y2kStyle: DesignStyle = {
       'Pixel art and low-fi graphics'
     ],
     colorPalette: [
-      'Chrome silver/white (#f0f0f0)',
-      'Lime green (#84cc16)',
-      'Hot pink (#ff0080)',
-      'Sky blue (#38bdf8)',
-      'Bright orange (#fb923c)'
+      'Metallic chrome/silver tones',
+      'Bright neon colors (cyan, pink, or lime)',
+      'Glossy, reflective surfaces',
+      'Dark futuristic backgrounds'
     ],
     typography: [
       'Chunky, rounded fonts',
@@ -675,54 +981,54 @@ const y2kStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-gradient-to-br from-sky-200 via-pink-200 to-lime-200',
-    container: 'bg-gradient-to-br from-white via-gray-50 to-sky-50 border-2 border-sky-400 shadow-[inset_0_2px_0_rgba(255,255,255,0.8),0_4px_12px_rgba(0,0,0,0.1)]',
+    body: 'bg-palette-background',
+    container: 'bg-palette-surface border-2 border-palette-border shadow-[inset_0_2px_0_rgba(255,255,255,0.8),0_4px_12px_rgba(0,0,0,0.1)]',
   },
   card: {
-    container: 'bg-gradient-to-br from-pink-400 to-pink-300 border-2 border-white shadow-[inset_0_2px_0_rgba(255,255,255,0.6),4px_4px_0_rgba(0,0,0,0.15)] rounded-2xl',
-    title: 'font-black text-2xl text-sky-700',
-    content: 'font-bold text-base text-sky-900 leading-relaxed',
+    container: 'bg-palette-primary border-2 border-palette-border shadow-[inset_0_2px_0_rgba(255,255,255,0.6),4px_4px_0_rgba(0,0,0,0.15)] rounded-2xl',
+    title: 'font-black text-2xl text-palette-text',
+    content: 'font-bold text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'bg-gradient-to-r from-lime-400 via-sky-300 to-pink-400 border-b-2 border-white shadow-[0_4px_0_rgba(255,255,255,0.4)]',
-    select: 'bg-white border-2 border-sky-400 text-sky-600 font-black rounded-xl shadow-[inset_0_2px_0_rgba(255,255,255,1),0_4px_0_rgba(0,0,0,0.1)] focus:ring-2 focus:ring-pink-400 focus:outline-none',
-    text: 'text-white font-black',
-    label: 'text-white font-black',
+    container: 'bg-palette-surface border-b-2 border-palette-border shadow-[0_4px_0_rgba(255,255,255,0.4)]',
+    select: 'bg-palette-background border-2 border-palette-border text-palette-text font-black rounded-xl shadow-[inset_0_2px_0_rgba(255,255,255,1),0_4px_0_rgba(0,0,0,0.1)] focus:ring-2 focus:ring-palette-accent focus:outline-none',
+    text: 'text-palette-text font-black',
+    label: 'text-palette-text font-black',
   },
   button: {
     base: 'border-2 rounded-2xl font-black transition-all shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_4px_0_rgba(0,0,0,0.2)] hover:shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_6px_0_rgba(0,0,0,0.25)] hover:translate-y-[-2px] active:translate-y-0 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_2px_0_rgba(0,0,0,0.2)]',
     // For style selector dialog
-    selected: 'bg-gradient-to-br from-lime-400 to-lime-500 text-white border-lime-300',
-    unselected: 'bg-gradient-to-br from-sky-300 to-sky-400 text-white border-sky-200 hover:from-sky-400 hover:to-sky-500',
+    selected: 'bg-palette-primary text-palette-text border-palette-border',
+    unselected: 'bg-palette-accent text-palette-text border-palette-border hover:bg-palette-secondary',
     // For general button usage
-    primary: 'bg-gradient-to-br from-pink-400 to-pink-500 text-white border-pink-300',
-    secondary: 'bg-gradient-to-br from-lime-400 to-lime-500 text-white border-lime-300',
-    outline: 'bg-white text-sky-600 border-sky-400',
+    primary: 'bg-palette-primary text-palette-text border-palette-border',
+    secondary: 'bg-palette-secondary text-palette-text border-palette-border',
+    outline: 'bg-palette-background text-palette-text border-palette-border',
   },
   input: {
-    base: 'bg-white border-2 border-sky-400 rounded-xl text-sky-900 font-bold placeholder:text-sky-300 focus:ring-2 focus:ring-pink-400 focus:outline-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)]',
-    label: 'font-black text-sky-600',
+    base: 'bg-white border-2 border-palette-border rounded-xl text-sky-900 font-bold placeholder:text-sky-300 focus:ring-2 focus:ring-pink-400 focus:outline-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)]',
+    label: 'font-black text-palette-text',
   },
   textarea: {
-    base: 'bg-white border-2 border-sky-400 rounded-xl text-sky-900 font-bold placeholder:text-sky-300 focus:ring-2 focus:ring-pink-400 focus:outline-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)]',
+    base: 'bg-white border-2 border-palette-border rounded-xl text-sky-900 font-bold placeholder:text-sky-300 focus:ring-2 focus:ring-pink-400 focus:outline-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)]',
   },
   checkbox: {
-    base: 'border-2 border-sky-400 rounded w-5 h-5 accent-pink-500 focus:ring-2 focus:ring-pink-400 bg-white',
+    base: 'border-2 border-palette-border rounded w-5 h-5 accent-palette-accent focus:ring-2 focus:ring-pink-400 bg-white',
     label: 'font-bold text-sky-700',
   },
   switch: {
-    base: 'border-2 border-sky-400 shadow-[0_2px_0_rgba(0,0,0,0.1)]',
+    base: 'border-2 border-palette-border shadow-[0_2px_0_rgba(0,0,0,0.1)]',
   },
   tabs: {
     list: 'bg-gradient-to-r from-lime-300 to-sky-300 border-2 border-white rounded-2xl p-2 gap-2 shadow-[inset_0_2px_0_rgba(255,255,255,0.4)]',
-    trigger: 'font-black text-white px-4 py-2 rounded-xl transition-all border-2',
-    triggerActive: 'bg-white text-pink-500 border-pink-300 shadow-[inset_0_2px_0_rgba(255,255,255,1),0_2px_4px_rgba(0,0,0,0.1)]',
+    trigger: 'font-black text-palette-text px-4 py-2 rounded-xl transition-all border-2',
+    triggerActive: 'bg-white text-palette-primary border-palette-border shadow-[inset_0_2px_0_rgba(255,255,255,1),0_2px_4px_rgba(0,0,0,0.1)]',
     triggerInactive: 'border-transparent hover:bg-white/20',
     content: 'bg-white border-2 border-sky-300 rounded-2xl p-6 mt-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]',
   },
   accordion: {
     item: 'bg-gradient-to-br from-sky-300 to-sky-400 border-2 border-white rounded-2xl mb-2 overflow-hidden shadow-[0_4px_0_rgba(0,0,0,0.1)]',
-    trigger: 'font-black text-white hover:bg-sky-500/50 p-4',
+    trigger: 'font-black text-palette-text hover:bg-sky-500/50 p-4',
     content: 'font-bold text-sky-900 p-4 bg-white border-t-2 border-sky-200',
   },
   alert: {
@@ -732,21 +1038,21 @@ const y2kStyle: DesignStyle = {
   },
   badge: {
     base: 'border-2 rounded-full font-black text-xs px-3 py-1 shadow-[0_2px_0_rgba(0,0,0,0.1)]',
-    success: 'bg-gradient-to-br from-lime-400 to-lime-500 text-white border-lime-300',
-    warning: 'bg-gradient-to-br from-orange-400 to-orange-500 text-white border-orange-300',
-    error: 'bg-gradient-to-br from-pink-400 to-pink-500 text-white border-pink-300',
+    success: 'bg-gradient-to-br from-lime-400 to-lime-500 text-palette-text border-lime-300',
+    warning: 'bg-gradient-to-br from-orange-400 to-orange-500 text-palette-text border-orange-300',
+    error: 'bg-gradient-to-br from-pink-400 to-pink-500 text-palette-text border-palette-border',
   },
   progress: {
-    container: 'bg-white border-2 border-sky-400 rounded-full h-4 overflow-hidden shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)]',
+    container: 'bg-white border-2 border-palette-border rounded-full h-4 overflow-hidden shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)]',
     bar: 'bg-gradient-to-r from-pink-400 via-lime-400 to-sky-400 h-full shadow-[0_0_8px_rgba(236,72,153,0.4)]',
   },
   slider: {
-    base: 'accent-pink-500 h-2',
+    base: 'accent-palette-accent h-2',
   },
   dialog: {
-    overlay: 'bg-sky-400/40 backdrop-blur-sm',
-    content: 'bg-gradient-to-br from-white via-sky-50 to-pink-50 border-2 border-sky-400 rounded-2xl shadow-[inset_0_2px_0_rgba(255,255,255,0.8),0_8px_24px_rgba(0,0,0,0.15)]',
-    title: 'font-black text-xl text-pink-500',
+    overlay: 'bg-palette-secondary/40 backdrop-blur-sm',
+    content: 'bg-gradient-to-br from-white via-sky-50 to-pink-50 border-2 border-palette-border rounded-2xl shadow-[inset_0_2px_0_rgba(255,255,255,0.8),0_8px_24px_rgba(0,0,0,0.15)]',
+    title: 'font-black text-xl text-palette-primary',
     description: 'font-bold text-sky-700',
   },
 }
@@ -758,6 +1064,50 @@ const y2kStyle: DesignStyle = {
 const vaporwaveStyle: DesignStyle = {
   name: 'vaporwave',
   displayName: 'Vaporwave',
+  colorPalettes: [
+    {
+      id: 'sunset',
+      name: 'Sunset',
+      colors: {
+        primary: '#ff6ec7',      // Hot pink
+        secondary: '#a855f7',    // Purple
+        accent: '#fbbf24',       // Golden yellow
+        background: '#1a0520',   // Deep purple-black
+        surface: '#2d1838',      // Dark purple
+        text: '#ffc0e5',         // Light pink
+        textSecondary: '#dda8f5', // Light purple
+        border: '#ff6ec7'        // Pink border
+      }
+    },
+    {
+      id: 'neon',
+      name: 'Neon',
+      colors: {
+        primary: '#06b6d4',      // Cyan
+        secondary: '#ec4899',    // Magenta
+        accent: '#8b5cf6',       // Purple
+        background: '#0a1628',   // Deep blue-black
+        surface: '#1e2a42',      // Dark navy
+        text: '#7dd3fc',         // Light cyan
+        textSecondary: '#f9a8d4', // Light pink
+        border: '#06b6d4'        // Cyan border
+      }
+    },
+    {
+      id: 'retro',
+      name: 'Retro',
+      colors: {
+        primary: '#14b8a6',      // Teal
+        secondary: '#fb7185',    // Rose
+        accent: '#a78bfa',       // Lavender
+        background: '#0f1419',   // Deep teal-black
+        surface: '#1e2d2a',      // Dark teal
+        text: '#5eead4',         // Light teal
+        textSecondary: '#fda4af', // Light rose
+        border: '#14b8a6'        // Teal border
+      }
+    }
+  ],
   metadata: {
     description: 'A nostalgic design style inspired by 80s/90s aesthetics, featuring soft pastels, dreamy vibes, and retro nostalgia',
     characteristics: [
@@ -769,11 +1119,10 @@ const vaporwaveStyle: DesignStyle = {
       'Washed-out, nostalgic atmosphere'
     ],
     colorPalette: [
-      'Pastel pink (#ffc0cb)',
-      'Soft cyan/teal (#7dd3c0)',
-      'Lavender purple (#d8b5ff)',
-      'Peach (#ffd4a3)',
-      'Soft gradients'
+      'Neon pink and purple tones',
+      'Soft cyan and teal accents',
+      'Dark atmospheric backgrounds',
+      'Dreamy gradient overlays'
     ],
     typography: [
       'Retro, smooth fonts',
@@ -783,60 +1132,60 @@ const vaporwaveStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-gradient-to-b from-pink-200 via-purple-200 to-cyan-200',
-    container: 'bg-gradient-to-br from-pink-100/90 to-cyan-100/90 border-2 border-pink-300 shadow-[0_8px_32px_rgba(255,192,203,0.3)]',
+    body: 'bg-palette-background',
+    container: 'bg-palette-surface border-2 border-palette-border shadow-[0_8px_32px_rgba(255,192,203,0.3)]',
   },
   card: {
-    container: 'bg-gradient-to-br from-purple-200/80 to-pink-200/80 border-2 border-cyan-300 shadow-[0_8px_24px_rgba(125,211,192,0.3)] rounded-lg backdrop-blur-sm',
-    title: 'font-bold text-2xl italic bg-gradient-to-r from-pink-400 via-purple-300 to-cyan-400 bg-clip-text text-transparent',
-    content: 'font-normal text-base text-purple-700 leading-relaxed',
+    container: 'bg-palette-surface/80 backdrop-blur-md border-2 border-palette-border shadow-[0_8px_24px_rgba(125,211,192,0.3)] rounded-lg',
+    title: 'font-bold text-2xl italic text-palette-text',
+    content: 'font-normal text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'bg-gradient-to-r from-pink-200 via-purple-200 to-cyan-200 border-b-2 border-pink-300 shadow-lg',
-    select: 'bg-white/80 backdrop-blur-sm border-2 border-cyan-300 text-purple-600 font-bold italic rounded-lg shadow-md focus:ring-2 focus:ring-pink-300 focus:outline-none',
-    text: 'text-transparent bg-gradient-to-r from-pink-500 to-cyan-500 bg-clip-text font-bold italic',
-    label: 'text-purple-600 font-bold italic',
+    container: 'bg-palette-surface border-b-2 border-palette-border shadow-lg',
+    select: 'bg-palette-background backdrop-blur-sm border-2 border-palette-border text-palette-text font-bold italic rounded-lg shadow-md focus:ring-2 focus:ring-palette-accent focus:outline-none',
+    text: 'text-palette-text font-bold italic',
+    label: 'text-palette-text font-bold italic',
   },
   button: {
     base: 'border-2 rounded-lg font-bold italic transition-all shadow-md hover:shadow-lg hover:scale-105 active:scale-100',
     // For style selector dialog
-    selected: 'bg-gradient-to-r from-pink-300 to-purple-300 text-purple-700 border-cyan-300 shadow-[0_0_20px_rgba(255,192,203,0.4)]',
-    unselected: 'bg-gradient-to-r from-cyan-200 to-pink-200 text-purple-600 border-purple-300 hover:from-cyan-300 hover:to-pink-300',
+    selected: 'bg-palette-primary text-palette-background border-palette-border shadow-[0_0_20px_rgba(255,192,203,0.4)]',
+    unselected: 'bg-palette-surface text-palette-text border-palette-border hover:bg-palette-background',
     // For general button usage
-    primary: 'bg-gradient-to-r from-pink-300 to-purple-300 text-white border-pink-400 shadow-md',
-    secondary: 'bg-gradient-to-r from-cyan-300 to-teal-300 text-white border-cyan-400 shadow-md',
-    outline: 'bg-white/50 backdrop-blur-sm text-purple-600 border-purple-300 hover:bg-purple-100/50',
+    primary: 'bg-palette-primary text-palette-background border-palette-border shadow-md',
+    secondary: 'bg-palette-secondary text-palette-background border-palette-border shadow-md',
+    outline: 'bg-palette-surface backdrop-blur-sm text-palette-text border-palette-border hover:bg-palette-background',
   },
   input: {
-    base: 'bg-white/70 backdrop-blur-sm border-2 border-cyan-300 rounded-lg text-purple-700 font-medium italic placeholder:text-purple-300 focus:ring-2 focus:ring-pink-300 focus:outline-none shadow-inner',
-    label: 'font-bold italic text-pink-500',
+    base: 'bg-palette-surface/90 backdrop-blur-sm border-2 border-palette-border rounded-lg text-palette-text font-medium italic placeholder:text-palette-text-secondary/50 focus:ring-2 focus:ring-palette-accent focus:outline-none shadow-inner',
+    label: 'font-bold italic text-palette-text',
   },
   textarea: {
-    base: 'bg-white/70 backdrop-blur-sm border-2 border-cyan-300 rounded-lg text-purple-700 font-medium italic placeholder:text-purple-300 focus:ring-2 focus:ring-pink-300 focus:outline-none shadow-inner',
+    base: 'bg-palette-surface/90 backdrop-blur-sm border-2 border-palette-border rounded-lg text-palette-text font-medium italic placeholder:text-palette-text-secondary/50 focus:ring-2 focus:ring-palette-accent focus:outline-none shadow-inner',
   },
   checkbox: {
-    base: 'border-2 border-cyan-300 rounded w-5 h-5 accent-pink-400 focus:ring-2 focus:ring-pink-300 bg-white/70',
-    label: 'font-medium italic text-purple-600',
+    base: 'border-2 border-palette-border rounded w-5 h-5 accent-palette-accent focus:ring-2 focus:ring-palette-accent bg-palette-surface',
+    label: 'font-medium italic text-palette-text',
   },
   switch: {
-    base: 'border-2 border-cyan-300',
+    base: 'border-2 border-palette-border',
   },
   tabs: {
-    list: 'bg-gradient-to-r from-pink-200 to-cyan-200 border-2 border-purple-300 rounded-xl p-2 gap-2 shadow-inner',
-    trigger: 'font-bold italic text-purple-600 px-4 py-2 rounded-lg transition-all',
-    triggerActive: 'bg-white/80 backdrop-blur-sm text-pink-500 shadow-md',
-    triggerInactive: 'hover:bg-white/40',
-    content: 'bg-white/60 backdrop-blur-sm border-2 border-pink-300 rounded-xl p-6 mt-2 shadow-lg',
+    list: 'bg-palette-surface border-2 border-palette-border rounded-xl p-2 gap-2 shadow-inner',
+    trigger: 'font-bold italic text-palette-text px-4 py-2 rounded-lg transition-all',
+    triggerActive: 'bg-palette-primary text-palette-background shadow-md',
+    triggerInactive: 'hover:bg-palette-background',
+    content: 'bg-palette-surface/90 backdrop-blur-sm border-2 border-palette-border rounded-xl p-6 mt-2 shadow-lg',
   },
   accordion: {
-    item: 'bg-gradient-to-br from-pink-200/60 to-purple-200/60 backdrop-blur-sm border-2 border-cyan-300 rounded-xl mb-2 overflow-hidden shadow-md',
-    trigger: 'font-bold italic text-purple-600 hover:bg-pink-200/50 p-4 transition-colors',
-    content: 'font-normal italic text-purple-700 p-4 bg-white/50 border-t-2 border-pink-200',
+    item: 'bg-palette-surface/80 backdrop-blur-sm border-2 border-palette-border rounded-xl mb-2 overflow-hidden shadow-md',
+    trigger: 'font-bold italic text-palette-text hover:bg-palette-background/50 p-4 transition-colors',
+    content: 'font-normal italic text-palette-text-secondary p-4 bg-palette-background/50 border-t-2 border-palette-border',
   },
   alert: {
-    base: 'bg-gradient-to-br from-pink-200/70 to-purple-200/70 backdrop-blur-sm border-2 border-cyan-300 rounded-xl shadow-lg p-4',
+    base: 'bg-palette-surface/80 backdrop-blur-sm border-2 border-palette-border rounded-xl shadow-lg p-4',
     title: 'font-bold italic text-transparent bg-gradient-to-r from-pink-500 to-cyan-500 bg-clip-text',
-    description: 'font-normal italic text-purple-600',
+    description: 'font-normal italic text-palette-text',
   },
   badge: {
     base: 'border-2 rounded-full font-bold italic text-xs px-3 py-1 shadow-sm',
@@ -845,17 +1194,17 @@ const vaporwaveStyle: DesignStyle = {
     error: 'bg-gradient-to-r from-pink-300 to-rose-300 text-pink-700 border-pink-400',
   },
   progress: {
-    container: 'bg-white/70 backdrop-blur-sm border-2 border-purple-300 rounded-full h-4 overflow-hidden shadow-inner',
+    container: 'bg-white/70 backdrop-blur-sm border-2 border-palette-border rounded-full h-4 overflow-hidden shadow-inner',
     bar: 'bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300 h-full',
   },
   slider: {
-    base: 'accent-pink-400 h-2',
+    base: 'accent-palette-accent h-2',
   },
   dialog: {
-    overlay: 'bg-purple-300/30 backdrop-blur-md',
-    content: 'bg-gradient-to-br from-pink-100 via-purple-100 to-cyan-100 border-2 border-pink-300 rounded-2xl shadow-[0_8px_32px_rgba(255,192,203,0.4)]',
+    overlay: 'bg-palette-surface/30 backdrop-blur-md',
+    content: 'bg-gradient-to-br from-pink-100 via-purple-100 to-cyan-100 border-2 border-palette-border rounded-2xl shadow-[0_8px_32px_rgba(255,192,203,0.4)]',
     title: 'font-bold text-xl italic text-transparent bg-gradient-to-r from-pink-500 via-purple-400 to-cyan-500 bg-clip-text',
-    description: 'font-normal italic text-purple-600',
+    description: 'font-normal italic text-palette-text',
   },
 }
 
@@ -866,6 +1215,50 @@ const vaporwaveStyle: DesignStyle = {
 const boldMinimalismStyle: DesignStyle = {
   name: 'bold-minimalism',
   displayName: 'Bold Minimalism',
+  colorPalettes: [
+    {
+      id: 'crimson',
+      name: 'Crimson',
+      colors: {
+        primary: '#dc2626',      // Crimson red
+        secondary: '#991b1b',    // Dark red
+        accent: '#ef4444',       // Bright red
+        background: '#ffffff',   // Pure white
+        surface: '#fef2f2',      // Light red tint
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#525252', // Dark gray
+        border: '#fee2e2'        // Light red border
+      }
+    },
+    {
+      id: 'indigo',
+      name: 'Indigo',
+      colors: {
+        primary: '#4f46e5',      // Indigo
+        secondary: '#3730a3',    // Dark indigo
+        accent: '#6366f1',       // Bright indigo
+        background: '#ffffff',   // Pure white
+        surface: '#eef2ff',      // Light indigo tint
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#525252', // Dark gray
+        border: '#e0e7ff'        // Light indigo border
+      }
+    },
+    {
+      id: 'emerald',
+      name: 'Emerald',
+      colors: {
+        primary: '#10b981',      // Emerald green
+        secondary: '#047857',    // Dark emerald
+        accent: '#34d399',       // Bright emerald
+        background: '#ffffff',   // Pure white
+        surface: '#ecfdf5',      // Light green tint
+        text: '#1a1a1a',         // Near black
+        textSecondary: '#525252', // Dark gray
+        border: '#d1fae5'        // Light green border
+      }
+    }
+  ],
   metadata: {
     description: 'A clean, minimal design style with bold typography as the focal point, using ample white space for a modern, professional look',
     characteristics: [
@@ -877,10 +1270,10 @@ const boldMinimalismStyle: DesignStyle = {
       'Professional, modern aesthetic'
     ],
     colorPalette: [
-      'Pure white backgrounds (#ffffff)',
-      'Deep black text (#000000)',
-      'Light gray accents (#f5f5f5)',
-      'Subtle shadows for depth'
+      'Clean white backgrounds',
+      'Bold accent colors (crimson, indigo, or emerald)',
+      'High contrast typography',
+      'Minimal use of color for impact'
     ],
     typography: [
       'Extra bold headings (800-900)',
@@ -891,27 +1284,27 @@ const boldMinimalismStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-white',
-    container: 'bg-white',
+    body: 'bg-palette-background',
+    container: 'bg-palette-background',
   },
   card: {
-    container: 'bg-white rounded-none',
-    title: 'font-black text-4xl text-black tracking-tight',
-    content: 'font-light text-lg text-gray-700 leading-relaxed',
+    container: 'bg-palette-surface rounded-none border-l-4 border-palette-primary',
+    title: 'font-black text-4xl text-palette-text tracking-tight',
+    content: 'font-light text-lg text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'bg-white border-b border-gray-200',
-    select: 'border-none bg-gray-50 text-black rounded-none font-bold focus:ring-0 focus:outline-none',
-    text: 'text-black font-black text-xl',
-    label: 'text-gray-600 font-light text-sm',
+    container: 'bg-palette-background border-b border-palette-border',
+    select: 'border-none bg-palette-surface text-palette-text rounded-none font-bold focus:ring-0 focus:outline-none',
+    text: 'text-palette-text font-black text-xl',
+    label: 'text-palette-text-secondary font-light text-sm',
   },
   button: {
     base: 'rounded-none font-black text-sm uppercase tracking-widest transition-all px-8 py-4',
-    selected: 'bg-black text-white',
-    unselected: 'bg-white text-black border border-gray-200 hover:bg-gray-50',
-    primary: 'bg-black text-white hover:bg-gray-900',
-    secondary: 'bg-gray-200 text-black hover:bg-gray-300',
-    outline: 'bg-white text-black border-2 border-black hover:bg-black hover:text-white',
+    selected: 'bg-palette-primary text-palette-background',
+    unselected: 'bg-palette-background text-palette-text border border-palette-border hover:bg-palette-surface',
+    primary: 'bg-palette-primary text-palette-background hover:bg-palette-secondary',
+    secondary: 'bg-palette-surface text-palette-text hover:bg-palette-border',
+    outline: 'bg-palette-background text-palette-text border-2 border-palette-primary hover:bg-palette-primary hover:text-palette-background',
   },
   input: {
     base: 'border-b-2 border-gray-300 rounded-none bg-white text-black font-light text-lg placeholder:text-gray-400 focus:border-black focus:ring-0 focus:outline-none px-0 py-3',
@@ -946,9 +1339,9 @@ const boldMinimalismStyle: DesignStyle = {
   },
   badge: {
     base: 'rounded-none font-black uppercase text-xs px-3 py-1 tracking-wider',
-    success: 'bg-black text-white',
-    warning: 'bg-gray-900 text-white',
-    error: 'bg-gray-800 text-white',
+    success: 'bg-black text-palette-text',
+    warning: 'bg-gray-900 text-palette-text',
+    error: 'bg-gray-800 text-palette-text',
   },
   progress: {
     container: 'border border-gray-300 rounded-none bg-gray-100 h-2 overflow-hidden',
@@ -972,6 +1365,50 @@ const boldMinimalismStyle: DesignStyle = {
 const modernFlatStyle: DesignStyle = {
   name: 'modern-flat',
   displayName: 'Modern Flat',
+  colorPalettes: [
+    {
+      id: 'sky',
+      name: 'Sky',
+      colors: {
+        primary: '#0ea5e9',      // Sky blue
+        secondary: '#0284c7',    // Darker blue
+        accent: '#38bdf8',       // Light blue
+        background: '#0c1220',   // Deep blue-black
+        surface: '#1e293b',      // Dark slate
+        text: '#f0f9ff',         // Light blue-white
+        textSecondary: '#cbd5e1', // Gray-blue
+        border: '#334155'        // Slate border
+      }
+    },
+    {
+      id: 'coral',
+      name: 'Coral',
+      colors: {
+        primary: '#f97316',      // Orange
+        secondary: '#ea580c',    // Dark orange
+        accent: '#fb923c',       // Light coral
+        background: '#1a0f0a',   // Deep orange-black
+        surface: '#292524',      // Dark brown
+        text: '#fef3c7',         // Light cream
+        textSecondary: '#d6d3d1', // Stone gray
+        border: '#44403c'        // Brown border
+      }
+    },
+    {
+      id: 'violet',
+      name: 'Violet',
+      colors: {
+        primary: '#8b5cf6',      // Violet
+        secondary: '#7c3aed',    // Dark purple
+        accent: '#a78bfa',       // Light violet
+        background: '#0f0a1a',   // Deep purple-black
+        surface: '#27272a',      // Dark zinc
+        text: '#faf5ff',         // Light lavender
+        textSecondary: '#d4d4d8', // Zinc gray
+        border: '#3f3f46'        // Zinc border
+      }
+    }
+  ],
   metadata: {
     description: 'A modern flat design with darker backgrounds and strategic use of vibrant accent colors to focus attention on key elements',
     characteristics: [
@@ -983,11 +1420,10 @@ const modernFlatStyle: DesignStyle = {
       'Strategic color use for CTAs'
     ],
     colorPalette: [
-      'Dark charcoal (#1a1a1a)',
-      'Vibrant green (#10b981)',
-      'Electric blue (#3b82f6)',
-      'Bright red (#ef4444)',
-      'Pure white text (#ffffff)'
+      'Dark charcoal backgrounds',
+      'Vibrant accent colors (sky blue, coral, or violet)',
+      'Flat, non-gradient surfaces',
+      'High contrast white text'
     ],
     typography: [
       'Medium to bold fonts (500-700)',
@@ -997,76 +1433,76 @@ const modernFlatStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-zinc-900',
-    container: 'bg-zinc-800 border border-zinc-700',
+    body: 'bg-palette-background',
+    container: 'bg-palette-surface border border-palette-border',
   },
   card: {
-    container: 'bg-zinc-800 border border-zinc-700 rounded-lg',
-    title: 'font-bold text-2xl text-white',
+    container: 'bg-palette-surface border border-palette-border rounded-lg',
+    title: 'font-bold text-2xl text-palette-text',
     content: 'font-normal text-base text-zinc-300 leading-relaxed',
   },
   navbar: {
-    container: 'bg-zinc-900 border-b border-zinc-800',
-    select: 'bg-zinc-800 border border-zinc-700 text-white rounded-md font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none',
-    text: 'text-white font-semibold',
+    container: 'bg-palette-background border-b border-zinc-800',
+    select: 'bg-palette-surface border border-palette-border text-palette-text rounded-md font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none',
+    text: 'text-palette-text font-semibold',
     label: 'text-zinc-400 font-medium',
   },
   button: {
     base: 'rounded-md font-semibold transition-all',
-    selected: 'bg-emerald-500 text-white',
-    unselected: 'bg-zinc-800 text-white border border-zinc-700 hover:bg-zinc-700',
-    primary: 'bg-emerald-500 text-white hover:bg-emerald-600',
-    secondary: 'bg-blue-500 text-white hover:bg-blue-600',
-    outline: 'bg-transparent text-white border-2 border-zinc-600 hover:bg-zinc-800',
+    selected: 'bg-palette-accent text-palette-text',
+    unselected: 'bg-palette-surface text-palette-text border border-palette-border hover:bg-zinc-700',
+    primary: 'bg-palette-accent text-palette-text hover:bg-emerald-600',
+    secondary: 'bg-palette-secondary text-palette-text hover:bg-blue-600',
+    outline: 'bg-transparent text-palette-text border-2 border-zinc-600 hover:bg-palette-surface',
   },
   input: {
-    base: 'bg-zinc-800 border border-zinc-700 rounded-md text-white placeholder:text-zinc-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:outline-none',
+    base: 'bg-palette-surface border border-palette-border rounded-md text-palette-text placeholder:text-zinc-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:outline-none',
     label: 'font-semibold text-zinc-200',
   },
   textarea: {
-    base: 'bg-zinc-800 border border-zinc-700 rounded-md text-white placeholder:text-zinc-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:outline-none',
+    base: 'bg-palette-surface border border-palette-border rounded-md text-palette-text placeholder:text-zinc-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:outline-none',
   },
   checkbox: {
-    base: 'border-2 border-zinc-600 rounded w-5 h-5 accent-emerald-500 focus:ring-2 focus:ring-emerald-500 bg-zinc-800',
+    base: 'border-2 border-zinc-600 rounded w-5 h-5 accent-palette-accent focus:ring-2 focus:ring-emerald-500 bg-palette-surface',
     label: 'font-medium text-zinc-300',
   },
   switch: {
-    base: 'border border-zinc-600 bg-zinc-800',
+    base: 'border border-zinc-600 bg-palette-surface',
   },
   tabs: {
-    list: 'bg-zinc-800 border border-zinc-700 rounded-lg p-1 gap-1',
+    list: 'bg-palette-surface border border-palette-border rounded-lg p-1 gap-1',
     trigger: 'font-semibold text-zinc-400 px-4 py-2 rounded-md transition-all',
-    triggerActive: 'bg-emerald-500 text-white',
+    triggerActive: 'bg-palette-accent text-palette-text',
     triggerInactive: 'hover:bg-zinc-700 hover:text-zinc-200',
-    content: 'bg-zinc-800 border border-zinc-700 rounded-lg p-6 mt-2',
+    content: 'bg-palette-surface border border-palette-border rounded-lg p-6 mt-2',
   },
   accordion: {
-    item: 'bg-zinc-800 border border-zinc-700 rounded-lg mb-2 overflow-hidden',
-    trigger: 'font-semibold text-white hover:bg-zinc-700 p-4 transition-colors',
-    content: 'font-normal text-zinc-300 p-4 bg-zinc-900/50',
+    item: 'bg-palette-surface border border-palette-border rounded-lg mb-2 overflow-hidden',
+    trigger: 'font-semibold text-palette-text hover:bg-zinc-700 p-4 transition-colors',
+    content: 'font-normal text-zinc-300 p-4 bg-palette-background/50',
   },
   alert: {
-    base: 'bg-zinc-800 border-l-4 rounded-md p-4',
-    title: 'font-bold text-white',
+    base: 'bg-palette-surface border-l-4 rounded-md p-4',
+    title: 'font-bold text-palette-text',
     description: 'font-normal text-zinc-300',
   },
   badge: {
     base: 'rounded-md font-semibold text-xs px-3 py-1',
-    success: 'bg-emerald-500 text-white',
-    warning: 'bg-amber-500 text-white',
-    error: 'bg-red-500 text-white',
+    success: 'bg-palette-accent text-palette-text',
+    warning: 'bg-palette-secondary text-palette-text',
+    error: 'bg-palette-primary text-palette-text',
   },
   progress: {
-    container: 'bg-zinc-800 border border-zinc-700 rounded-full h-3 overflow-hidden',
-    bar: 'bg-emerald-500 h-full',
+    container: 'bg-palette-surface border border-palette-border rounded-full h-3 overflow-hidden',
+    bar: 'bg-palette-accent h-full',
   },
   slider: {
-    base: 'accent-emerald-500 h-2',
+    base: 'accent-palette-accent h-2',
   },
   dialog: {
     overlay: 'bg-black/80',
-    content: 'bg-zinc-800 border border-zinc-700 shadow-2xl rounded-lg',
-    title: 'font-bold text-xl text-white',
+    content: 'bg-palette-surface border border-palette-border shadow-2xl rounded-lg',
+    title: 'font-bold text-xl text-palette-text',
     description: 'font-normal text-zinc-300',
   },
 }
@@ -1078,6 +1514,50 @@ const modernFlatStyle: DesignStyle = {
 const bentoGridStyle: DesignStyle = {
   name: 'bento-grid',
   displayName: 'Bento Grid',
+  colorPalettes: [
+    {
+      id: 'slate',
+      name: 'Slate',
+      colors: {
+        primary: '#475569',      // Slate
+        secondary: '#64748b',    // Light slate
+        accent: '#3b82f6',       // Blue accent
+        background: '#f8fafc',   // Light slate bg
+        surface: '#ffffff',      // White tiles
+        text: '#1e293b',         // Dark slate text
+        textSecondary: '#64748b', // Medium slate
+        border: '#e2e8f0'        // Light slate border
+      }
+    },
+    {
+      id: 'moss',
+      name: 'Moss',
+      colors: {
+        primary: '#65a30d',      // Moss green
+        secondary: '#84cc16',    // Lime
+        accent: '#facc15',       // Yellow accent
+        background: '#f7fee7',   // Light lime bg
+        surface: '#fefce8',      // Light yellow tile
+        text: '#365314',         // Dark green text
+        textSecondary: '#4d7c0f', // Medium green
+        border: '#d9f99d'        // Light green border
+      }
+    },
+    {
+      id: 'plum',
+      name: 'Plum',
+      colors: {
+        primary: '#9333ea',      // Purple
+        secondary: '#c084fc',    // Light purple
+        accent: '#ec4899',       // Pink accent
+        background: '#faf5ff',   // Light purple bg
+        surface: '#fdf4ff',      // Light pink tile
+        text: '#581c87',         // Dark purple text
+        textSecondary: '#7e22ce', // Medium purple
+        border: '#f3e8ff'        // Light purple border
+      }
+    }
+  ],
   metadata: {
     description: 'A tile-based grid layout inspired by bento boxes, organizing content in customizable boxes with different sizes for emphasis',
     characteristics: [
@@ -1089,11 +1569,10 @@ const bentoGridStyle: DesignStyle = {
       'Modern, organized presentation'
     ],
     colorPalette: [
-      'Light backgrounds (#f8f9fa)',
-      'White tiles (#ffffff)',
-      'Soft borders (#e5e7eb)',
-      'Subtle shadows',
-      'Accent colors for highlights'
+      'Light neutral backgrounds',
+      'Clean white or tinted tiles',
+      'Soft borders',
+      'Accent colors for emphasis (slate, moss, or plum)'
     ],
     typography: [
       'Medium font weights (500-600)',
@@ -1108,29 +1587,29 @@ const bentoGridStyle: DesignStyle = {
   },
   card: {
     container: 'bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow',
-    title: 'font-semibold text-xl text-gray-900',
+    title: 'font-semibold text-xl text-palette-text',
     content: 'font-normal text-sm text-gray-600 leading-relaxed',
   },
   navbar: {
     container: 'bg-white border-b border-gray-200',
-    select: 'bg-white border border-gray-300 text-gray-900 rounded-xl font-medium shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none',
-    text: 'text-gray-900 font-semibold',
+    select: 'bg-white border border-gray-300 text-palette-text rounded-xl font-medium shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none',
+    text: 'text-palette-text font-semibold',
     label: 'text-gray-600 font-medium',
   },
   button: {
     base: 'rounded-xl font-medium transition-all shadow-sm hover:shadow-md',
-    selected: 'bg-blue-500 text-white',
-    unselected: 'bg-white text-gray-900 border border-gray-300 hover:bg-gray-50',
-    primary: 'bg-blue-500 text-white hover:bg-blue-600',
-    secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
-    outline: 'bg-white text-gray-900 border-2 border-gray-300 hover:border-gray-400',
+    selected: 'bg-palette-secondary text-palette-text',
+    unselected: 'bg-white text-palette-text border border-gray-300 hover:bg-gray-50',
+    primary: 'bg-palette-secondary text-palette-text hover:bg-blue-600',
+    secondary: 'bg-gray-100 text-palette-text hover:bg-gray-200',
+    outline: 'bg-white text-palette-text border-2 border-gray-300 hover:border-gray-400',
   },
   input: {
-    base: 'bg-white border border-gray-300 rounded-xl text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none shadow-sm',
+    base: 'bg-white border border-gray-300 rounded-xl text-palette-text placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none shadow-sm',
     label: 'font-medium text-gray-700',
   },
   textarea: {
-    base: 'bg-white border border-gray-300 rounded-xl text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none shadow-sm',
+    base: 'bg-white border border-gray-300 rounded-xl text-palette-text placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none shadow-sm',
   },
   checkbox: {
     base: 'border-2 border-gray-300 rounded-md w-5 h-5 accent-blue-500 focus:ring-2 focus:ring-blue-500 bg-white',
@@ -1142,18 +1621,18 @@ const bentoGridStyle: DesignStyle = {
   tabs: {
     list: 'bg-gray-100 rounded-xl p-1 gap-1',
     trigger: 'font-medium text-gray-600 px-4 py-2 rounded-lg transition-all',
-    triggerActive: 'bg-white text-gray-900 shadow-sm',
-    triggerInactive: 'hover:text-gray-900',
+    triggerActive: 'bg-white text-palette-text shadow-sm',
+    triggerInactive: 'hover:text-palette-text',
     content: 'bg-white border border-gray-200 rounded-xl p-6 mt-2 shadow-sm',
   },
   accordion: {
     item: 'bg-white border border-gray-200 rounded-xl mb-2 overflow-hidden shadow-sm',
-    trigger: 'font-medium text-gray-900 hover:bg-gray-50 p-4 transition-colors',
+    trigger: 'font-medium text-palette-text hover:bg-gray-50 p-4 transition-colors',
     content: 'font-normal text-gray-600 p-4 bg-gray-50/50',
   },
   alert: {
     base: 'bg-white border border-gray-200 rounded-xl shadow-sm p-4',
-    title: 'font-semibold text-gray-900',
+    title: 'font-semibold text-palette-text',
     description: 'font-normal text-gray-600',
   },
   badge: {
@@ -1164,7 +1643,7 @@ const bentoGridStyle: DesignStyle = {
   },
   progress: {
     container: 'bg-gray-200 rounded-full h-3 overflow-hidden',
-    bar: 'bg-blue-500 h-full rounded-full',
+    bar: 'bg-palette-secondary h-full rounded-full',
   },
   slider: {
     base: 'accent-blue-500 h-2',
@@ -1172,7 +1651,7 @@ const bentoGridStyle: DesignStyle = {
   dialog: {
     overlay: 'bg-gray-900/40 backdrop-blur-sm',
     content: 'bg-white border border-gray-200 shadow-2xl rounded-2xl',
-    title: 'font-semibold text-xl text-gray-900',
+    title: 'font-semibold text-xl text-palette-text',
     description: 'font-normal text-gray-600',
   },
 }
