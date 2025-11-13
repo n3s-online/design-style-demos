@@ -31,7 +31,7 @@ export function VaporwaveLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-16">
+    <div className="w-full space-y-8 sm:space-y-12 md:space-y-16">
       {/* Dreamy Hero Welcome */}
       <div className="relative">
         <StyledCard
@@ -42,20 +42,20 @@ export function VaporwaveLayout() {
       </div>
 
       {/* Quick Actions - Dreamy Spacing */}
-      <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Quick Actions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-7 text-lg")}>
+      <div className="space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Quick Actions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-7 text-base sm:text-lg")}>
             Create New Project
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-7 text-lg")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-4 sm:py-5 md:py-7 text-base sm:text-lg")}>
             View Analytics
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-7 text-lg")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-4 sm:py-5 md:py-7 text-base sm:text-lg")}>
             Team Settings
           </Button>
           <Button
-            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-7 text-lg")}
+            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-7 text-base sm:text-lg")}
             disabled
           >
             Export Report
@@ -64,10 +64,10 @@ export function VaporwaveLayout() {
       </div>
 
       {/* Contact Form - Relaxed Retro */}
-      <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Contact Us</h2>
-        <div className={cn(currentStyle.card.container, "p-10")}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Contact Us</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8 lg:p-10")}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             <div className="space-y-3">
               <Label className={currentStyle.input.label}>Full Name</Label>
               <Input
@@ -113,10 +113,10 @@ export function VaporwaveLayout() {
       </div>
 
       {/* Project Status - Gradient Overlay */}
-      <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Project Status</h2>
-        <div className={cn(currentStyle.card.container, "p-10")}>
-          <div className="flex flex-wrap gap-4 mb-10 justify-center">
+      <div className="space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Project Status</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8 lg:p-10")}>
+          <div className="flex flex-wrap gap-4 mb-6 sm:mb-8 md:mb-10 justify-center">
             <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success)}>
               Active
             </Badge>
@@ -133,7 +133,7 @@ export function VaporwaveLayout() {
               Completed
             </Badge>
           </div>
-          <div className="space-y-10 max-w-2xl mx-auto">
+          <div className="space-y-6 sm:space-y-8 md:space-y-10 max-w-2xl mx-auto">
             <div className="space-y-4">
               <div className="flex justify-between items-center mb-2">
                 <Label className={currentStyle.input.label}>Website Redesign</Label>
@@ -162,12 +162,12 @@ export function VaporwaveLayout() {
       </div>
 
       {/* Account Preferences - Dreamy Layout */}
-      <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Account Preferences</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className={cn(currentStyle.card.container, "p-10")}>
-            <h3 className={cn('text-2xl mb-8', currentStyle.input.label)}>Email Preferences</h3>
-            <div className="space-y-6">
+      <div className="space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Account Preferences</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8 lg:p-10")}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8', currentStyle.input.label)}>Email Preferences</h3>
+            <div className="space-y-4 sm:space-y-6">
               <label className="flex items-center gap-4 cursor-pointer">
                 <Checkbox
                   className={currentStyle.checkbox.base}
@@ -192,9 +192,9 @@ export function VaporwaveLayout() {
               </label>
             </div>
           </div>
-          <div className={cn(currentStyle.card.container, "p-10")}>
-            <h3 className={cn('text-2xl mb-8', currentStyle.input.label)}>Notifications</h3>
-            <div className="space-y-6">
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8 lg:p-10")}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8', currentStyle.input.label)}>Notifications</h3>
+            <div className="space-y-4 sm:space-y-6">
               <div className="flex items-center justify-between">
                 <span className={currentStyle.checkbox.label}>Email Notifications</span>
                 <Switch
@@ -216,8 +216,8 @@ export function VaporwaveLayout() {
       </div>
 
       {/* Dashboard Tabs - Retro Aesthetic */}
-      <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Dashboard</h2>
+      <div className="space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Dashboard</h2>
         <Tabs defaultValue="overview">
           <TabsList className={currentStyle.tabs.list}>
             <StyledTabTrigger value="overview">Overview</StyledTabTrigger>
@@ -226,7 +226,7 @@ export function VaporwaveLayout() {
             <StyledTabTrigger value="settings">Settings</StyledTabTrigger>
           </TabsList>
           <TabsContent value="overview" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-6', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6', currentStyle.card.title)}>
               Overview
             </h3>
             <p className={currentStyle.card.content}>
@@ -234,7 +234,7 @@ export function VaporwaveLayout() {
             </p>
           </TabsContent>
           <TabsContent value="analytics" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-6', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6', currentStyle.card.title)}>
               Analytics
             </h3>
             <p className={currentStyle.card.content}>
@@ -242,7 +242,7 @@ export function VaporwaveLayout() {
             </p>
           </TabsContent>
           <TabsContent value="team" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-6', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6', currentStyle.card.title)}>
               Team
             </h3>
             <p className={currentStyle.card.content}>
@@ -250,7 +250,7 @@ export function VaporwaveLayout() {
             </p>
           </TabsContent>
           <TabsContent value="settings" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-6', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6', currentStyle.card.title)}>
               Settings
             </h3>
             <p className={currentStyle.card.content}>
@@ -261,8 +261,8 @@ export function VaporwaveLayout() {
       </div>
 
       {/* FAQ - Gradient Accordion */}
-      <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Frequently Asked Questions</h2>
+      <div className="space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Frequently Asked Questions</h2>
         <Accordion>
           <AccordionItem value="item-1" className={currentStyle.accordion.item}>
             <AccordionTrigger className={currentStyle.accordion.trigger}>
@@ -300,9 +300,9 @@ export function VaporwaveLayout() {
       </div>
 
       {/* System Notifications - Dreamy Alerts */}
-      <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>System Notifications</h2>
-        <div className="space-y-6">
+      <div className="space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>System Notifications</h2>
+        <div className="space-y-4 sm:space-y-6">
           <Alert className={cn(currentStyle.alert.base, 'bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-cyan-500/40 text-cyan-300')}>
             <AlertTitle className={currentStyle.alert.title}>New Feature Available</AlertTitle>
             <AlertDescription className={currentStyle.alert.description}>
@@ -331,9 +331,9 @@ export function VaporwaveLayout() {
       </div>
 
       {/* Services Grid - Dreamy Cards */}
-      <div className="space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-center text-3xl")}>Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-center text-xl sm:text-2xl md:text-3xl")}>Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
           <StyledCard
             title="Cloud Solutions"
             content="Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly."
@@ -362,10 +362,10 @@ export function VaporwaveLayout() {
       </div>
 
       {/* Important Actions Dialog */}
-      <div className="text-center space-y-8">
-        <h2 className={cn(currentStyle.card.title, "text-3xl")}>Important Actions</h2>
+      <div className="text-center space-y-6 sm:space-y-8">
+        <h2 className={cn(currentStyle.card.title, "text-xl sm:text-2xl md:text-3xl")}>Important Actions</h2>
         <Dialog>
-          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-10 py-5 text-lg")}>
+          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-4 py-3 sm:px-6 sm:py-4 md:px-10 md:py-5 text-base sm:text-lg")}>
             Delete Project
           </DialogTrigger>
           <DialogContent className={currentStyle.dialog.content}>

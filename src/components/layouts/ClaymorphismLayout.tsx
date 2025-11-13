@@ -31,7 +31,7 @@ export function ClaymorphismLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-12">
+    <div className="w-full space-y-8 sm:space-y-10 md:space-y-12">
       {/* Puffy Welcome Card */}
       <div className="relative">
         <StyledCard
@@ -42,20 +42,20 @@ export function ClaymorphismLayout() {
       </div>
 
       {/* Quick Actions - Playful Spacing */}
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         <h2 className={cn(currentStyle.card.title, "text-center")}>Quick Actions</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-6 text-lg")}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-6 text-base sm:text-lg")}>
             Create New Project
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-6 text-lg")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-4 sm:py-5 md:py-6 text-base sm:text-lg")}>
             View Analytics
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-6 text-lg")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-4 sm:py-5 md:py-6 text-base sm:text-lg")}>
             Team Settings
           </Button>
           <Button
-            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-6 text-lg")}
+            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-6 text-base sm:text-lg")}
             disabled
           >
             Export Report
@@ -64,10 +64,10 @@ export function ClaymorphismLayout() {
       </div>
 
       {/* Contact Form - Rounded & Soft */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         <h2 className={cn(currentStyle.card.title, "text-center")}>Contact Us</h2>
-        <div className={cn(currentStyle.card.container, "p-8")}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8")}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             <div className="space-y-2">
               <Label className={currentStyle.input.label}>Full Name</Label>
               <Input
@@ -113,10 +113,10 @@ export function ClaymorphismLayout() {
       </div>
 
       {/* Project Status - Soft Puffy Card */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         <h2 className={cn(currentStyle.card.title, "text-center")}>Project Status</h2>
-        <div className={cn(currentStyle.card.container, "p-8")}>
-          <div className="flex flex-wrap gap-4 mb-8 justify-center">
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8")}>
+          <div className="flex flex-wrap gap-4 mb-6 sm:mb-8 justify-center">
             <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success)}>
               Active
             </Badge>
@@ -162,10 +162,10 @@ export function ClaymorphismLayout() {
       </div>
 
       {/* Account Preferences - Rounded Cards Side by Side */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         <h2 className={cn(currentStyle.card.title, "text-center")}>Account Preferences</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className={cn(currentStyle.card.container, "p-8")}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8")}>
             <h3 className={cn('text-xl mb-6', currentStyle.input.label)}>Email Preferences</h3>
             <div className="space-y-5">
               <label className="flex items-center gap-3 cursor-pointer">
@@ -192,7 +192,7 @@ export function ClaymorphismLayout() {
               </label>
             </div>
           </div>
-          <div className={cn(currentStyle.card.container, "p-8")}>
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8")}>
             <h3 className={cn('text-xl mb-6', currentStyle.input.label)}>Notifications</h3>
             <div className="space-y-5">
               <div className="flex items-center justify-between">
@@ -333,7 +333,7 @@ export function ClaymorphismLayout() {
       {/* Services Grid - Playful Puffy Cards */}
       <div className="space-y-6">
         <h2 className={cn(currentStyle.card.title, "text-center")}>Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <StyledCard
             title="Cloud Solutions"
             content="Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly."
@@ -365,7 +365,7 @@ export function ClaymorphismLayout() {
       <div className="text-center space-y-6">
         <h2 className={cn(currentStyle.card.title)}>Important Actions</h2>
         <Dialog>
-          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-8 py-4 text-lg")}>
+          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-4 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4 text-base sm:text-lg")}>
             Delete Project
           </DialogTrigger>
           <DialogContent className={currentStyle.dialog.content}>

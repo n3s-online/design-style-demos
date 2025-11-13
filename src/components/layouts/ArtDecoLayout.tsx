@@ -32,14 +32,14 @@ export function ArtDecoLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-16">
+    <div className="w-full space-y-8 sm:space-y-12 md:space-y-16">
       {/* Elegant Hero Section with Geometric Borders */}
       <div className="relative">
         {/* Decorative corner elements */}
-        <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-amber-600" />
-        <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-amber-600" />
-        <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-amber-600" />
-        <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-amber-600" />
+        <div className="absolute top-0 left-0 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-t-2 border-l-2 border-amber-600" />
+        <div className="absolute top-0 right-0 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-t-2 border-r-2 border-amber-600" />
+        <div className="absolute bottom-0 left-0 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-b-2 border-l-2 border-amber-600" />
+        <div className="absolute bottom-0 right-0 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-b-2 border-r-2 border-amber-600" />
 
         <StyledCard
           title="Welcome to Acme Corp"
@@ -50,19 +50,19 @@ export function ArtDecoLayout() {
 
       {/* Centered Quick Actions */}
       <div className="text-center">
-        <h2 className={cn(currentStyle.card.title, "mb-8")}>Quick Actions</h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "px-8 py-3")}>
+        <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6 md:mb-8 text-lg sm:text-xl md:text-2xl")}>Quick Actions</h2>
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
+          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3")}>
             Create New Project
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "px-8 py-3")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3")}>
             View Analytics
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "px-8 py-3")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3")}>
             Team Settings
           </Button>
           <Button
-            className={cn(currentStyle.button.base, currentStyle.button.primary, "px-8 py-3")}
+            className={cn(currentStyle.button.base, currentStyle.button.primary, "px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3")}
             disabled
           >
             Export Report
@@ -74,7 +74,7 @@ export function ArtDecoLayout() {
       <div className="relative">
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-amber-600 to-transparent" />
         <DemoSection title="Contact Us">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             <div className="space-y-2">
               <Label className={currentStyle.input.label}>Full Name</Label>
               <Input
@@ -129,7 +129,7 @@ export function ArtDecoLayout() {
             <StyledTabTrigger value="settings">Settings</StyledTabTrigger>
           </TabsList>
           <TabsContent value="overview" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               Overview
             </h3>
             <p className={currentStyle.card.content}>
@@ -137,7 +137,7 @@ export function ArtDecoLayout() {
             </p>
           </TabsContent>
           <TabsContent value="analytics" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               Analytics
             </h3>
             <p className={currentStyle.card.content}>
@@ -145,7 +145,7 @@ export function ArtDecoLayout() {
             </p>
           </TabsContent>
           <TabsContent value="team" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               Team
             </h3>
             <p className={currentStyle.card.content}>
@@ -153,7 +153,7 @@ export function ArtDecoLayout() {
             </p>
           </TabsContent>
           <TabsContent value="settings" className={currentStyle.tabs.content}>
-            <h3 className={cn('text-2xl mb-4', currentStyle.card.title)}>
+            <h3 className={cn('text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4', currentStyle.card.title)}>
               Settings
             </h3>
             <p className={currentStyle.card.content}>
@@ -164,7 +164,7 @@ export function ArtDecoLayout() {
       </DemoSection>
 
       {/* Project Status & Preferences - Side by Side */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
         <DemoSection title="Project Status">
           <div className="flex flex-wrap gap-3 mb-6">
             <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success)}>
@@ -265,7 +265,7 @@ export function ArtDecoLayout() {
 
       {/* Services Grid */}
       <DemoSection title="Our Services">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <StyledCard
             title="Cloud Solutions"
             content="Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly."
@@ -363,9 +363,9 @@ export function ArtDecoLayout() {
 
       {/* Important Actions */}
       <div className="text-center">
-        <h2 className={cn(currentStyle.card.title, "mb-6")}>Important Actions</h2>
+        <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl")}>Important Actions</h2>
         <Dialog>
-          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-8 py-3")}>
+          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3")}>
             Delete Project
           </DialogTrigger>
           <DialogContent className={currentStyle.dialog.content}>

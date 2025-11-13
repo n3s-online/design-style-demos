@@ -31,7 +31,7 @@ export function GlassmorphismLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-16">
+    <div className="w-full space-y-8 sm:space-y-12 md:space-y-16">
       {/* Floating Hero Card with Glass Effect */}
       <div className="relative">
         <StyledCard
@@ -42,20 +42,20 @@ export function GlassmorphismLayout() {
       </div>
 
       {/* Quick Actions - Floating Buttons with Generous Spacing */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         <h2 className={cn(currentStyle.card.title, "text-center")}>Quick Actions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-6 text-lg shadow-xl")}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-6 text-base sm:text-lg shadow-xl")}>
             Create New Project
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-6 text-lg shadow-xl")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "py-4 sm:py-5 md:py-6 text-base sm:text-lg shadow-xl")}>
             View Analytics
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-6 text-lg shadow-xl")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "py-4 sm:py-5 md:py-6 text-base sm:text-lg shadow-xl")}>
             Team Settings
           </Button>
           <Button
-            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-6 text-lg shadow-xl")}
+            className={cn(currentStyle.button.base, currentStyle.button.primary, "py-4 sm:py-5 md:py-6 text-base sm:text-lg shadow-xl")}
             disabled
           >
             Export Report
@@ -64,10 +64,10 @@ export function GlassmorphismLayout() {
       </div>
 
       {/* Layered Two-Column Layout: Contact & Status */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {/* Contact Form - Glass Card */}
-        <div className={cn(currentStyle.card.container, "p-8 shadow-2xl")}>
-          <h2 className={cn(currentStyle.card.title, "mb-6")}>Contact Us</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8 shadow-2xl")}>
+          <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6")}>Contact Us</h2>
           <div className="space-y-5">
             <div className="space-y-2">
               <Label className={currentStyle.input.label}>Full Name</Label>
@@ -113,8 +113,8 @@ export function GlassmorphismLayout() {
         </div>
 
         {/* Project Status - Floating Glass Card */}
-        <div className={cn(currentStyle.card.container, "p-8 shadow-2xl")}>
-          <h2 className={cn(currentStyle.card.title, "mb-6")}>Project Status</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8 shadow-2xl")}>
+          <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6")}>Project Status</h2>
           <div className="flex flex-wrap gap-3 mb-8">
             <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success)}>
               Active
@@ -161,10 +161,10 @@ export function GlassmorphismLayout() {
       </div>
 
       {/* Account Preferences - Layered Cards */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         <h2 className={cn(currentStyle.card.title, "text-center")}>Account Preferences</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className={cn(currentStyle.card.container, "p-8 shadow-2xl")}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8 shadow-2xl")}>
             <h3 className={cn('text-xl mb-6', currentStyle.input.label)}>Email Preferences</h3>
             <div className="space-y-4">
               <label className="flex items-center gap-3 cursor-pointer">
@@ -191,7 +191,7 @@ export function GlassmorphismLayout() {
               </label>
             </div>
           </div>
-          <div className={cn(currentStyle.card.container, "p-8 shadow-2xl")}>
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-8 shadow-2xl")}>
             <h3 className={cn('text-xl mb-6', currentStyle.input.label)}>Notifications</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -332,7 +332,7 @@ export function GlassmorphismLayout() {
       {/* Services Grid - Floating Cards */}
       <div className="space-y-6">
         <h2 className={cn(currentStyle.card.title, "text-center")}>Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <StyledCard
             title="Cloud Solutions"
             content="Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly."
@@ -370,7 +370,7 @@ export function GlassmorphismLayout() {
       <div className="text-center">
         <h2 className={cn(currentStyle.card.title, "mb-6")}>Important Actions</h2>
         <Dialog>
-          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-8 py-4 text-lg shadow-xl")}>
+          <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "px-4 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4 text-base sm:text-lg shadow-xl")}>
             Delete Project
           </DialogTrigger>
           <DialogContent className={currentStyle.dialog.content}>

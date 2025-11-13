@@ -32,7 +32,7 @@ export function PopArtLayout() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
 
   return (
-    <div className="w-full space-y-10">
+    <div className="w-full space-y-6 sm:space-y-8 md:space-y-10">
       {/* Bold Hero Card */}
       <div className="relative">
         <StyledCard
@@ -44,18 +44,18 @@ export function PopArtLayout() {
 
       {/* Quick Actions - Bold Grid */}
       <DemoSection title="QUICK ACTIONS">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "text-xl py-7 font-black")}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <Button className={cn(currentStyle.button.base, currentStyle.button.primary, "text-base sm:text-lg md:text-xl py-4 sm:py-5 md:py-7 font-black")}>
             CREATE NEW PROJECT!
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "text-xl py-7 font-black")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.secondary, "text-base sm:text-lg md:text-xl py-4 sm:py-5 md:py-7 font-black")}>
             VIEW ANALYTICS!
           </Button>
-          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "text-xl py-7 font-black")}>
+          <Button className={cn(currentStyle.button.base, currentStyle.button.outline, "text-base sm:text-lg md:text-xl py-4 sm:py-5 md:py-7 font-black")}>
             TEAM SETTINGS!
           </Button>
           <Button
-            className={cn(currentStyle.button.base, currentStyle.button.primary, "text-xl py-7 font-black")}
+            className={cn(currentStyle.button.base, currentStyle.button.primary, "text-base sm:text-lg md:text-xl py-4 sm:py-5 md:py-7 font-black")}
             disabled
           >
             EXPORT REPORT!
@@ -64,13 +64,13 @@ export function PopArtLayout() {
       </DemoSection>
 
       {/* Bold Two-Column Grid: Contact & Status */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {/* Contact Form - High Contrast */}
-        <div className={cn(currentStyle.card.container, "p-7")}>
-          <h2 className={cn(currentStyle.card.title, "mb-6 text-2xl")}>CONTACT US!</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-7")}>
+          <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl")}>CONTACT US!</h2>
           <div className="space-y-5">
             <div className="space-y-2">
-              <Label className={cn(currentStyle.input.label, "text-lg font-bold")}>FULL NAME</Label>
+              <Label className={cn(currentStyle.input.label, "text-base sm:text-lg font-bold")}>FULL NAME</Label>
               <Input
                 type="text"
                 placeholder="JOHN DOE"
@@ -78,7 +78,7 @@ export function PopArtLayout() {
               />
             </div>
             <div className="space-y-2">
-              <Label className={cn(currentStyle.input.label, "text-lg font-bold")}>EMAIL</Label>
+              <Label className={cn(currentStyle.input.label, "text-base sm:text-lg font-bold")}>EMAIL</Label>
               <Input
                 type="email"
                 placeholder="JOHN@ACMECORP.COM"
@@ -86,7 +86,7 @@ export function PopArtLayout() {
               />
             </div>
             <div className="space-y-2">
-              <Label className={cn(currentStyle.input.label, "text-lg font-bold")}>COMPANY</Label>
+              <Label className={cn(currentStyle.input.label, "text-base sm:text-lg font-bold")}>COMPANY</Label>
               <Input
                 type="text"
                 placeholder="YOUR COMPANY INC."
@@ -94,7 +94,7 @@ export function PopArtLayout() {
               />
             </div>
             <div className="space-y-2">
-              <Label className={cn(currentStyle.input.label, "text-lg font-bold")}>PHONE</Label>
+              <Label className={cn(currentStyle.input.label, "text-base sm:text-lg font-bold")}>PHONE</Label>
               <Input
                 type="tel"
                 placeholder="+1 (555) 123-4567"
@@ -102,7 +102,7 @@ export function PopArtLayout() {
               />
             </div>
             <div className="space-y-2">
-              <Label className={cn(currentStyle.input.label, "text-lg font-bold")}>MESSAGE</Label>
+              <Label className={cn(currentStyle.input.label, "text-base sm:text-lg font-bold")}>MESSAGE</Label>
               <Textarea
                 placeholder="TELL US ABOUT YOUR PROJECT..."
                 className={currentStyle.textarea.base}
@@ -113,30 +113,30 @@ export function PopArtLayout() {
         </div>
 
         {/* Project Status - Vibrant */}
-        <div className={cn(currentStyle.card.container, "p-7")}>
-          <h2 className={cn(currentStyle.card.title, "mb-6 text-2xl")}>PROJECT STATUS!</h2>
+        <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-7")}>
+          <h2 className={cn(currentStyle.card.title, "mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl")}>PROJECT STATUS!</h2>
           <div className="flex flex-wrap gap-4 mb-7">
-            <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success, "text-lg px-4 py-2 font-black")}>
+            <Badge className={cn(currentStyle.badge.base, currentStyle.badge.success, "text-base sm:text-lg px-3 sm:px-4 py-1.5 sm:py-2 font-black")}>
               ACTIVE
             </Badge>
-            <Badge className={cn(currentStyle.badge.base, currentStyle.badge.warning, "text-lg px-4 py-2 font-black")}>
+            <Badge className={cn(currentStyle.badge.base, currentStyle.badge.warning, "text-base sm:text-lg px-3 sm:px-4 py-1.5 sm:py-2 font-black")}>
               IN REVIEW
             </Badge>
-            <Badge className={cn(currentStyle.badge.base, currentStyle.badge.error, "text-lg px-4 py-2 font-black")}>
+            <Badge className={cn(currentStyle.badge.base, currentStyle.badge.error, "text-base sm:text-lg px-3 sm:px-4 py-1.5 sm:py-2 font-black")}>
               BLOCKED
             </Badge>
-            <Badge className={cn(currentStyle.badge.base, 'bg-blue-500 text-white border-4 border-black', "text-lg px-4 py-2 font-black")}>
+            <Badge className={cn(currentStyle.badge.base, 'bg-blue-500 text-white border-4 border-black', "text-base sm:text-lg px-3 sm:px-4 py-1.5 sm:py-2 font-black")}>
               PLANNING
             </Badge>
-            <Badge className={cn(currentStyle.badge.base, 'bg-purple-500 text-white border-4 border-black', "text-lg px-4 py-2 font-black")}>
+            <Badge className={cn(currentStyle.badge.base, 'bg-purple-500 text-white border-4 border-black', "text-base sm:text-lg px-3 sm:px-4 py-1.5 sm:py-2 font-black")}>
               COMPLETED
             </Badge>
           </div>
           <div className="space-y-7">
             <div className="space-y-3">
               <div className="flex justify-between items-center mb-2">
-                <Label className={cn(currentStyle.input.label, "text-lg font-bold")}>WEBSITE REDESIGN</Label>
-                <span className={cn(currentStyle.checkbox.label, "text-2xl font-black")}>{uploadProgress}%</span>
+                <Label className={cn(currentStyle.input.label, "text-base sm:text-lg font-bold")}>WEBSITE REDESIGN</Label>
+                <span className={cn(currentStyle.checkbox.label, "text-lg sm:text-xl md:text-2xl font-black")}>{uploadProgress}%</span>
               </div>
               <Progress
                 value={uploadProgress}
@@ -145,8 +145,8 @@ export function PopArtLayout() {
             </div>
             <div className="space-y-3">
               <div className="flex justify-between items-center mb-2">
-                <Label className={cn(currentStyle.input.label, "text-lg font-bold")}>TEAM RESOURCES</Label>
-                <span className={cn(currentStyle.checkbox.label, "text-2xl font-black")}>{volume}%</span>
+                <Label className={cn(currentStyle.input.label, "text-base sm:text-lg font-bold")}>TEAM RESOURCES</Label>
+                <span className={cn(currentStyle.checkbox.label, "text-lg sm:text-xl md:text-2xl font-black")}>{volume}%</span>
               </div>
               <Slider
                 value={volume}
@@ -162,9 +162,9 @@ export function PopArtLayout() {
 
       {/* Account Preferences - Bold Grid */}
       <DemoSection title="ACCOUNT PREFERENCES">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className={cn(currentStyle.card.container, "p-7")}>
-            <h3 className={cn('text-xl mb-5 font-black', currentStyle.input.label)}>EMAIL PREFERENCES</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-7")}>
+            <h3 className={cn('text-lg sm:text-xl mb-4 sm:mb-5 font-black', currentStyle.input.label)}>EMAIL PREFERENCES</h3>
             <div className="space-y-5">
               <label className="flex items-center gap-4 cursor-pointer">
                 <Checkbox
@@ -190,8 +190,8 @@ export function PopArtLayout() {
               </label>
             </div>
           </div>
-          <div className={cn(currentStyle.card.container, "p-7")}>
-            <h3 className={cn('text-xl mb-5 font-black', currentStyle.input.label)}>NOTIFICATIONS</h3>
+          <div className={cn(currentStyle.card.container, "p-4 sm:p-6 md:p-7")}>
+            <h3 className={cn('text-lg sm:text-xl mb-4 sm:mb-5 font-black', currentStyle.input.label)}>NOTIFICATIONS</h3>
             <div className="space-y-5">
               <div className="flex items-center justify-between">
                 <span className={cn(currentStyle.checkbox.label, "font-bold")}>EMAIL NOTIFICATIONS</span>
@@ -327,7 +327,7 @@ export function PopArtLayout() {
 
       {/* Services Grid - Bold Comic Grid */}
       <DemoSection title="OUR SERVICES">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-7">
           <StyledCard
             title="CLOUD SOLUTIONS!"
             content="Scalable cloud infrastructure designed to grow with your business. Deploy, manage, and scale applications effortlessly."
@@ -359,7 +359,7 @@ export function PopArtLayout() {
       <DemoSection title="IMPORTANT ACTIONS">
         <div className="text-center">
           <Dialog>
-            <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "text-xl py-7 px-10 font-black")}>
+            <DialogTrigger className={cn(currentStyle.button.base, currentStyle.button.primary, "text-base sm:text-lg md:text-xl py-4 sm:py-5 md:py-7 px-6 sm:px-8 md:px-10 font-black")}>
               DELETE PROJECT!
             </DialogTrigger>
             <DialogContent className={currentStyle.dialog.content}>
