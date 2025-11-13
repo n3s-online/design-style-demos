@@ -1135,29 +1135,29 @@ const vaporwaveStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-gradient-to-b from-pink-200 via-purple-200 to-cyan-200',
-    container: 'bg-gradient-to-br from-pink-100/90 to-cyan-100/90 border-2 border-palette-border shadow-[0_8px_32px_rgba(255,192,203,0.3)]',
+    body: 'bg-palette-background',
+    container: 'bg-palette-surface border-2 border-palette-border shadow-[0_8px_32px_rgba(255,192,203,0.3)]',
   },
   card: {
-    container: 'bg-gradient-to-br from-purple-200/80 to-pink-200/80 border-2 border-palette-border shadow-[0_8px_24px_rgba(125,211,192,0.3)] rounded-lg backdrop-blur-sm',
-    title: 'font-bold text-2xl italic bg-gradient-to-r from-pink-400 via-purple-300 to-cyan-400 bg-clip-text text-transparent',
+    container: 'bg-palette-primary border-2 border-palette-border shadow-[0_8px_24px_rgba(125,211,192,0.3)] rounded-lg backdrop-blur-sm',
+    title: 'font-bold text-2xl italic text-palette-text',
     content: 'font-normal text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'bg-gradient-to-r from-pink-200 via-purple-200 to-cyan-200 border-b-2 border-palette-border shadow-lg',
-    select: 'bg-white/80 backdrop-blur-sm border-2 border-palette-border text-palette-text font-bold italic rounded-lg shadow-md focus:ring-2 focus:ring-pink-300 focus:outline-none',
-    text: 'text-transparent bg-gradient-to-r from-pink-500 to-cyan-500 bg-clip-text font-bold italic',
+    container: 'bg-palette-surface border-b-2 border-palette-border shadow-lg',
+    select: 'bg-palette-background backdrop-blur-sm border-2 border-palette-border text-palette-text font-bold italic rounded-lg shadow-md focus:ring-2 focus:ring-palette-accent focus:outline-none',
+    text: 'text-palette-text font-bold italic',
     label: 'text-palette-text font-bold italic',
   },
   button: {
     base: 'border-2 rounded-lg font-bold italic transition-all shadow-md hover:shadow-lg hover:scale-105 active:scale-100',
     // For style selector dialog
-    selected: 'bg-gradient-to-r from-pink-300 to-purple-300 text-palette-text-secondary border-palette-border shadow-[0_0_20px_rgba(255,192,203,0.4)]',
-    unselected: 'bg-gradient-to-r from-cyan-200 to-pink-200 text-palette-text border-palette-border hover:from-cyan-300 hover:to-pink-300',
+    selected: 'bg-palette-primary text-palette-text border-palette-border shadow-[0_0_20px_rgba(255,192,203,0.4)]',
+    unselected: 'bg-palette-accent text-palette-text border-palette-border hover:bg-palette-secondary',
     // For general button usage
-    primary: 'bg-gradient-to-r from-pink-300 to-purple-300 text-palette-text border-pink-400 shadow-md',
-    secondary: 'bg-gradient-to-r from-cyan-300 to-teal-300 text-palette-text border-cyan-400 shadow-md',
-    outline: 'bg-white/50 backdrop-blur-sm text-palette-text border-palette-border hover:bg-purple-100/50',
+    primary: 'bg-palette-primary text-palette-text border-palette-border shadow-md',
+    secondary: 'bg-palette-secondary text-palette-text border-palette-border shadow-md',
+    outline: 'bg-palette-surface backdrop-blur-sm text-palette-text border-palette-border hover:bg-palette-accent',
   },
   input: {
     base: 'bg-white/70 backdrop-blur-sm border-2 border-palette-border rounded-lg text-palette-text-secondary font-medium italic placeholder:text-purple-300 focus:ring-2 focus:ring-pink-300 focus:outline-none shadow-inner',
