@@ -311,45 +311,45 @@ const pureMinimalismStyle: DesignStyle = {
   displayName: 'Pure Minimalism',
   colorPalettes: [
     {
-      id: 'classic',
-      name: 'Classic',
+      id: 'monochrome',
+      name: 'Monochrome',
       colors: {
-        primary: '#111827',
-        secondary: '#6b7280',
-        accent: '#3b82f6',
-        background: '#ffffff',
-        surface: '#f9fafb',
-        text: '#111827',
-        textSecondary: '#6b7280',
-        border: '#e5e7eb'
+        primary: '#000000',      // Pure black
+        secondary: '#404040',    // Dark gray
+        accent: '#666666',       // Medium gray
+        background: '#ffffff',   // Pure white
+        surface: '#fafafa',      // Off-white
+        text: '#000000',         // Black text
+        textSecondary: '#737373', // Gray text
+        border: '#e5e5e5'        // Light gray border
       }
     },
     {
       id: 'warm',
       name: 'Warm',
       colors: {
-        primary: '#78350f',
-        secondary: '#92400e',
-        accent: '#f59e0b',
-        background: '#fefce8',
-        surface: '#fef3c7',
-        text: '#78350f',
-        textSecondary: '#92400e',
-        border: '#fde68a'
+        primary: '#2c2218',      // Deep warm gray
+        secondary: '#5c4a3a',    // Warm brown
+        accent: '#8b7355',       // Light brown
+        background: '#fffef9',   // Warm white
+        surface: '#faf8f3',      // Cream
+        text: '#2c2218',         // Warm black
+        textSecondary: '#6b5d4f', // Warm gray
+        border: '#e8e2d8'        // Warm border
       }
     },
     {
       id: 'cool',
       name: 'Cool',
       colors: {
-        primary: '#0f172a',
-        secondary: '#475569',
-        accent: '#06b6d4',
-        background: '#f8fafc',
-        surface: '#e0f2fe',
-        text: '#0f172a',
-        textSecondary: '#475569',
-        border: '#bae6fd'
+        primary: '#1a2332',      // Deep blue-gray
+        secondary: '#384a5e',    // Blue gray
+        accent: '#5a7a9a',       // Light blue gray
+        background: '#f8fafb',   // Cool white
+        surface: '#f0f4f7',      // Light blue-white
+        text: '#1a2332',         // Cool black
+        textSecondary: '#546b84', // Blue-gray text
+        border: '#d9e2ec'        // Cool border
       }
     }
   ],
