@@ -613,45 +613,45 @@ const claymorphismStyle: DesignStyle = {
   displayName: 'Claymorphism',
   colorPalettes: [
     {
-      id: 'peach',
-      name: 'Peach',
+      id: 'terracotta',
+      name: 'Terracotta',
       colors: {
-        primary: '#f472b6',
-        secondary: '#fb923c',
-        accent: '#a855f7',
-        background: '#fff1f2',
-        surface: '#fce7f3',
-        text: '#831843',
-        textSecondary: '#9f1239',
-        border: '#f9a8d4'
+        primary: '#e07856',      // Warm terracotta
+        secondary: '#c85a3a',    // Burnt orange
+        accent: '#f4a261',       // Sandy peach
+        background: '#fef6f1',   // Warm off-white
+        surface: '#f9e9dd',      // Light terracotta
+        text: '#5d3a1a',         // Deep brown
+        textSecondary: '#8b5a3c', // Medium brown
+        border: '#e8b298'        // Soft terracotta border
       }
     },
     {
       id: 'lavender',
       name: 'Lavender',
       colors: {
-        primary: '#a855f7',
-        secondary: '#c084fc',
-        accent: '#f472b6',
-        background: '#faf5ff',
-        surface: '#f3e8ff',
-        text: '#581c87',
-        textSecondary: '#6b21a8',
-        border: '#d8b4fe'
+        primary: '#b197fc',      // Soft lavender
+        secondary: '#9775fa',    // Medium purple
+        accent: '#d0bfff',       // Light lavender
+        background: '#f8f5ff',   // Lavender white
+        surface: '#ede5ff',      // Pale lavender
+        text: '#4c2b85',         // Deep purple
+        textSecondary: '#6741b8', // Medium purple
+        border: '#c9b4f5'        // Lavender border
       }
     },
     {
-      id: 'mint',
-      name: 'Mint',
+      id: 'sage',
+      name: 'Sage',
       colors: {
-        primary: '#34d399',
-        secondary: '#10b981',
-        accent: '#06b6d4',
-        background: '#ecfdf5',
-        surface: '#d1fae5',
-        text: '#065f46',
-        textSecondary: '#047857',
-        border: '#6ee7b7'
+        primary: '#8fb996',      // Soft sage
+        secondary: '#6e9e7a',    // Medium sage
+        accent: '#b8d4be',       // Light mint
+        background: '#f5f9f6',   // Sage white
+        surface: '#e7f2ea',      // Pale sage
+        text: '#2d4a34',         // Deep forest green
+        textSecondary: '#4a6b52', // Medium green
+        border: '#a8c9b0'        // Sage border
       }
     }
   ],
