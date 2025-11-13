@@ -983,29 +983,29 @@ const y2kStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-gradient-to-br from-sky-200 via-pink-200 to-lime-200',
-    container: 'bg-gradient-to-br from-white via-gray-50 to-sky-50 border-2 border-palette-border shadow-[inset_0_2px_0_rgba(255,255,255,0.8),0_4px_12px_rgba(0,0,0,0.1)]',
+    body: 'bg-palette-background',
+    container: 'bg-palette-surface border-2 border-palette-border shadow-[inset_0_2px_0_rgba(255,255,255,0.8),0_4px_12px_rgba(0,0,0,0.1)]',
   },
   card: {
-    container: 'bg-gradient-to-br from-pink-400 to-pink-300 border-2 border-white shadow-[inset_0_2px_0_rgba(255,255,255,0.6),4px_4px_0_rgba(0,0,0,0.15)] rounded-2xl',
-    title: 'font-black text-2xl text-sky-700',
-    content: 'font-bold text-base text-sky-900 leading-relaxed',
+    container: 'bg-palette-primary border-2 border-palette-border shadow-[inset_0_2px_0_rgba(255,255,255,0.6),4px_4px_0_rgba(0,0,0,0.15)] rounded-2xl',
+    title: 'font-black text-2xl text-palette-text',
+    content: 'font-bold text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'bg-gradient-to-r from-lime-400 via-sky-300 to-pink-400 border-b-2 border-white shadow-[0_4px_0_rgba(255,255,255,0.4)]',
-    select: 'bg-white border-2 border-palette-border text-palette-text font-black rounded-xl shadow-[inset_0_2px_0_rgba(255,255,255,1),0_4px_0_rgba(0,0,0,0.1)] focus:ring-2 focus:ring-pink-400 focus:outline-none',
+    container: 'bg-palette-surface border-b-2 border-palette-border shadow-[0_4px_0_rgba(255,255,255,0.4)]',
+    select: 'bg-palette-background border-2 border-palette-border text-palette-text font-black rounded-xl shadow-[inset_0_2px_0_rgba(255,255,255,1),0_4px_0_rgba(0,0,0,0.1)] focus:ring-2 focus:ring-palette-accent focus:outline-none',
     text: 'text-palette-text font-black',
     label: 'text-palette-text font-black',
   },
   button: {
     base: 'border-2 rounded-2xl font-black transition-all shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_4px_0_rgba(0,0,0,0.2)] hover:shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_6px_0_rgba(0,0,0,0.25)] hover:translate-y-[-2px] active:translate-y-0 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.5),0_2px_0_rgba(0,0,0,0.2)]',
     // For style selector dialog
-    selected: 'bg-gradient-to-br from-lime-400 to-lime-500 text-palette-text border-lime-300',
-    unselected: 'bg-gradient-to-br from-sky-300 to-sky-400 text-palette-text border-sky-200 hover:from-sky-400 hover:to-sky-500',
+    selected: 'bg-palette-primary text-palette-text border-palette-border',
+    unselected: 'bg-palette-accent text-palette-text border-palette-border hover:bg-palette-secondary',
     // For general button usage
-    primary: 'bg-gradient-to-br from-pink-400 to-pink-500 text-palette-text border-palette-border',
-    secondary: 'bg-gradient-to-br from-lime-400 to-lime-500 text-palette-text border-lime-300',
-    outline: 'bg-white text-palette-text border-palette-border',
+    primary: 'bg-palette-primary text-palette-text border-palette-border',
+    secondary: 'bg-palette-secondary text-palette-text border-palette-border',
+    outline: 'bg-palette-background text-palette-text border-palette-border',
   },
   input: {
     base: 'bg-white border-2 border-palette-border rounded-xl text-sky-900 font-bold placeholder:text-sky-300 focus:ring-2 focus:ring-pink-400 focus:outline-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)]',
