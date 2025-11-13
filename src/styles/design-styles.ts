@@ -469,7 +469,7 @@ const glassmorphismStyle: DesignStyle = {
         secondary: '#764ba2',    // Purple gradient end
         accent: '#8b5cf6',       // Vibrant purple accent
         background: '#667eea',   // Gradient background
-        surface: 'rgba(255, 255, 255, 0.4)', // Translucent white glass
+        surface: 'rgba(255, 255, 255, 0.15)', // More transparent white glass
         text: '#1a1a1a',         // Dark text for contrast on bright bg
         textSecondary: '#4a4a4a', // Medium gray text
         border: 'rgba(255, 255, 255, 0.2)' // Subtle white border
@@ -483,7 +483,7 @@ const glassmorphismStyle: DesignStyle = {
         secondary: '#f5576c',    // Red-pink gradient end
         accent: '#ec4899',       // Vibrant pink accent
         background: '#f093fb',   // Gradient background
-        surface: 'rgba(255, 255, 255, 0.4)', // Translucent white glass
+        surface: 'rgba(255, 255, 255, 0.15)', // More transparent white glass
         text: '#1a1a1a',         // Dark text for contrast on bright bg
         textSecondary: '#4a4a4a', // Medium gray text
         border: 'rgba(255, 255, 255, 0.2)' // Subtle white border
@@ -497,7 +497,7 @@ const glassmorphismStyle: DesignStyle = {
         secondary: '#00f2fe',    // Bright cyan gradient end
         accent: '#06b6d4',       // Vibrant cyan accent
         background: '#4facfe',   // Gradient background
-        surface: 'rgba(255, 255, 255, 0.4)', // Translucent white glass
+        surface: 'rgba(255, 255, 255, 0.15)', // More transparent white glass
         text: '#1a1a1a',         // Dark text for contrast on bright bg
         textSecondary: '#4a4a4a', // Medium gray text
         border: 'rgba(255, 255, 255, 0.2)' // Subtle white border
@@ -545,52 +545,52 @@ const glassmorphismStyle: DesignStyle = {
   button: {
     base: 'backdrop-blur-md border border-palette-border rounded-xl font-medium transition-all hover:shadow-lg',
     // For style selector dialog
-    selected: 'bg-white/50 text-palette-text border-white/30 shadow-lg backdrop-blur-md',
-    unselected: 'bg-white/20 text-palette-text border-palette-border hover:bg-white/30 backdrop-blur-md',
+    selected: 'bg-white/25 text-palette-text border-white/30 shadow-lg backdrop-blur-md',
+    unselected: 'bg-white/10 text-palette-text border-palette-border hover:bg-white/15 backdrop-blur-md',
     // For general button usage
-    primary: 'bg-white/30 text-palette-text border-palette-border hover:bg-white/40 shadow-md',
-    secondary: 'bg-white/25 text-palette-text border-palette-border hover:bg-white/35 shadow-md',
-    outline: 'bg-transparent text-palette-text border-white/30 hover:bg-white/20',
+    primary: 'bg-white/15 text-palette-text border-palette-border hover:bg-white/20 shadow-md',
+    secondary: 'bg-white/12 text-palette-text border-palette-border hover:bg-white/18 shadow-md',
+    outline: 'bg-transparent text-palette-text border-white/30 hover:bg-white/10',
   },
   input: {
-    base: 'bg-white/30 backdrop-blur-md border border-white/30 rounded-lg text-palette-text placeholder:text-palette-text-secondary/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
+    base: 'bg-white/15 backdrop-blur-md border border-white/30 rounded-lg text-palette-text placeholder:text-palette-text-secondary/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
     label: 'font-medium text-palette-text',
   },
   textarea: {
-    base: 'bg-white/30 backdrop-blur-md border border-white/30 rounded-lg text-palette-text placeholder:text-palette-text-secondary/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
+    base: 'bg-white/15 backdrop-blur-md border border-white/30 rounded-lg text-palette-text placeholder:text-palette-text-secondary/60 focus:ring-2 focus:ring-white/50 focus:outline-none',
   },
   checkbox: {
-    base: 'border-2 border-white/50 rounded w-4 h-4 accent-palette-accent focus:ring-2 focus:ring-white/50 bg-white/30',
+    base: 'border-2 border-white/50 rounded w-4 h-4 accent-palette-accent focus:ring-2 focus:ring-white/50 bg-white/15',
     label: 'font-medium text-palette-text',
   },
   switch: {
-    base: 'border border-white/30 bg-white/20',
+    base: 'border border-white/30 bg-white/10',
   },
   tabs: {
-    list: 'bg-white/30 backdrop-blur-md border border-white/20 rounded-xl p-1 gap-1',
+    list: 'bg-white/15 backdrop-blur-md border border-white/20 rounded-xl p-1 gap-1',
     trigger: 'font-medium text-palette-text-secondary px-4 py-2 rounded-lg transition-all',
-    triggerActive: 'bg-white/50 text-palette-text shadow-md backdrop-blur-sm',
-    triggerInactive: 'hover:bg-white/20 hover:text-palette-text',
-    content: 'bg-white/30 backdrop-blur-md border border-white/20 rounded-xl p-6 mt-2 shadow-lg',
+    triggerActive: 'bg-white/25 text-palette-text shadow-md backdrop-blur-sm',
+    triggerInactive: 'hover:bg-white/10 hover:text-palette-text',
+    content: 'bg-white/15 backdrop-blur-md border border-white/20 rounded-xl p-6 mt-2 shadow-lg',
   },
   accordion: {
-    item: 'bg-white/30 backdrop-blur-md border border-white/20 rounded-xl mb-2 overflow-hidden',
-    trigger: 'font-medium text-palette-text hover:bg-white/20 p-4 transition-colors',
-    content: 'font-normal text-palette-text-secondary p-4 bg-white/10 border-t border-white/20',
+    item: 'bg-white/15 backdrop-blur-md border border-white/20 rounded-xl mb-2 overflow-hidden',
+    trigger: 'font-medium text-palette-text hover:bg-white/10 p-4 transition-colors',
+    content: 'font-normal text-palette-text-secondary p-4 bg-white/8 border-t border-white/20',
   },
   alert: {
-    base: 'bg-white/40 backdrop-blur-md border border-white/30 rounded-xl shadow-lg p-4',
+    base: 'bg-white/20 backdrop-blur-md border border-white/30 rounded-xl shadow-lg p-4',
     title: 'font-semibold text-palette-text',
     description: 'font-normal text-palette-text-secondary',
   },
   badge: {
-    base: 'bg-white/40 backdrop-blur-sm border border-white/30 rounded-full font-medium text-xs px-3 py-1 text-palette-text',
-    success: 'bg-green-500/40 text-palette-text border-white/30 backdrop-blur-sm',
-    warning: 'bg-yellow-500/40 text-palette-text border-white/30 backdrop-blur-sm',
-    error: 'bg-red-500/40 text-palette-text border-white/30 backdrop-blur-sm',
+    base: 'bg-white/20 backdrop-blur-sm border border-white/30 rounded-full font-medium text-xs px-3 py-1 text-palette-text',
+    success: 'bg-green-500/25 text-palette-text border-white/30 backdrop-blur-sm',
+    warning: 'bg-yellow-500/25 text-palette-text border-white/30 backdrop-blur-sm',
+    error: 'bg-red-500/25 text-palette-text border-white/30 backdrop-blur-sm',
   },
   progress: {
-    container: 'bg-white/30 backdrop-blur-sm border border-white/20 rounded-full h-3 overflow-hidden',
+    container: 'bg-white/15 backdrop-blur-sm border border-white/20 rounded-full h-3 overflow-hidden',
     bar: 'bg-gradient-to-r from-palette-primary to-palette-accent h-full shadow-md',
   },
   slider: {
@@ -598,7 +598,7 @@ const glassmorphismStyle: DesignStyle = {
   },
   dialog: {
     overlay: 'bg-black/40 backdrop-blur-sm',
-    content: 'bg-white/40 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl',
+    content: 'bg-white/20 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl',
     title: 'font-semibold text-xl text-palette-text',
     description: 'font-normal text-palette-text-secondary',
   },
