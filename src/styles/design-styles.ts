@@ -377,29 +377,29 @@ const pureMinimalismStyle: DesignStyle = {
     ]
   },
   background: {
-    body: 'bg-white',
-    container: 'bg-white border border-gray-100',
+    body: 'bg-palette-background',
+    container: 'bg-palette-background border border-palette-border',
   },
   card: {
-    container: 'border border-gray-100 bg-white rounded-sm',
+    container: 'border border-palette-border bg-palette-surface rounded-sm',
     title: 'font-light text-2xl text-palette-text',
-    content: 'font-light text-base text-gray-600 leading-relaxed',
+    content: 'font-light text-base text-palette-text-secondary leading-relaxed',
   },
   navbar: {
-    container: 'border-b border-gray-100 bg-white',
-    select: 'border border-gray-200 bg-white text-palette-text rounded-sm font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
+    container: 'border-b border-palette-border bg-palette-background',
+    select: 'border border-palette-border bg-palette-surface text-palette-text rounded-sm font-light focus:ring-1 focus:ring-palette-primary focus:outline-none',
     text: 'text-palette-text',
-    label: 'text-gray-600 font-light',
+    label: 'text-palette-text-secondary font-light',
   },
   button: {
-    base: 'border border-gray-200 rounded-sm font-light transition-all hover:border-gray-300',
+    base: 'border border-palette-border rounded-sm font-light transition-all hover:border-palette-primary',
     // For style selector dialog
-    selected: 'bg-gray-900 text-palette-text border-gray-900',
-    unselected: 'bg-white text-palette-text hover:bg-gray-50',
+    selected: 'bg-palette-primary text-palette-background border-palette-primary',
+    unselected: 'bg-palette-background text-palette-text hover:bg-palette-surface',
     // For general button usage
-    primary: 'bg-gray-900 text-palette-text border-gray-900 hover:bg-gray-800',
-    secondary: 'bg-gray-100 text-palette-text border-gray-200 hover:bg-gray-200',
-    outline: 'bg-white text-palette-text border-gray-300 hover:bg-gray-50',
+    primary: 'bg-palette-primary text-palette-background border-palette-primary hover:bg-palette-secondary',
+    secondary: 'bg-palette-surface text-palette-text border-palette-border hover:bg-palette-accent',
+    outline: 'bg-palette-background text-palette-text border-palette-primary hover:bg-palette-surface',
   },
   input: {
     base: 'border border-gray-200 rounded-sm bg-white text-palette-text font-light focus:ring-1 focus:ring-blue-500 focus:outline-none',
