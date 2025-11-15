@@ -11,6 +11,7 @@ import { VaporwaveLayout } from './layouts/VaporwaveLayout'
 import { BoldMinimalismLayout } from './layouts/BoldMinimalismLayout'
 import { ModernFlatLayout } from './layouts/ModernFlatLayout'
 import { BentoGridLayout } from './layouts/BentoGridLayout'
+import { CassetteFuturismLayout } from './layouts/CassetteFuturismLayout'
 
 /**
  * LayoutSelector Component
@@ -49,6 +50,8 @@ export function LayoutSelector() {
       return <ModernFlatLayout />
     case 'bento-grid':
       return <BentoGridLayout />
+    case 'cassette-futurism':
+      return <CassetteFuturismLayout />
 
     // Default fallback layout
     default:

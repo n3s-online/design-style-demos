@@ -1657,6 +1657,160 @@ const bentoGridStyle: DesignStyle = {
 }
 
 /**
+ * Cassette Futurism Design Style
+ * Characterized by retro-futuristic 1970s-80s sci-fi aesthetic, chunky terminals, and analog displays
+ */
+const cassetteFuturismStyle: DesignStyle = {
+  name: 'cassette-futurism',
+  displayName: 'Cassette Futurism',
+  colorPalettes: [
+    {
+      id: 'terminal',
+      name: 'Terminal',
+      colors: {
+        primary: '#e6d5b8',        // Beige/cream
+        secondary: '#4a5568',      // Slate gray
+        accent: '#ff6b35',         // Retro orange
+        background: '#2d3748',     // Dark gray
+        surface: '#1a202c',        // Darker gray
+        text: '#00ff00',           // Terminal green
+        textSecondary: '#e6d5b8',  // Beige text
+        border: '#718096'          // Medium gray
+      }
+    },
+    {
+      id: 'spaceship',
+      name: 'Spaceship',
+      colors: {
+        primary: '#cbd5e0',        // Light gray
+        secondary: '#2d3748',      // Dark gray
+        accent: '#ed8936',         // Warm orange
+        background: '#1a1a1a',     // Almost black
+        surface: '#2d2d2d',        // Charcoal
+        text: '#ff9500',           // Amber/orange display
+        textSecondary: '#cbd5e0',  // Light gray text
+        border: '#4a5568'          // Slate border
+      }
+    },
+    {
+      id: 'station',
+      name: 'Station',
+      colors: {
+        primary: '#f7fafc',        // Off-white
+        secondary: '#718096',      // Medium gray
+        accent: '#48bb78',         // Retro green
+        background: '#0f1419',     // Deep black
+        surface: '#1c2128',        // Dark surface
+        text: '#00d9ff',           // Cyan display
+        textSecondary: '#f7fafc',  // Off-white text
+        border: '#2d3748'          // Dark gray border
+      }
+    }
+  ],
+  metadata: {
+    description: 'Retro-futuristic design inspired by 1970s-80s sci-fi, featuring chunky terminals, analog displays, and utilitarian industrial aesthetic',
+    characteristics: [
+      'Monospaced terminal fonts',
+      'Chunky, boxy interfaces',
+      'Analog-style displays and gauges',
+      'CRT screen effects',
+      'Industrial, utilitarian design',
+      'LED indicator lights',
+      'Minimal rounded corners',
+      'Grid-based layouts'
+    ],
+    colorPalette: [
+      'Beige and off-white surfaces',
+      'Dark gray and black backgrounds',
+      'Bright terminal text (green, orange, cyan)',
+      'Muted industrial colors',
+      'LED-style accent colors'
+    ],
+    typography: [
+      'Monospaced fonts (Courier, Consolas)',
+      'Terminal-style text rendering',
+      'ALL CAPS for labels',
+      'Technical, no-nonsense hierarchy'
+    ]
+  },
+  background: {
+    body: 'bg-gradient-to-br from-gray-900 via-gray-800 to-slate-900',
+    container: 'bg-palette-surface border-2 border-palette-border shadow-[0_0_20px_rgba(0,0,0,0.5)]',
+  },
+  card: {
+    container: 'border-2 border-palette-border bg-palette-surface shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] rounded-sm',
+    title: 'font-mono font-bold text-2xl uppercase tracking-wider text-palette-text',
+    content: 'font-mono text-base text-palette-textSecondary leading-relaxed',
+  },
+  navbar: {
+    container: 'border-b-2 border-palette-border bg-palette-background shadow-[0_2px_10px_rgba(0,0,0,0.3)]',
+    select: 'border-2 border-palette-border bg-palette-surface font-mono text-palette-text focus:ring-2 focus:ring-palette-accent rounded-sm',
+    text: 'text-palette-textSecondary font-mono',
+    label: 'text-palette-textSecondary font-mono uppercase text-xs tracking-wider',
+  },
+  button: {
+    base: 'border-2 border-palette-border font-mono uppercase tracking-wider transition-all hover:shadow-[0_0_10px_rgba(255,107,53,0.3)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] rounded-sm',
+    // For style selector dialog
+    selected: 'bg-palette-accent text-palette-background shadow-[0_0_15px_rgba(255,107,53,0.5)]',
+    unselected: 'bg-palette-surface text-palette-textSecondary hover:bg-palette-primary hover:text-palette-background',
+    // For general button usage
+    primary: 'bg-palette-accent text-palette-background hover:bg-opacity-90 shadow-[0_2px_0_rgba(0,0,0,0.3)]',
+    secondary: 'bg-palette-secondary text-palette-textSecondary hover:bg-opacity-80 shadow-[0_2px_0_rgba(0,0,0,0.3)]',
+    outline: 'bg-palette-background text-palette-textSecondary hover:bg-palette-surface shadow-[0_2px_0_rgba(0,0,0,0.3)]',
+  },
+  input: {
+    base: 'border-2 border-palette-border bg-palette-background font-mono text-palette-text placeholder:text-gray-600 focus:ring-2 focus:ring-palette-accent focus:border-palette-accent rounded-sm shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]',
+    label: 'font-mono uppercase tracking-wider text-xs text-palette-textSecondary',
+  },
+  textarea: {
+    base: 'border-2 border-palette-border bg-palette-background font-mono text-palette-text placeholder:text-gray-600 focus:ring-2 focus:ring-palette-accent focus:border-palette-accent rounded-sm shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]',
+  },
+  checkbox: {
+    base: 'border-2 border-palette-border w-5 h-5 accent-palette-accent focus:ring-2 focus:ring-palette-accent rounded-sm',
+    label: 'font-mono text-palette-textSecondary',
+  },
+  switch: {
+    base: 'border-2 border-palette-border data-[state=checked]:bg-palette-accent',
+  },
+  tabs: {
+    list: 'border-2 border-palette-border bg-palette-background p-1 gap-1 rounded-sm',
+    trigger: 'font-mono uppercase tracking-wider text-palette-textSecondary border-2 border-transparent transition-all px-4 py-2 rounded-sm',
+    triggerActive: 'bg-palette-surface border-palette-border text-palette-text shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]',
+    triggerInactive: 'hover:bg-palette-surface hover:bg-opacity-50',
+    content: 'border-2 border-palette-border bg-palette-surface p-6 mt-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] rounded-sm',
+  },
+  accordion: {
+    item: 'border-2 border-palette-border bg-palette-surface mb-2 rounded-sm',
+    trigger: 'font-mono uppercase tracking-wider text-palette-textSecondary hover:bg-palette-background hover:text-palette-text p-4 transition-colors',
+    content: 'font-mono text-palette-textSecondary p-4 bg-palette-background border-t-2 border-palette-border leading-relaxed',
+  },
+  alert: {
+    base: 'border-2 border-palette-border shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 rounded-sm',
+    title: 'font-mono uppercase tracking-wider text-palette-text font-bold',
+    description: 'font-mono text-palette-textSecondary',
+  },
+  badge: {
+    base: 'border border-palette-border font-mono uppercase text-xs px-2 py-1 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.2)]',
+    success: 'bg-green-900 text-green-300 border-green-700',
+    warning: 'bg-yellow-900 text-yellow-300 border-yellow-700',
+    error: 'bg-red-900 text-red-300 border-red-700',
+  },
+  progress: {
+    container: 'border-2 border-palette-border bg-palette-background h-6 shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] rounded-sm overflow-hidden',
+    bar: 'bg-palette-accent h-full shadow-[0_0_10px_rgba(255,107,53,0.5)] transition-all',
+  },
+  slider: {
+    base: 'accent-palette-accent h-2 border border-palette-border',
+  },
+  dialog: {
+    overlay: 'bg-black/70',
+    content: 'border-2 border-palette-border bg-palette-surface shadow-[0_0_30px_rgba(0,0,0,0.7)] rounded-sm',
+    title: 'font-mono font-bold text-xl uppercase tracking-wider text-palette-text',
+    description: 'font-mono text-palette-textSecondary',
+  },
+}
+
+/**
  * Design Style Registry
  * To add a new style: simply add it to this object
  * This follows the Open-Closed Principle
@@ -1673,6 +1827,7 @@ export const designStyleRegistry: Record<DesignStyleName, DesignStyle> = {
   'pop-art': popArtStyle,
   y2k: y2kStyle,
   vaporwave: vaporwaveStyle,
+  'cassette-futurism': cassetteFuturismStyle,
 }
 
 /**

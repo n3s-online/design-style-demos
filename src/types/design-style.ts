@@ -3,7 +3,7 @@
  * Following Open-Closed Principle: open for extension, closed for modification
  */
 
-export type DesignStyleName = 'neobrutalism' | 'bold-minimalism' | 'modern-flat' | 'bento-grid' | 'art-deco' | 'pure-minimalism' | 'glassmorphism' | 'claymorphism' | 'pop-art' | 'y2k' | 'vaporwave'
+export type DesignStyleName = 'neobrutalism' | 'bold-minimalism' | 'modern-flat' | 'bento-grid' | 'art-deco' | 'pure-minimalism' | 'glassmorphism' | 'claymorphism' | 'pop-art' | 'y2k' | 'vaporwave' | 'cassette-futurism'
 
 /**
  * Color Palette definition
